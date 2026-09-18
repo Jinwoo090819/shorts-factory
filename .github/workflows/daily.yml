@@ -1,0 +1,65 @@
+name: Daily Shorts Factory
+
+on:
+  schedule:
+    # 07:30 UTC = 16:30 KST. Build early, then schedule YouTube for 19:00 KST.
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Seoul
+      GEMINI_MODEL: gemini-3.5-flash-lite
+      OUTPUT_DIR: output
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build and upload Short
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python src/main.py
+
+      - name: Commit history
+        if: success()
+        run: |
+          git config user.name 'shorts-factory-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/history.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: record published short'
+            git push
+          fi
+
+      - name: Upload render artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latest-short
+          path: output/
+          if-no-files-found: ignore
+          retention-days: 3
