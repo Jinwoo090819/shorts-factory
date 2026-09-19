@@ -1,0 +1,109 @@
+name: Multi B-roll Render Test
+
+on:
+  push:
+    paths:
+      - 'ops/render-test-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      TZ: Asia/Seoul
+      OUTPUT_DIR: output
+      TTS_VOICE: ko-KR-HyunsuNeural
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create temporary render-test script
+        run: |
+          mkdir -p data/scripts
+          cat > data/scripts/0000-render-test.json <<'JSON'
+          {
+            "fact_key": "render_test_airplane_windows",
+            "category": "기술",
+            "fact": "현대 여객기의 객실 창문 모서리가 둥근 이유 중 하나는 압력 변화에서 응력 집중을 줄이기 위해서입니다.",
+            "script": "그거 아세요? 비행기 창문이 거의 전부 둥근 모서리를 가진 건 단순한 디자인 취향 때문이 아닙니다. 여객기는 높은 고도에서 비행할 때 객실 내부 압력을 지상과 비슷하게 유지해야 해서 기체 외부와 내부 사이에 큰 압력 차이가 생깁니다. 이 압력은 비행할 때마다 동체에 반복해서 걸리는데, 모서리가 날카로운 사각형 구멍은 그 주변에 응력이 집중되기 쉽습니다. 반대로 모서리를 둥글게 만들면 힘이 한 지점에 몰리는 정도를 줄이는 데 도움이 됩니다. 그래서 현대 항공기 창문은 직사각형처럼 보여도 실제 모서리는 크게 둥글려져 있습니다. 흥미로운 건 우리가 평소 예쁘다고 생각하는 곡선 디자인 중 일부가 사실은 구조적인 이유에서 시작됐다는 점입니다. 자동차나 건물에서도 비슷하게 모서리를 둥글리는 설계가 보이는데, 디자인과 안전 중 어디까지가 기능이고 어디부터가 미적인 선택이라고 봐야 할까요?",
+            "source_1": "https://www.faa.gov/",
+            "source_2": "https://www.nasa.gov/",
+            "pexels_query_1": "airplane window",
+            "pexels_query_2": "airplane wing flight",
+            "pexels_query_3": "airport runway airplane",
+            "title": "비행기 창문은 왜 둥글까?",
+            "slot": "test",
+            "target_publish_time": "23:59",
+            "status": "ready",
+            "created_at": "2026-09-19T00:00:00+09:00"
+          }
+          JSON
+
+      - name: Build multi B-roll test short
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python src/main_fixed.py build
+
+      - name: Validate render
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          meta = json.loads(Path('output/post.json').read_text(encoding='utf-8'))
+          count = int(meta.get('pexels_video_count', 0))
+          if count < 4:
+              raise SystemExit(f'Expected >=4 unique B-roll clips, got {count}')
+
+          duration = float(subprocess.check_output([
+              'ffprobe', '-v', 'error', '-show_entries', 'format=duration',
+              '-of', 'default=noprint_wrappers=1:nokey=1', 'output/short.mp4'
+          ], text=True).strip())
+          if duration < 50:
+              raise SystemExit(f'Expected >=50s video, got {duration:.2f}s')
+
+          audio = subprocess.check_output([
+              'ffprobe', '-v', 'error', '-select_streams', 'a:0',
+              '-show_entries', 'stream=codec_name', '-of', 'csv=p=0', 'output/short.mp4'
+          ], text=True).strip()
+          if not audio:
+              raise SystemExit('Final MP4 has no audio stream')
+
+          print(json.dumps({
+              'ok': True,
+              'duration_seconds': round(duration, 2),
+              'broll_count': count,
+              'audio_codec': audio,
+              'sources': meta.get('pexels_videos', []),
+          }, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload test artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multi-broll-render-test
+          path: |
+            output/short.mp4
+            output/post.json
+            output/captions.ass
+          if-no-files-found: warn
+          retention-days: 2
