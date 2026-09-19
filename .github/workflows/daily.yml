@@ -2,7 +2,7 @@ name: Daily Shorts Factory
 
 on:
   schedule:
-    # 07:30 UTC = 16:30 KST. Build first, then Buffer schedules 19:00 KST.
+    # 07:30 UTC = 16:30 KST. Backup retry if a ready script still exists.
     - cron: '30 7 * * *'
   workflow_dispatch:
   push:
@@ -29,38 +29,68 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check for ready script
+        id: ready
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          found = False
+          for path in sorted(Path('data/scripts').glob('*.json')):
+              try:
+                  raw = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              items = raw if isinstance(raw, list) else [raw] if isinstance(raw, dict) else []
+              if any(isinstance(x, dict) and str(x.get('status', 'ready')).lower() == 'ready' for x in items):
+                  found = True
+                  break
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
+              f.write(f"has_ready={'true' if found else 'false'}\n")
+          print('ready script:', found)
+          PY
+
       - name: Set up Python
+        if: steps.ready.outputs.has_ready == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: pip
 
       - name: Install FFmpeg and fonts
+        if: steps.ready.outputs.has_ready == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg fonts-noto-cjk
 
       - name: Install Python dependencies
+        if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
 
       - name: Build Short
+        if: steps.ready.outputs.has_ready == 'true'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python src/main.py build
 
       - name: Configure GitHub Pages
+        if: steps.ready.outputs.has_ready == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload media staging site
+        if: steps.ready.outputs.has_ready == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
       - name: Deploy media staging site
+        if: steps.ready.outputs.has_ready == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Wait for public MP4
+        if: steps.ready.outputs.has_ready == 'true'
         env:
           MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
         run: |
@@ -75,6 +105,7 @@ jobs:
           exit 1
 
       - name: Schedule YouTube Short through Buffer
+        if: steps.ready.outputs.has_ready == 'true'
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
@@ -82,7 +113,7 @@ jobs:
         run: python src/main.py publish
 
       - name: Commit scheduling state
-        if: success()
+        if: steps.ready.outputs.has_ready == 'true' && success()
         run: |
           git config user.name 'shorts-factory-bot'
           git config user.email 'actions@users.noreply.github.com'
@@ -93,7 +124,7 @@ jobs:
           fi
 
       - name: Upload render artifact
-        if: always()
+        if: steps.ready.outputs.has_ready == 'true' && always()
         uses: actions/upload-artifact@v4
         with:
           name: latest-short
