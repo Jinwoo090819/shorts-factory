@@ -23,13 +23,15 @@ permissions:
 jobs:
   build-stage-schedule:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 90
     env:
       TZ: Asia/Seoul
       OUTPUT_DIR: output
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Check for ready script
         id: ready
@@ -70,20 +72,56 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
 
-      - name: Build Short with Edge TTS + generated BGM
+      - name: Build and schedule all ready Shorts
         if: steps.ready.outputs.has_ready == 'true'
+        shell: bash
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           TTS_VOICE: ko-KR-HyunsuNeural
-        run: python src/main_fixed.py build
-
-      - name: Prepare unique media asset
-        if: steps.ready.outputs.has_ready == 'true'
-        id: media
-        shell: bash
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python - <<'PY'
-          import json, os, re, shutil
+          set -euo pipefail
+
+          git config user.name 'shorts-factory-bot'
+          git config user.email 'actions@users.noreply.github.com'
+
+          if ! gh release view shorts-media >/dev/null 2>&1; then
+            gh release create shorts-media \
+              --title 'Shorts media staging' \
+              --notes 'Temporary uniquely named media files used by the automated Shorts publishing pipeline.'
+          fi
+
+          mkdir -p output/media output/batch
+
+          # Normal daily target is three Shorts. Process up to three ready scripts
+          # in this run so the morning/lunch/evening videos can all be prepared
+          # together as soon as the 05:00 script batch lands.
+          for batch_index in 1 2 3; do
+            if ! python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in sorted(Path('data/scripts').glob('*.json')):
+              try:
+                  raw = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              items = raw if isinstance(raw, list) else [raw] if isinstance(raw, dict) else []
+              if any(isinstance(x, dict) and str(x.get('status', 'ready')).lower() == 'ready' for x in items):
+                  raise SystemExit(0)
+          raise SystemExit(1)
+          PY
+            then
+              echo 'No more ready scripts.'
+              break
+            fi
+
+            echo "Building batch item ${batch_index}..."
+            python src/main_fixed.py build
+
+            MEDIA_FILENAME="$(python - <<'PY'
+          import json, re, shutil
           from pathlib import Path
 
           meta = json.loads(Path('output/post.json').read_text(encoding='utf-8'))
@@ -98,57 +136,45 @@ jobs:
           target = media_dir / filename
           shutil.copy2('output/short.mp4', target)
 
-          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
-              f.write(f"filename={filename}\n")
-          print('unique media asset:', target)
+          batch_dir = Path('output/batch')
+          batch_dir.mkdir(parents=True, exist_ok=True)
+          shutil.copy2('output/post.json', batch_dir / f'{safe_name[:140]}.json')
+          print(filename)
           PY
+          )"
 
-      - name: Upload unique media asset to GitHub Release
-        if: steps.ready.outputs.has_ready == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MEDIA_FILENAME: ${{ steps.media.outputs.filename }}
-        run: |
-          if ! gh release view shorts-media >/dev/null 2>&1; then
-            gh release create shorts-media \
-              --title 'Shorts media staging' \
-              --notes 'Temporary uniquely named media files used by the automated Shorts publishing pipeline.'
-          fi
-          gh release upload shorts-media "output/media/${MEDIA_FILENAME}#${MEDIA_FILENAME}" --clobber
+            MEDIA_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/shorts-media/${MEDIA_FILENAME}"
+            echo "Uploading ${MEDIA_FILENAME}"
+            gh release upload shorts-media "output/media/${MEDIA_FILENAME}#${MEDIA_FILENAME}" --clobber
 
-      - name: Wait for unique public MP4
-        if: steps.ready.outputs.has_ready == 'true'
-        env:
-          MEDIA_URL: https://github.com/${{ github.repository }}/releases/download/shorts-media/${{ steps.media.outputs.filename }}
-        run: |
-          echo "Waiting for $MEDIA_URL"
-          for i in 1 2 3 4 5 6 7 8; do
-            if curl -fLsS -o /dev/null "$MEDIA_URL"; then
-              exit 0
+            echo "Waiting for ${MEDIA_URL}"
+            ready_url=false
+            for attempt in 1 2 3 4 5 6 7 8; do
+              if curl -fLsS -o /dev/null "$MEDIA_URL"; then
+                ready_url=true
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ready_url" != true ]; then
+              echo "Unique media URL did not become reachable: ${MEDIA_URL}"
+              exit 1
             fi
-            sleep 10
+
+            MEDIA_URL="$MEDIA_URL" python src/main_fixed.py publish
+
+            # Persist each successful Buffer schedule before starting the next
+            # video. This prevents an error on a later item from causing an
+            # already-scheduled Short to be scheduled again on retry.
+            git add data/history.json data/scripts || true
+            if ! git diff --cached --quiet; then
+              git commit -m '[skip ci] chore: record Buffer scheduled short'
+              if ! git push; then
+                git pull --rebase
+                git push
+              fi
+            fi
           done
-          echo "Unique media URL did not become reachable"
-          exit 1
-
-      - name: Schedule YouTube Short through Buffer
-        if: steps.ready.outputs.has_ready == 'true'
-        env:
-          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-          BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
-          MEDIA_URL: https://github.com/${{ github.repository }}/releases/download/shorts-media/${{ steps.media.outputs.filename }}
-        run: python src/main_fixed.py publish
-
-      - name: Commit scheduling state
-        if: steps.ready.outputs.has_ready == 'true' && success()
-        run: |
-          git config user.name 'shorts-factory-bot'
-          git config user.email 'actions@users.noreply.github.com'
-          git add data/history.json data/scripts || true
-          if ! git diff --cached --quiet; then
-            git commit -m '[skip ci] chore: record Buffer scheduled short'
-            git push
-          fi
 
       - name: Clean release media older than 14 days
         if: steps.ready.outputs.has_ready == 'true' && success()
@@ -180,7 +206,7 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true' && always()
         uses: actions/upload-artifact@v4
         with:
-          name: latest-short
+          name: daily-shorts-${{ github.run_id }}
           path: output/
           if-no-files-found: ignore
           retention-days: 3
