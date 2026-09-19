@@ -68,10 +68,12 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
 
-      - name: Build Short with forced TTS + generated BGM
+      - name: Build Short with Typecast TTS + generated BGM
         if: steps.ready.outputs.has_ready == 'true'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          TYPECAST_API_KEY: ${{ secrets.TYPECAST_API_KEY }}
+          TYPECAST_VOICE_ID: ${{ vars.TYPECAST_VOICE_ID }}
         run: python src/main_fixed.py build
 
       - name: Configure GitHub Pages
