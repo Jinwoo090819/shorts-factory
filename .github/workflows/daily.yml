@@ -72,6 +72,7 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          TTS_VOICE: ko-KR-HyunsuNeural
         run: python src/main_fixed.py build
 
       - name: Configure GitHub Pages
