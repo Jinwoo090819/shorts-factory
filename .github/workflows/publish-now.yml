@@ -1,0 +1,30 @@
+name: Publish Scheduled Short Now
+
+on:
+  push:
+    paths:
+      - 'ops/publish-now-trigger.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  share-now:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish scheduled Buffer post now
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python src/share_now.py
