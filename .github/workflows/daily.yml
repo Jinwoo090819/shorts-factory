@@ -15,7 +15,6 @@ jobs:
     timeout-minutes: 30
     env:
       TZ: Asia/Seoul
-      GEMINI_MODEL: gemini-3.5-flash-lite
       OUTPUT_DIR: output
     steps:
       - name: Checkout
@@ -37,19 +36,18 @@ jobs:
 
       - name: Build and upload Short
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: python src/main.py
 
-      - name: Commit history
+      - name: Commit publication state
         if: success()
         run: |
           git config user.name 'shorts-factory-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/history.json || true
+          git add data/history.json data/scripts || true
           if ! git diff --cached --quiet; then
             git commit -m 'chore: record published short'
             git push
