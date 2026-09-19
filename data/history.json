@@ -18,5 +18,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://jinwoo090819.github.io/shorts-factory/short.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-19T13:04:30.706114+09:00",
+    "publish_at": "2026-09-19T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-19.json",
+    "fact_key": "octopus_three_hearts",
+    "category": "동물",
+    "fact": "문어를 포함한 두족류는 심장이 3개이며, 하나는 몸 전체로 혈액을 보내고 두 개는 아가미 쪽으로 혈액을 보냅니다.",
+    "title": "문어의 심장은 왜 3개일까?",
+    "source_1": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives",
+    "source_2": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/day-octopus",
+    "pexels_query_used": "octopus underwater",
+    "pexels_video_url": "https://www.pexels.com/video/pulpa-aquarium-biarritz-17836505/",
+    "pexels_creator": "Entdecker Fuchs",
+    "buffer_post_id": "6aae09ce24705c9044983134",
+    "buffer_due_at": "2026-09-19T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://jinwoo090819.github.io/shorts-factory/short.mp4",
+    "status": "scheduled"
   }
 ]
