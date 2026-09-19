@@ -1,0 +1,16 @@
+{
+  "fact_key": "space_boundary_80km_vs_100km",
+  "category": "물리·화학·우주",
+  "fact": "우주의 시작점은 전 세계가 하나의 고도로 합의한 경계가 아니다. 국제항공연맹(FAI)은 항공·우주 기록을 구분하는 카르만선을 해발 100km로 사용하지만, 미국에서는 50마일, 약 80km 기준도 우주비행·우주인 인정에 사용돼 왔다.",
+  "script": "그거 아세요? 우주는 정확히 몇 킬로미터부터 시작할까요? 딱 하나의 정답이 있을 것 같지만 실제로는 기준에 따라 답이 달라집니다. 국제항공연맹, FAI는 해발 100킬로미터를 카르만선으로 정해 항공과 우주 비행 기록을 구분합니다. 이유는 위로 올라갈수록 공기가 계속 희박해져 날개가 공기를 밀어 얻는 양력만으로 비행하기가 점점 어려워지기 때문입니다. 그런데 미국에서는 오래전부터 50마일, 약 80킬로미터를 우주 비행의 기준으로 사용한 사례가 있습니다. 그래서 같은 최고 고도라도 어떤 기준을 적용하느냐에 따라 우주에 갔다고 인정되는지가 달라질 수 있습니다. 여기서 중요한 건 대기가 100킬로미터에서 갑자기 끝나는 벽처럼 생긴 게 아니라는 점입니다. 공기는 고도가 높아질수록 서서히 희박해지기 때문에 자연이 선 하나를 그어 놓은 게 아니라, 기록과 제도를 위해 사람이 경계를 정한 겁니다. 실제로 FAI의 100킬로미터 기준과 미국에서 사용해 온 50마일 기준 사이에는 약 20킬로미터 차이가 있습니다. 그러니까 ‘우주는 어디서 시작하냐’는 질문은 물리 문제이면서 동시에 정의의 문제인 셈이죠. 여러분은 80킬로미터와 100킬로미터 중 어느 기준이 더 납득되나요?",
+  "source_1": "https://www.fai.org/sites/default/files/documents/annex_4_fai_icare_plenary_meeting-_karman_line_presentation._berend.pdf",
+  "source_2": "https://www.nationalgeographic.com/science/article/where-is-the-edge-of-space-and-what-is-the-karman-line",
+  "pexels_query_1": "earth atmosphere clouds",
+  "pexels_query_2": "astronaut space earth",
+  "pexels_query_3": "planet earth space",
+  "title": "우주는 80km부터일까, 100km부터일까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-20T05:00:30+09:00"
+}
