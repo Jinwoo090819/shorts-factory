@@ -1,29 +1,31 @@
+import argparse
 import asyncio
 import json
 import os
 import re
 import subprocess
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import edge_tts
 import requests
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / os.getenv("OUTPUT_DIR", "output")
 DATA = ROOT / "data"
 SCRIPTS = DATA / "scripts"
+SITE = ROOT / "site"
 OUT.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 SCRIPTS.mkdir(parents=True, exist_ok=True)
+SITE.mkdir(parents=True, exist_ok=True)
 HISTORY_PATH = DATA / "history.json"
+POST_META_PATH = OUT / "post.json"
 
 KST = ZoneInfo("Asia/Seoul")
 VOICE = os.getenv("TTS_VOICE", "ko-KR-SunHiNeural")
+BUFFER_ENDPOINT = "https://api.buffer.com"
 
 BLOCKED = {
     "총", "소총", "권총", "폭탄", "폭발물", "마약", "대마", "도박", "카지노",
@@ -51,7 +53,7 @@ def save_history(item):
     history = load_history()
     history.append(item)
     HISTORY_PATH.write_text(
-        json.dumps(history[-300:], ensure_ascii=False, indent=2),
+        json.dumps(history[-500:], ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
@@ -96,16 +98,14 @@ def select_ready_script():
     raise RuntimeError("No ready script found in data/scripts")
 
 
-def mark_script_published(path: Path, index: int, raw, youtube_id: str, publish_at: datetime):
+def mark_script_scheduled(path: Path, index: int, raw, buffer_post_id: str, publish_at: datetime, media_url: str):
     now = datetime.now(KST).isoformat()
-    if isinstance(raw, list):
-        target = raw[index]
-    else:
-        target = raw
-    target["status"] = "published"
-    target["youtube_id"] = youtube_id
+    target = raw[index] if isinstance(raw, list) else raw
+    target["status"] = "scheduled"
+    target["buffer_post_id"] = buffer_post_id
     target["publish_at"] = publish_at.isoformat()
-    target["used_at"] = now
+    target["media_url"] = media_url
+    target["scheduled_at"] = now
     path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -240,48 +240,133 @@ def next_publish_time():
     return publish
 
 
-def youtube_client():
-    creds = Credentials(
-        token=None,
-        refresh_token=required("YOUTUBE_REFRESH_TOKEN"),
-        token_uri="https://oauth2.googleapis.com/token",
-        client_id=required("YOUTUBE_CLIENT_ID"),
-        client_secret=required("YOUTUBE_CLIENT_SECRET"),
-        scopes=["https://www.googleapis.com/auth/youtube.upload"],
+def graphql(query: str, variables=None):
+    token = required("BUFFER_API_KEY")
+    response = requests.post(
+        BUFFER_ENDPOINT,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
+        json={"query": query, "variables": variables or {}},
+        timeout=60,
     )
-    return build("youtube", "v3", credentials=creds, cache_discovery=False)
+    response.raise_for_status()
+    payload = response.json()
+    if payload.get("errors"):
+        raise RuntimeError(f"Buffer GraphQL error: {payload['errors']}")
+    return payload.get("data") or {}
 
 
-def upload_youtube(video: Path, title: str, description: str, publish_at: datetime):
-    youtube = youtube_client()
-    body = {
-        "snippet": {
-            "title": title[:100],
-            "description": description,
-            "categoryId": "27",
-            "tags": ["잡지식", "상식", "shorts"],
-        },
-        "status": {
-            "privacyStatus": "private",
-            "publishAt": publish_at.isoformat(),
-            "selfDeclaredMadeForKids": False,
-        },
+def find_youtube_channel():
+    preferred = os.getenv("BUFFER_CHANNEL_ID", "").strip()
+    account_data = graphql(
+        """
+        query GetOrganizations {
+          account {
+            organizations { id name }
+          }
+        }
+        """
+    )
+    organizations = ((account_data.get("account") or {}).get("organizations") or [])
+    youtube_channels = []
+    for organization in organizations:
+        org_id = organization.get("id")
+        if not org_id:
+            continue
+        channel_data = graphql(
+            """
+            query GetChannels($input: ChannelsInput!) {
+              channels(input: $input) {
+                id
+                name
+                service
+                serviceId
+              }
+            }
+            """,
+            {"input": {"organizationId": org_id}},
+        )
+        for channel in channel_data.get("channels") or []:
+            if str(channel.get("service", "")).lower() == "youtube":
+                youtube_channels.append(channel)
+
+    if preferred:
+        for channel in youtube_channels:
+            if str(channel.get("id")) == preferred:
+                return channel
+        raise RuntimeError("BUFFER_CHANNEL_ID does not match a connected YouTube channel")
+
+    if len(youtube_channels) == 1:
+        return youtube_channels[0]
+    if not youtube_channels:
+        raise RuntimeError("No YouTube channel is connected to Buffer")
+    names = ", ".join(str(c.get("name")) for c in youtube_channels)
+    raise RuntimeError(
+        "Multiple YouTube channels are connected to Buffer. "
+        f"Set repository variable BUFFER_CHANNEL_ID. Channels: {names}"
+    )
+
+
+def create_buffer_post(channel_id: str, media_url: str, title: str, description: str, publish_at: datetime):
+    due_at = publish_at.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    mutation = """
+    mutation CreatePost($input: CreatePostInput!) {
+      createPost(input: $input) {
+        ... on PostActionSuccess {
+          post {
+            id
+            text
+            dueAt
+            status
+          }
+        }
+        ... on MutationError {
+          message
+        }
+      }
     }
-    media = MediaFileUpload(
-        str(video),
-        chunksize=8 * 1024 * 1024,
-        resumable=True,
-        mimetype="video/mp4",
-    )
-    request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
-    response = None
-    while response is None:
-        _, response = request.next_chunk()
-    return response["id"]
+    """
+    variables = {
+        "input": {
+            "text": description,
+            "channelId": channel_id,
+            "schedulingType": "automatic",
+            "mode": "customScheduled",
+            "dueAt": due_at,
+            "aiAssisted": True,
+            "assets": [
+                {
+                    "video": {
+                        "url": media_url,
+                    }
+                }
+            ],
+            "metadata": {
+                "youtube": {
+                    "title": title[:100],
+                    "categoryId": "27",
+                    "privacy": "public",
+                    "madeForKids": False,
+                    "notifySubscribers": True,
+                    "isAiGenerated": True,
+                }
+            },
+        }
+    }
+    data = graphql(mutation, variables)
+    result = data.get("createPost") or {}
+    if result.get("message"):
+        raise RuntimeError(f"Buffer rejected post: {result['message']}")
+    post = result.get("post") or {}
+    if not post.get("id"):
+        raise RuntimeError(f"Buffer returned no post id: {result}")
+    return post
 
 
 def build_one():
-    script_path, script_index, content, raw = select_ready_script()
+    script_path, script_index, content, _raw = select_ready_script()
     script = str(content["script"]).strip()
     title = str(content.get("title") or "오늘의 잡지식").strip()
     fact = str(content.get("fact") or "").strip()
@@ -292,7 +377,6 @@ def build_one():
         str(content.get("pexels_query_2") or "").strip(),
         str(content.get("pexels_query_3") or "").strip(),
     ]
-
     if not any(queries):
         raise RuntimeError("Selected script has no Pexels search queries")
 
@@ -325,33 +409,101 @@ def build_one():
         + credit
         + "\n\n#잡지식 #상식 #shorts"
     )
-    video_id = upload_youtube(final, title, description, publish_at)
 
-    mark_script_published(script_path, script_index, raw, video_id, publish_at)
-    save_history({
-        "created_at": datetime.now(KST).isoformat(),
-        "publish_at": publish_at.isoformat(),
+    (SITE / "short.mp4").write_bytes(final.read_bytes())
+    (SITE / "index.html").write_text(
+        "<!doctype html><meta charset='utf-8'><title>shorts-factory media</title><p>Media staging endpoint.</p>",
+        encoding="utf-8",
+    )
+
+    metadata = {
         "script_file": str(script_path.relative_to(ROOT)),
+        "script_index": script_index,
         "fact_key": content.get("fact_key"),
         "category": content.get("category"),
         "fact": fact,
         "title": title,
+        "description": description,
         "source_1": source_1,
         "source_2": source_2,
         "pexels_query_used": media_credit.get("query"),
         "pexels_video_url": media_credit.get("video_url"),
         "pexels_creator": media_credit.get("creator"),
-        "youtube_id": video_id,
-    })
+        "publish_at": publish_at.isoformat(),
+    }
+    POST_META_PATH.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({"ok": True, "stage": "built", **metadata}, ensure_ascii=False, indent=2))
 
+
+def publish_built():
+    media_url = required("MEDIA_URL")
+    if not POST_META_PATH.exists():
+        raise RuntimeError("output/post.json is missing; run build first")
+    metadata = json.loads(POST_META_PATH.read_text(encoding="utf-8"))
+    publish_at = datetime.fromisoformat(metadata["publish_at"])
+
+    response = requests.head(media_url, allow_redirects=True, timeout=30)
+    if response.status_code >= 400:
+        raise RuntimeError(f"Public media URL is not reachable: {media_url} ({response.status_code})")
+
+    channel = find_youtube_channel()
+    post = create_buffer_post(
+        str(channel["id"]),
+        media_url,
+        str(metadata["title"]),
+        str(metadata["description"]),
+        publish_at,
+    )
+
+    script_path = ROOT / metadata["script_file"]
+    raw = json.loads(script_path.read_text(encoding="utf-8"))
+    mark_script_scheduled(
+        script_path,
+        int(metadata["script_index"]),
+        raw,
+        str(post["id"]),
+        publish_at,
+        media_url,
+    )
+    save_history({
+        "created_at": datetime.now(KST).isoformat(),
+        "publish_at": publish_at.isoformat(),
+        "script_file": metadata["script_file"],
+        "fact_key": metadata.get("fact_key"),
+        "category": metadata.get("category"),
+        "fact": metadata.get("fact"),
+        "title": metadata.get("title"),
+        "source_1": metadata.get("source_1"),
+        "source_2": metadata.get("source_2"),
+        "pexels_query_used": metadata.get("pexels_query_used"),
+        "pexels_video_url": metadata.get("pexels_video_url"),
+        "pexels_creator": metadata.get("pexels_creator"),
+        "buffer_post_id": post.get("id"),
+        "buffer_due_at": post.get("dueAt"),
+        "buffer_channel_id": channel.get("id"),
+        "buffer_channel_name": channel.get("name"),
+        "media_url": media_url,
+        "status": "scheduled",
+    })
     print(json.dumps({
         "ok": True,
-        "youtube_id": video_id,
+        "stage": "scheduled",
+        "buffer_post_id": post.get("id"),
+        "channel": channel.get("name"),
         "publish_at": publish_at.isoformat(),
-        "title": title,
-        "script_file": str(script_path.relative_to(ROOT)),
+        "media_url": media_url,
     }, ensure_ascii=False, indent=2))
 
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("command", choices=["build", "publish"])
+    args = parser.parse_args()
+    if args.command == "build":
+        build_one()
+    else:
+        publish_built()
+
+
 if __name__ == "__main__":
-    build_one()
+    main()
