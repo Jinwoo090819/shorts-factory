@@ -18,17 +18,12 @@ concurrency:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
   actions: read
 
 jobs:
   build-stage-schedule:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     env:
       TZ: Asia/Seoul
       OUTPUT_DIR: output
@@ -82,34 +77,58 @@ jobs:
           TTS_VOICE: ko-KR-HyunsuNeural
         run: python src/main_fixed.py build
 
-      - name: Configure GitHub Pages
+      - name: Prepare unique media asset
         if: steps.ready.outputs.has_ready == 'true'
-        uses: actions/configure-pages@v5
+        id: media
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, re, shutil
+          from pathlib import Path
 
-      - name: Upload media staging site
-        if: steps.ready.outputs.has_ready == 'true'
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: site
+          meta = json.loads(Path('output/post.json').read_text(encoding='utf-8'))
+          script_stem = Path(str(meta.get('script_file') or 'short')).stem
+          fact_key = str(meta.get('fact_key') or 'fact')
+          raw_name = f"{script_stem}-{fact_key}"
+          safe_name = re.sub(r'[^A-Za-z0-9._-]+', '-', raw_name).strip('-._') or 'short'
+          filename = safe_name[:140] + '.mp4'
 
-      - name: Deploy media staging site
-        if: steps.ready.outputs.has_ready == 'true'
-        id: deployment
-        uses: actions/deploy-pages@v4
+          media_dir = Path('output/media')
+          media_dir.mkdir(parents=True, exist_ok=True)
+          target = media_dir / filename
+          shutil.copy2('output/short.mp4', target)
 
-      - name: Wait for public MP4
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
+              f.write(f"filename={filename}\n")
+          print('unique media asset:', target)
+          PY
+
+      - name: Upload unique media asset to GitHub Release
         if: steps.ready.outputs.has_ready == 'true'
         env:
-          MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MEDIA_FILENAME: ${{ steps.media.outputs.filename }}
+        run: |
+          if ! gh release view shorts-media >/dev/null 2>&1; then
+            gh release create shorts-media \
+              --title 'Shorts media staging' \
+              --notes 'Temporary uniquely named media files used by the automated Shorts publishing pipeline.'
+          fi
+          gh release upload shorts-media "output/media/${MEDIA_FILENAME}#${MEDIA_FILENAME}" --clobber
+
+      - name: Wait for unique public MP4
+        if: steps.ready.outputs.has_ready == 'true'
+        env:
+          MEDIA_URL: https://github.com/${{ github.repository }}/releases/download/shorts-media/${{ steps.media.outputs.filename }}
         run: |
           echo "Waiting for $MEDIA_URL"
-          for i in 1 2 3 4 5 6; do
+          for i in 1 2 3 4 5 6 7 8; do
             if curl -fLsS -o /dev/null "$MEDIA_URL"; then
               exit 0
             fi
             sleep 10
           done
-          echo "Media URL did not become reachable"
+          echo "Unique media URL did not become reachable"
           exit 1
 
       - name: Schedule YouTube Short through Buffer
@@ -117,7 +136,7 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
-          MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
+          MEDIA_URL: https://github.com/${{ github.repository }}/releases/download/shorts-media/${{ steps.media.outputs.filename }}
         run: python src/main_fixed.py publish
 
       - name: Commit scheduling state
@@ -130,6 +149,32 @@ jobs:
             git commit -m '[skip ci] chore: record Buffer scheduled short'
             git push
           fi
+
+      - name: Clean release media older than 14 days
+        if: steps.ready.outputs.has_ready == 'true' && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          from datetime import datetime, timedelta, timezone
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+          data = subprocess.check_output([
+              'gh', 'api', f'repos/{repo}/releases/tags/shorts-media'
+          ], text=True)
+          release = json.loads(data)
+          for asset in release.get('assets', []):
+              created = datetime.fromisoformat(asset['created_at'].replace('Z', '+00:00'))
+              if created < cutoff:
+                  subprocess.run([
+                      'gh', 'api', '-X', 'DELETE',
+                      f"repos/{repo}/releases/assets/{asset['id']}"
+                  ], check=True)
+                  print('deleted old media asset:', asset.get('name'))
+          PY
 
       - name: Upload render artifact
         if: steps.ready.outputs.has_ready == 'true' && always()
