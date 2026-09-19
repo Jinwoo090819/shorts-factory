@@ -99,29 +99,57 @@ def split_caption_fixed(text):
     return blocks or [text]
 
 
-def make_srt_fixed(text, duration, output):
+def _ass_time(seconds):
+    centiseconds = max(0, int(round(seconds * 100)))
+    hours, centiseconds = divmod(centiseconds, 360000)
+    minutes, centiseconds = divmod(centiseconds, 6000)
+    secs, centiseconds = divmod(centiseconds, 100)
+    return f"{hours}:{minutes:02}:{secs:02}.{centiseconds:02}"
+
+
+def _ass_text(text):
+    # Protect literal ASS control characters while preserving our own line breaks.
+    text = text.replace("\\", "／").replace("{", "(").replace("}", ")")
+    return text.replace("\n", r"\N")
+
+
+def make_ass_fixed(text, duration, output):
     chunks = split_caption_fixed(text)
     if not chunks:
         raise RuntimeError("No subtitle chunks generated")
 
-    # Weight timing by spoken-character count while ignoring line breaks/spaces.
     weights = [max(len(re.sub(r"\s", "", chunk)), 6) for chunk in chunks]
     total = sum(weights)
     cursor = 0.0
-    lines = []
 
+    header = """[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shorts,Noto Sans CJK KR,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,5,1,2,120,120,220,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+"""
+
+    events = []
     for i, (chunk, weight) in enumerate(zip(chunks, weights), start=1):
         span = duration * weight / total
         end = duration if i == len(chunks) else min(duration, cursor + span)
-        lines.extend([
-            str(i),
-            f"{factory.srt_time(cursor)} --> {factory.srt_time(end)}",
-            chunk,
-            "",
-        ])
+        caption = _ass_text(chunk)
+        # Subtle transition on every caption change: quick 94% -> 100% pop + short fade.
+        effect = r"{\fad(80,60)\fscx94\fscy94\t(0,120,\fscx100\fscy100)}"
+        events.append(
+            f"Dialogue: 0,{_ass_time(cursor)},{_ass_time(end)},Shorts,,0,0,0,,{effect}{caption}"
+        )
         cursor = end
 
-    output.write_text("\n".join(lines), encoding="utf-8")
+    output.write_text(header + "\n".join(events) + "\n", encoding="utf-8")
 
 
 def _has_audio(path):
@@ -141,17 +169,15 @@ def _has_audio(path):
     return bool(data.get("streams"))
 
 
-def render_fixed(video, audio, srt, output):
+def render_fixed(video, audio, subtitles, output):
     duration = factory.ffprobe_duration(audio)
-    subtitle_path = str(srt).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+    subtitle_path = str(subtitles).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
 
     video_chain = (
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920,"
         "eq=brightness=-0.08:saturation=0.9,"
-        f"subtitles='{subtitle_path}':force_style='FontName=Noto Sans CJK KR,FontSize=17,"
-        "PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=3,Shadow=1,"
-        "Alignment=2,MarginL=120,MarginR=120,MarginV=220'"
+        f"subtitles='{subtitle_path}'"
     )
 
     # Input 0 = Pexels video, input 1 = Edge TTS narration.
@@ -206,7 +232,7 @@ def build_one_long():
 
     audio = factory.OUT / "narration.mp3"
     broll = factory.OUT / "broll.mp4"
-    subtitles = factory.OUT / "captions.srt"
+    subtitles = factory.OUT / "captions.ass"
     final = factory.OUT / "short.mp4"
 
     asyncio.run(factory.make_tts(script, audio))
@@ -220,7 +246,7 @@ def build_one_long():
             f"Narration is too long ({duration:.1f}s). Maximum is {MAX_NARRATION_SECONDS:.0f}s."
         )
 
-    factory.make_srt(script, duration, subtitles)
+    make_ass_fixed(script, duration, subtitles)
     media_credit = factory.pexels_video(queries, broll)
     factory.render(broll, audio, subtitles, final)
 
@@ -272,7 +298,6 @@ def build_one_long():
 factory.select_ready_script = select_ready_script_with_slot
 factory.next_publish_time = next_publish_time_for_slot
 factory.split_caption = split_caption_fixed
-factory.make_srt = make_srt_fixed
 factory.render = render_fixed
 factory.build_one = build_one_long
 factory.main()
