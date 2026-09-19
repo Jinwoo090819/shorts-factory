@@ -104,12 +104,13 @@ jobs:
         run: |
           NAME="storage-test-${GITHUB_RUN_ID}.mp4"
           echo "filename=$NAME" >> "$GITHUB_OUTPUT"
+          cp output/short.mp4 "output/${NAME}"
           if ! gh release view shorts-media >/dev/null 2>&1; then
             gh release create shorts-media \
               --title 'Shorts media staging' \
               --notes 'Temporary uniquely named media files used by the automated Shorts publishing pipeline.'
           fi
-          gh release upload shorts-media "output/short.mp4#${NAME}" --clobber
+          gh release upload shorts-media "output/${NAME}" --clobber
 
       - name: Validate unique public media URL
         env:
@@ -134,12 +135,16 @@ jobs:
           NAME: ${{ steps.storage.outputs.filename }}
         shell: bash
         run: |
-          if [ -z "$NAME" ]; then
-            exit 0
+          if [ -n "$NAME" ]; then
+            ASSET_ID=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/shorts-media" --jq ".assets[] | select(.name == \"$NAME\") | .id" | head -n1 || true)
+            if [ -n "$ASSET_ID" ]; then
+              gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/assets/${ASSET_ID}"
+            fi
           fi
-          ASSET_ID=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/shorts-media" --jq ".assets[] | select(.name == \"$NAME\") | .id" | head -n1 || true)
-          if [ -n "$ASSET_ID" ]; then
-            gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/assets/${ASSET_ID}"
+          # Remove the stray asset left by the first storage test, if present.
+          OLD_ID=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/shorts-media" --jq '.assets[] | select(.name == "short.mp4") | .id' | head -n1 || true)
+          if [ -n "$OLD_ID" ]; then
+            gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/assets/${OLD_ID}"
           fi
 
       - name: Upload test artifact
