@@ -1,7 +1,35 @@
 import json
+import re
 import subprocess
 
 import main as factory
+
+
+ORIGINAL_SELECT_READY_SCRIPT = factory.select_ready_script
+CURRENT_TARGET_PUBLISH_TIME = "19:00"
+
+
+def select_ready_script_with_slot():
+    global CURRENT_TARGET_PUBLISH_TIME
+    result = ORIGINAL_SELECT_READY_SCRIPT()
+    content = result[2]
+    target = str(content.get("target_publish_time") or "19:00").strip()
+    if not re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", target):
+        raise RuntimeError(f"Invalid target_publish_time: {target}")
+    CURRENT_TARGET_PUBLISH_TIME = target
+    return result
+
+
+def next_publish_time_for_slot():
+    now = factory.datetime.now(factory.KST)
+    hour, minute = [int(x) for x in CURRENT_TARGET_PUBLISH_TIME.split(":", 1)]
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+
+    # If rendering/Buffer work runs close to or after the slot, publish shortly
+    # instead of postponing the video to the next day.
+    if now >= target - factory.timedelta(minutes=10):
+        target = now + factory.timedelta(minutes=5)
+    return target
 
 
 def _has_audio(path):
@@ -69,7 +97,7 @@ def render_fixed(video, audio, srt, output):
         raise RuntimeError("Rendered MP4 has no audio stream")
 
 
-# main.py already generates narration with Edge TTS.
-# Only override rendering so narration is guaranteed to be the final main audio.
+factory.select_ready_script = select_ready_script_with_slot
+factory.next_publish_time = next_publish_time_for_slot
 factory.render = render_fixed
 factory.main()
