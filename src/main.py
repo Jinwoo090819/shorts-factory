@@ -172,7 +172,7 @@ def pexels_video(queries, output: Path):
     for query_text in [q for q in queries if q]:
         try:
             r = requests.get(
-                "https://api.pexels.com/videos/search",
+                "https://api.pexels.com/v1/videos/search",
                 params={"query": query_text, "orientation": "portrait", "per_page": 8},
                 headers={"Authorization": api_key},
                 timeout=30,
@@ -181,6 +181,8 @@ def pexels_video(queries, output: Path):
             videos = r.json().get("videos", [])
             candidates = []
             for video in videos:
+                video_url = str(video.get("url") or "")
+                creator = str(((video.get("user") or {}).get("name")) or "")
                 for f in video.get("video_files", []):
                     if f.get("file_type") != "video/mp4":
                         continue
@@ -188,18 +190,22 @@ def pexels_video(queries, output: Path):
                     height = f.get("height") or 0
                     link = f.get("link")
                     if link and height >= width and height >= 720:
-                        candidates.append((width * height, link))
+                        candidates.append((width * height, link, video_url, creator))
             if not candidates:
                 raise RuntimeError(f"No portrait MP4 found for: {query_text}")
-            candidates.sort(reverse=True)
-            link = candidates[0][1]
+            candidates.sort(reverse=True, key=lambda x: x[0])
+            _, link, video_url, creator = candidates[0]
             with requests.get(link, stream=True, timeout=90) as vr:
                 vr.raise_for_status()
                 with output.open("wb") as f:
                     for chunk in vr.iter_content(1024 * 1024):
                         if chunk:
                             f.write(chunk)
-            return query_text
+            return {
+                "query": query_text,
+                "video_url": video_url,
+                "creator": creator,
+            }
         except Exception as exc:
             last_error = exc
     raise RuntimeError(f"Pexels search failed for all queries: {last_error}")
@@ -300,15 +306,24 @@ def build_one():
     if duration < 12 or duration > 45:
         raise RuntimeError(f"Unexpected narration duration: {duration:.1f}s")
     make_srt(script, duration, subtitles)
-    used_query = pexels_video(queries, broll)
+    media_credit = pexels_video(queries, broll)
     render(broll, audio, subtitles, final)
 
     publish_at = next_publish_time()
     source_lines = [x for x in [source_1, source_2] if x]
+    credit = "영상 소스: Pexels"
+    if media_credit.get("creator"):
+        credit += f" / {media_credit['creator']}"
+    if media_credit.get("video_url"):
+        credit += f"\n{media_credit['video_url']}"
+    else:
+        credit += "\nhttps://www.pexels.com"
+
     description = (
         f"{fact}\n\n"
         + ("출처:\n" + "\n".join(source_lines) + "\n\n" if source_lines else "")
-        + "#잡지식 #상식 #shorts"
+        + credit
+        + "\n\n#잡지식 #상식 #shorts"
     )
     video_id = upload_youtube(final, title, description, publish_at)
 
@@ -323,7 +338,9 @@ def build_one():
         "title": title,
         "source_1": source_1,
         "source_2": source_2,
-        "pexels_query_used": used_query,
+        "pexels_query_used": media_credit.get("query"),
+        "pexels_video_url": media_credit.get("video_url"),
+        "pexels_creator": media_credit.get("creator"),
         "youtube_id": video_id,
     })
 
