@@ -1,0 +1,14 @@
+{
+  "fact_key": "octopus_three_hearts",
+  "category": "동물",
+  "fact": "문어를 포함한 두족류는 심장이 3개이며, 하나는 몸 전체로 혈액을 보내고 두 개는 아가미 쪽으로 혈액을 보냅니다.",
+  "script": "그거 아세요? 문어는 심장이 하나가 아니라 세 개입니다. 그중 하나는 산소를 받은 피를 몸 전체로 보내고, 나머지 두 개는 피를 아가미로 보내는 역할을 해요. 그래서 문어 몸속에서는 심장 세 개가 서로 다른 일을 나눠서 하고 있는 셈입니다.",
+  "source_1": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives",
+  "source_2": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/day-octopus",
+  "pexels_query_1": "octopus underwater",
+  "pexels_query_2": "octopus ocean",
+  "pexels_query_3": "cephalopod underwater",
+  "title": "문어의 심장은 왜 3개일까?",
+  "status": "ready",
+  "created_at": "2026-09-19T12:35:00+09:00"
+}
