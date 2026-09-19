@@ -2,17 +2,23 @@ name: Daily Shorts Factory
 
 on:
   schedule:
-    # 07:30 UTC = 16:30 KST. Build early, then schedule YouTube for 19:00 KST.
+    # 07:30 UTC = 16:30 KST. Build first, then Buffer schedules 19:00 KST.
     - cron: '30 7 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+  actions: read
 
 jobs:
-  build-and-upload:
+  build-stage-schedule:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     env:
       TZ: Asia/Seoul
       OUTPUT_DIR: output
@@ -34,22 +40,52 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Build and upload Short
+      - name: Build Short
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-        run: python src/main.py
+        run: python src/main.py build
 
-      - name: Commit publication state
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload media staging site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy media staging site
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for public MP4
+        env:
+          MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
+        run: |
+          echo "Waiting for $MEDIA_URL"
+          for i in 1 2 3 4 5 6; do
+            if curl -fLsS -o /dev/null "$MEDIA_URL"; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Media URL did not become reachable"
+          exit 1
+
+      - name: Schedule YouTube Short through Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
+          MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
+        run: python src/main.py publish
+
+      - name: Commit scheduling state
         if: success()
         run: |
           git config user.name 'shorts-factory-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/history.json data/scripts || true
           if ! git diff --cached --quiet; then
-            git commit -m 'chore: record published short'
+            git commit -m 'chore: record Buffer scheduled short'
             git push
           fi
 
