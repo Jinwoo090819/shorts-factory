@@ -10,6 +10,7 @@ ORIGINAL_SELECT_READY_SCRIPT = factory.select_ready_script
 CURRENT_TARGET_PUBLISH_TIME = "19:00"
 MIN_NARRATION_SECONDS = 50.0
 MAX_NARRATION_SECONDS = 85.0
+SUBTITLE_MAX_LINE_WIDTH = 15.0
 
 
 def select_ready_script_with_slot():
@@ -33,6 +34,94 @@ def next_publish_time_for_slot():
     if now >= target - factory.timedelta(minutes=10):
         target = now + factory.timedelta(minutes=5)
     return target
+
+
+def _visual_width(text):
+    """Approximate on-screen width. Korean/CJK glyphs count as 1, ASCII as narrower."""
+    width = 0.0
+    for ch in text:
+        if ch.isspace():
+            width += 0.45
+        elif ord(ch) < 128:
+            width += 0.58
+        else:
+            width += 1.0
+    return width
+
+
+def _wrap_sentence_two_lines(sentence):
+    """Return caption blocks with at most 2 lines and never split a word."""
+    words = sentence.split()
+    if not words:
+        return []
+
+    blocks = []
+    lines = []
+    current = ""
+
+    for word in words:
+        candidate = word if not current else f"{current} {word}"
+        if not current or _visual_width(candidate) <= SUBTITLE_MAX_LINE_WIDTH:
+            current = candidate
+            continue
+
+        lines.append(current)
+        current = word
+
+        if len(lines) == 2:
+            blocks.append("\n".join(lines))
+            lines = []
+
+    if current:
+        lines.append(current)
+    if lines:
+        blocks.append("\n".join(lines[:2]))
+
+    return blocks
+
+
+def split_caption_fixed(text):
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return []
+
+    # Keep sentence punctuation attached so captions end at natural semantic boundaries.
+    sentences = [
+        x.strip()
+        for x in re.split(r"(?<=[.!?。！？])\s+", text)
+        if x.strip()
+    ]
+
+    blocks = []
+    for sentence in sentences:
+        blocks.extend(_wrap_sentence_two_lines(sentence))
+
+    return blocks or [text]
+
+
+def make_srt_fixed(text, duration, output):
+    chunks = split_caption_fixed(text)
+    if not chunks:
+        raise RuntimeError("No subtitle chunks generated")
+
+    # Weight timing by spoken-character count while ignoring line breaks/spaces.
+    weights = [max(len(re.sub(r"\s", "", chunk)), 6) for chunk in chunks]
+    total = sum(weights)
+    cursor = 0.0
+    lines = []
+
+    for i, (chunk, weight) in enumerate(zip(chunks, weights), start=1):
+        span = duration * weight / total
+        end = duration if i == len(chunks) else min(duration, cursor + span)
+        lines.extend([
+            str(i),
+            f"{factory.srt_time(cursor)} --> {factory.srt_time(end)}",
+            chunk,
+            "",
+        ])
+        cursor = end
+
+    output.write_text("\n".join(lines), encoding="utf-8")
 
 
 def _has_audio(path):
@@ -60,9 +149,9 @@ def render_fixed(video, audio, srt, output):
         "scale=1080:1920:force_original_aspect_ratio=increase,"
         "crop=1080:1920,"
         "eq=brightness=-0.08:saturation=0.9,"
-        f"subtitles='{subtitle_path}':force_style='FontName=Noto Sans CJK KR,FontSize=18,"
+        f"subtitles='{subtitle_path}':force_style='FontName=Noto Sans CJK KR,FontSize=17,"
         "PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=3,Shadow=1,"
-        "Alignment=2,MarginV=210'"
+        "Alignment=2,MarginL=120,MarginR=120,MarginV=220'"
     )
 
     # Input 0 = Pexels video, input 1 = Edge TTS narration.
@@ -182,6 +271,8 @@ def build_one_long():
 
 factory.select_ready_script = select_ready_script_with_slot
 factory.next_publish_time = next_publish_time_for_slot
+factory.split_caption = split_caption_fixed
+factory.make_srt = make_srt_fixed
 factory.render = render_fixed
 factory.build_one = build_one_long
 factory.main()
