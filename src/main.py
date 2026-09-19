@@ -1,12 +1,10 @@
 import asyncio
 import json
 import os
-import random
 import re
 import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
-from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 import edge_tts
@@ -18,12 +16,13 @@ from googleapiclient.http import MediaFileUpload
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / os.getenv("OUTPUT_DIR", "output")
 DATA = ROOT / "data"
+SCRIPTS = DATA / "scripts"
 OUT.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
+SCRIPTS.mkdir(parents=True, exist_ok=True)
 HISTORY_PATH = DATA / "history.json"
 
 KST = ZoneInfo("Asia/Seoul")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 VOICE = os.getenv("TTS_VOICE", "ko-KR-SunHiNeural")
 
 BLOCKED = {
@@ -51,96 +50,63 @@ def load_history():
 def save_history(item):
     history = load_history()
     history.append(item)
-    HISTORY_PATH.write_text(json.dumps(history[-300:], ensure_ascii=False, indent=2), encoding="utf-8")
+    HISTORY_PATH.write_text(
+        json.dumps(history[-300:], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
-def safe_source(text: str) -> bool:
+def safe_text(text: str) -> bool:
     lowered = text.lower()
     return not any(word.lower() in lowered for word in BLOCKED)
 
 
-def get_wikipedia_candidate():
-    history = load_history()
-    used_titles = {x.get("source_title") for x in history}
-    headers = {"User-Agent": "shorts-factory/1.0 (educational automation)"}
+def _normalize_script_payload(raw, path: Path):
+    if isinstance(raw, list):
+        candidates = raw
+    elif isinstance(raw, dict):
+        candidates = [raw]
+    else:
+        return []
 
-    for _ in range(15):
-        r = requests.get(
-            "https://ko.wikipedia.org/api/rest_v1/page/random/summary",
-            headers=headers,
-            timeout=20,
-        )
-        r.raise_for_status()
-        data = r.json()
-        title = (data.get("title") or "").strip()
-        extract = (data.get("extract") or "").strip()
-        page_url = ((data.get("content_urls") or {}).get("desktop") or {}).get("page", "")
-        if not title or len(extract) < 140 or title in used_titles:
+    out = []
+    for index, item in enumerate(candidates):
+        if not isinstance(item, dict):
             continue
-        if not safe_source(title + " " + extract):
+        if str(item.get("status", "ready")).lower() != "ready":
             continue
-        if data.get("type") == "disambiguation":
+        script = str(item.get("script", "")).strip()
+        if not script.startswith("그거 아세요?"):
             continue
-        return {"title": title, "extract": extract, "url": page_url}
+        if not safe_text(script):
+            continue
+        out.append((path, index, item, raw))
+    return out
 
-    raise RuntimeError("Could not find a suitable Wikipedia source after retries")
+
+def select_ready_script():
+    for path in sorted(SCRIPTS.glob("*.json")):
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        candidates = _normalize_script_payload(raw, path)
+        if candidates:
+            return candidates[0]
+    raise RuntimeError("No ready script found in data/scripts")
 
 
-def call_gemini(source):
-    api_key = required("GEMINI_API_KEY")
-    url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent?key={api_key}"
-    )
-    prompt = f"""
-너는 한국어 YouTube Shorts 잡지식 편집자다.
-아래 '출처 원문'에 명시된 사실만 사용한다. 원문에 없는 숫자, 원인, 추론, 인물 관계를 새로 만들지 마라.
-출처가 애매하거나 한 가지 흥미로운 사실을 안전하게 만들 수 없으면 usable=false로 답해라.
-
-콘텐츠 규칙:
-- 첫 문장은 정확히 '그거 아세요?'
-- 한 영상에 사실 하나만
-- 자연스러운 한국어 구어체
-- 약 20~30초 분량, 130~220자 정도
-- 구조: 그거 아세요? → 사실 공개 → 왜/어떻게 설명 → 마지막 한 방
-- 과장, 공포 조장, 음모론, 위험 행동, 성인 주제 금지
-- 제목은 짧고 호기심을 유발하되 낚시성 금지
-- pexels_query는 영상 검색용 영어 명사구 2~5단어
-
-출처 제목: {source['title']}
-출처 원문:
-{source['extract']}
-
-반드시 아래 JSON 형식으로만 답해라:
-{{
-  "usable": true,
-  "fact": "한 문장 사실",
-  "script": "그거 아세요? ...",
-  "title": "쇼츠 제목",
-  "pexels_query": "english search phrase"
-}}
-""".strip()
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.35,
-            "responseMimeType": "application/json",
-        },
-    }
-    r = requests.post(url, json=payload, timeout=60)
-    r.raise_for_status()
-    obj = r.json()
-    text = obj["candidates"][0]["content"]["parts"][0]["text"]
-    result = json.loads(text)
-    if not result.get("usable"):
-        raise ValueError("Gemini rejected source as unusable")
-    script = str(result.get("script", "")).strip()
-    if not script.startswith("그거 아세요?"):
-        raise ValueError("Script does not start with required hook")
-    if not safe_source(script):
-        raise ValueError("Generated script hit safety filter")
-    result["title"] = str(result.get("title", "잡지식 한 스푼"))[:85]
-    return result
+def mark_script_published(path: Path, index: int, raw, youtube_id: str, publish_at: datetime):
+    now = datetime.now(KST).isoformat()
+    if isinstance(raw, list):
+        target = raw[index]
+    else:
+        target = raw
+    target["status"] = "published"
+    target["youtube_id"] = youtube_id
+    target["publish_at"] = publish_at.isoformat()
+    target["used_at"] = now
+    path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 async def make_tts(text: str, output: Path):
@@ -200,38 +166,43 @@ def make_srt(text: str, duration: float, output: Path):
     output.write_text("\n".join(lines), encoding="utf-8")
 
 
-def pexels_video(query_text: str, output: Path):
+def pexels_video(queries, output: Path):
     api_key = required("PEXELS_API_KEY")
-    r = requests.get(
-        "https://api.pexels.com/videos/search",
-        params={"query": query_text, "orientation": "portrait", "per_page": 8},
-        headers={"Authorization": api_key},
-        timeout=30,
-    )
-    r.raise_for_status()
-    videos = r.json().get("videos", [])
-    if not videos:
-        raise RuntimeError(f"No Pexels videos found for query: {query_text}")
-
-    candidates = []
-    for video in videos:
-        for f in video.get("video_files", []):
-            if f.get("file_type") != "video/mp4":
-                continue
-            width = f.get("width") or 0
-            height = f.get("height") or 0
-            if height >= width and height >= 720:
-                candidates.append((width * height, f.get("link")))
-    if not candidates:
-        raise RuntimeError("No suitable portrait MP4 found on Pexels")
-    candidates.sort(reverse=True)
-    link = candidates[0][1]
-    with requests.get(link, stream=True, timeout=90) as vr:
-        vr.raise_for_status()
-        with output.open("wb") as f:
-            for chunk in vr.iter_content(1024 * 1024):
-                if chunk:
-                    f.write(chunk)
+    last_error = None
+    for query_text in [q for q in queries if q]:
+        try:
+            r = requests.get(
+                "https://api.pexels.com/videos/search",
+                params={"query": query_text, "orientation": "portrait", "per_page": 8},
+                headers={"Authorization": api_key},
+                timeout=30,
+            )
+            r.raise_for_status()
+            videos = r.json().get("videos", [])
+            candidates = []
+            for video in videos:
+                for f in video.get("video_files", []):
+                    if f.get("file_type") != "video/mp4":
+                        continue
+                    width = f.get("width") or 0
+                    height = f.get("height") or 0
+                    link = f.get("link")
+                    if link and height >= width and height >= 720:
+                        candidates.append((width * height, link))
+            if not candidates:
+                raise RuntimeError(f"No portrait MP4 found for: {query_text}")
+            candidates.sort(reverse=True)
+            link = candidates[0][1]
+            with requests.get(link, stream=True, timeout=90) as vr:
+                vr.raise_for_status()
+                with output.open("wb") as f:
+                    for chunk in vr.iter_content(1024 * 1024):
+                        if chunk:
+                            f.write(chunk)
+            return query_text
+        except Exception as exc:
+            last_error = exc
+    raise RuntimeError(f"Pexels search failed for all queries: {last_error}")
 
 
 def render(video: Path, audio: Path, srt: Path, output: Path):
@@ -279,7 +250,7 @@ def upload_youtube(video: Path, title: str, description: str, publish_at: dateti
     youtube = youtube_client()
     body = {
         "snippet": {
-            "title": title,
+            "title": title[:100],
             "description": description,
             "categoryId": "27",
             "tags": ["잡지식", "상식", "shorts"],
@@ -287,9 +258,15 @@ def upload_youtube(video: Path, title: str, description: str, publish_at: dateti
         "status": {
             "privacyStatus": "private",
             "publishAt": publish_at.isoformat(),
+            "selfDeclaredMadeForKids": False,
         },
     }
-    media = MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True, mimetype="video/mp4")
+    media = MediaFileUpload(
+        str(video),
+        chunksize=8 * 1024 * 1024,
+        resumable=True,
+        mimetype="video/mp4",
+    )
     request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
     response = None
     while response is None:
@@ -298,52 +275,64 @@ def upload_youtube(video: Path, title: str, description: str, publish_at: dateti
 
 
 def build_one():
-    last_error = None
-    for _ in range(6):
-        try:
-            source = get_wikipedia_candidate()
-            content = call_gemini(source)
-            break
-        except Exception as exc:
-            last_error = exc
-    else:
-        raise RuntimeError(f"Could not generate a valid short: {last_error}")
+    script_path, script_index, content, raw = select_ready_script()
+    script = str(content["script"]).strip()
+    title = str(content.get("title") or "오늘의 잡지식").strip()
+    fact = str(content.get("fact") or "").strip()
+    source_1 = str(content.get("source_1") or "").strip()
+    source_2 = str(content.get("source_2") or "").strip()
+    queries = [
+        str(content.get("pexels_query_1") or "").strip(),
+        str(content.get("pexels_query_2") or "").strip(),
+        str(content.get("pexels_query_3") or "").strip(),
+    ]
+
+    if not any(queries):
+        raise RuntimeError("Selected script has no Pexels search queries")
 
     audio = OUT / "narration.mp3"
     broll = OUT / "broll.mp4"
     subtitles = OUT / "captions.srt"
     final = OUT / "short.mp4"
 
-    asyncio.run(make_tts(content["script"], audio))
+    asyncio.run(make_tts(script, audio))
     duration = ffprobe_duration(audio)
     if duration < 12 or duration > 45:
         raise RuntimeError(f"Unexpected narration duration: {duration:.1f}s")
-    make_srt(content["script"], duration, subtitles)
-    pexels_video(content["pexels_query"], broll)
+    make_srt(script, duration, subtitles)
+    used_query = pexels_video(queries, broll)
     render(broll, audio, subtitles, final)
 
     publish_at = next_publish_time()
+    source_lines = [x for x in [source_1, source_2] if x]
     description = (
-        f"{content['fact']}\n\n"
-        f"출처: {source['url']}\n"
-        "#잡지식 #상식 #shorts"
+        f"{fact}\n\n"
+        + ("출처:\n" + "\n".join(source_lines) + "\n\n" if source_lines else "")
+        + "#잡지식 #상식 #shorts"
     )
-    video_id = upload_youtube(final, content["title"], description, publish_at)
+    video_id = upload_youtube(final, title, description, publish_at)
+
+    mark_script_published(script_path, script_index, raw, video_id, publish_at)
     save_history({
         "created_at": datetime.now(KST).isoformat(),
         "publish_at": publish_at.isoformat(),
-        "source_title": source["title"],
-        "source_url": source["url"],
-        "fact": content["fact"],
-        "title": content["title"],
+        "script_file": str(script_path.relative_to(ROOT)),
+        "fact_key": content.get("fact_key"),
+        "category": content.get("category"),
+        "fact": fact,
+        "title": title,
+        "source_1": source_1,
+        "source_2": source_2,
+        "pexels_query_used": used_query,
         "youtube_id": video_id,
     })
+
     print(json.dumps({
         "ok": True,
         "youtube_id": video_id,
         "publish_at": publish_at.isoformat(),
-        "title": content["title"],
-        "source": source["url"],
+        "title": title,
+        "script_file": str(script_path.relative_to(ROOT)),
     }, ensure_ascii=False, indent=2))
 
 
