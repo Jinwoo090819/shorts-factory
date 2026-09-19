@@ -9,10 +9,11 @@
   "pexels_query_2": "octopus ocean",
   "pexels_query_3": "cephalopod underwater",
   "title": "문어의 심장은 왜 3개일까?",
-  "status": "scheduled",
+  "status": "published",
   "created_at": "2026-09-19T12:35:00+09:00",
   "buffer_post_id": "6aae053165e5b8cd5b27bcc7",
-  "publish_at": "2026-09-19T19:00:00+09:00",
+  "publish_at": "2026-09-19T12:48:34+09:00",
   "media_url": "https://jinwoo090819.github.io/shorts-factory/short.mp4",
-  "scheduled_at": "2026-09-19T12:44:49.223437+09:00"
+  "scheduled_at": "2026-09-19T12:44:49.223437+09:00",
+  "youtube_url": "https://www.youtube.com/watch?v=vWHo3eHiyrg"
 }
