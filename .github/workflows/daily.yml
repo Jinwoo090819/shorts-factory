@@ -68,11 +68,11 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
 
-      - name: Build Short
+      - name: Build Short with forced TTS + generated BGM
         if: steps.ready.outputs.has_ready == 'true'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-        run: python src/main.py build
+        run: python src/main_fixed.py build
 
       - name: Configure GitHub Pages
         if: steps.ready.outputs.has_ready == 'true'
@@ -110,7 +110,7 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
           MEDIA_URL: ${{ steps.deployment.outputs.page_url }}short.mp4
-        run: python src/main.py publish
+        run: python src/main_fixed.py publish
 
       - name: Commit scheduling state
         if: steps.ready.outputs.has_ready == 'true' && success()
