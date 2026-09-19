@@ -2,12 +2,19 @@ name: Daily Shorts Factory
 
 on:
   schedule:
-    # 07:30 UTC = 16:30 KST. Backup retry if a ready script still exists.
-    - cron: '30 7 * * *'
+    # Backup retries for the three daily publishing slots (KST).
+    # 22:00 UTC = 07:00 KST, 03:00 UTC = 12:00 KST, 09:00 UTC = 18:00 KST.
+    - cron: '0 22 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
   push:
     paths:
       - 'data/scripts/**'
+
+concurrency:
+  group: shorts-factory
+  cancel-in-progress: false
 
 permissions:
   contents: write
