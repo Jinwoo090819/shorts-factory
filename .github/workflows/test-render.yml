@@ -3,6 +3,7 @@ name: Multi B-roll Render Test
 on:
   push:
     paths:
+      - '.github/workflows/test-render.yml'
       - 'ops/render-test-trigger.txt'
   workflow_dispatch:
 
