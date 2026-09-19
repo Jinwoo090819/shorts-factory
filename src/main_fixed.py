@@ -1,3 +1,4 @@
+import asyncio
 import json
 import re
 import subprocess
@@ -7,6 +8,8 @@ import main as factory
 
 ORIGINAL_SELECT_READY_SCRIPT = factory.select_ready_script
 CURRENT_TARGET_PUBLISH_TIME = "19:00"
+MIN_NARRATION_SECONDS = 50.0
+MAX_NARRATION_SECONDS = 85.0
 
 
 def select_ready_script_with_slot():
@@ -97,7 +100,88 @@ def render_fixed(video, audio, srt, output):
         raise RuntimeError("Rendered MP4 has no audio stream")
 
 
+def build_one_long():
+    script_path, script_index, content, _raw = factory.select_ready_script()
+    script = str(content["script"]).strip()
+    title = str(content.get("title") or "오늘의 잡지식").strip()
+    fact = str(content.get("fact") or "").strip()
+    source_1 = str(content.get("source_1") or "").strip()
+    source_2 = str(content.get("source_2") or "").strip()
+    queries = [
+        str(content.get("pexels_query_1") or "").strip(),
+        str(content.get("pexels_query_2") or "").strip(),
+        str(content.get("pexels_query_3") or "").strip(),
+    ]
+    if not any(queries):
+        raise RuntimeError("Selected script has no Pexels search queries")
+
+    audio = factory.OUT / "narration.mp3"
+    broll = factory.OUT / "broll.mp4"
+    subtitles = factory.OUT / "captions.srt"
+    final = factory.OUT / "short.mp4"
+
+    asyncio.run(factory.make_tts(script, audio))
+    duration = factory.ffprobe_duration(audio)
+    if duration < MIN_NARRATION_SECONDS:
+        raise RuntimeError(
+            f"Narration is too short ({duration:.1f}s). Minimum is {MIN_NARRATION_SECONDS:.0f}s."
+        )
+    if duration > MAX_NARRATION_SECONDS:
+        raise RuntimeError(
+            f"Narration is too long ({duration:.1f}s). Maximum is {MAX_NARRATION_SECONDS:.0f}s."
+        )
+
+    factory.make_srt(script, duration, subtitles)
+    media_credit = factory.pexels_video(queries, broll)
+    factory.render(broll, audio, subtitles, final)
+
+    publish_at = factory.next_publish_time()
+    source_lines = [x for x in [source_1, source_2] if x]
+    credit = "영상 소스: Pexels"
+    if media_credit.get("creator"):
+        credit += f" / {media_credit['creator']}"
+    if media_credit.get("video_url"):
+        credit += f"\n{media_credit['video_url']}"
+    else:
+        credit += "\nhttps://www.pexels.com"
+
+    description = (
+        f"{fact}\n\n"
+        + ("출처:\n" + "\n".join(source_lines) + "\n\n" if source_lines else "")
+        + credit
+        + "\n\n#잡지식 #상식 #shorts"
+    )
+
+    (factory.SITE / "short.mp4").write_bytes(final.read_bytes())
+    (factory.SITE / "index.html").write_text(
+        "<!doctype html><meta charset='utf-8'><title>shorts-factory media</title><p>Media staging endpoint.</p>",
+        encoding="utf-8",
+    )
+
+    metadata = {
+        "script_file": str(script_path.relative_to(factory.ROOT)),
+        "script_index": script_index,
+        "fact_key": content.get("fact_key"),
+        "category": content.get("category"),
+        "fact": fact,
+        "title": title,
+        "description": description,
+        "source_1": source_1,
+        "source_2": source_2,
+        "pexels_query_used": media_credit.get("query"),
+        "pexels_video_url": media_credit.get("video_url"),
+        "pexels_creator": media_credit.get("creator"),
+        "narration_duration_seconds": round(duration, 3),
+        "publish_at": publish_at.isoformat(),
+    }
+    factory.POST_META_PATH.write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(json.dumps({"ok": True, "stage": "built", **metadata}, ensure_ascii=False, indent=2))
+
+
 factory.select_ready_script = select_ready_script_with_slot
 factory.next_publish_time = next_publish_time_for_slot
 factory.render = render_fixed
+factory.build_one = build_one_long
 factory.main()
