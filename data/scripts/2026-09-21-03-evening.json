@@ -1,0 +1,16 @@
+{
+  "fact_key": "zero_is_even_number_definition",
+  "category": "교육·일상생활",
+  "fact": "0은 짝수다. 정수 n이 어떤 정수 k에 대해 n=2k로 표현되면 짝수인데, 0=2×0이므로 정의를 정확히 만족한다.",
+  "script": "그거 아세요? 0은 홀수도 짝수도 아닌 것처럼 느껴질 수 있지만, 수학에서는 명확한 짝수입니다. 짝수의 정의는 ‘2로 나눴을 때 양의 수가 나오는 수’가 아닙니다. 어떤 정수 k를 사용해 2 곱하기 k 형태로 쓸 수 있는 정수가 짝수입니다. 0은 2 곱하기 0으로 정확히 표현되니까 조건을 만족합니다. 또 정수를 2로 나눌 때 나머지가 0이면 짝수라고 보는 방식에서도 0의 나머지는 0입니다. 반대로 홀수는 2k+1 꼴이어야 하는데, 정수 k로 0을 그렇게 만들 수 없습니다. 헷갈리는 이유는 우리가 어릴 때 2, 4, 6처럼 양의 짝수부터 배우기 때문입니다. 하지만 음수인 -2와 -4도 짝수이고 0도 같은 규칙 안에 들어갑니다. 즉 ‘아무것도 없음’이라는 일상적 이미지와 숫자 0의 수학적 성질은 구분해야 합니다. 여러분은 처음부터 0도 짝수라고 생각했나요?",
+  "source_1": "https://mathworld.wolfram.com/EvenNumber.html",
+  "source_2": "https://www.math.wichita.edu/discrete-book/section-logic-proofs.html",
+  "pexels_query_1": "zero number chalkboard",
+  "pexels_query_2": "math classroom equations",
+  "pexels_query_3": "numbers calculator desk",
+  "title": "0은 짝수일까, 아무것도 아닐까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-21T05:02:43+09:00"
+}
