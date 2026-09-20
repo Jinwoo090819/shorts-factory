@@ -11,6 +11,10 @@
   "title": "토마토는 과일일까 채소일까? 둘 다 맞을 수 있다",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-20T05:00:30+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-20T05:00:30+09:00",
+  "buffer_post_id": "6aaf308a8d048c06b4f58468",
+  "publish_at": "2026-09-20T10:06:56.905331+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-20-01-morning-tomato_fruit_vs_vegetable_definition.mp4",
+  "scheduled_at": "2026-09-20T10:02:02.197312+09:00"
 }

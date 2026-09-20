@@ -38,5 +38,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://jinwoo090819.github.io/shorts-factory/short.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-20T10:02:02.197501+09:00",
+    "publish_at": "2026-09-20T10:06:56.905331+09:00",
+    "script_file": "data/scripts/2026-09-20-01-morning.json",
+    "fact_key": "tomato_fruit_vs_vegetable_definition",
+    "category": "음식",
+    "fact": "토마토는 식물학적으로는 꽃의 씨방에서 발달한 열매이므로 과실이지만, 요리에서는 사용 방식 때문에 채소로 분류되기도 하며 1893년 미국 연방대법원도 당시 관세법의 일상적 의미에서는 토마토를 채소로 판단했다.",
+    "title": "토마토는 과일일까 채소일까? 둘 다 맞을 수 있다",
+    "source_1": "https://www.nationalgeographic.com/culture/article/fruit-or-vegetable",
+    "source_2": "https://supreme.justia.com/cases/federal/us/149/304/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6aaf308a8d048c06b4f58468",
+    "buffer_due_at": "2026-09-20T01:06:56.905Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-20-01-morning-tomato_fruit_vs_vegetable_definition.mp4",
+    "status": "scheduled"
   }
 ]
