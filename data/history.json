@@ -78,5 +78,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-20-02-lunch-daylight_saving_energy_savings_debate.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-20T10:05:35.964024+09:00",
+    "publish_at": "2026-09-20T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-20-03-evening.json",
+    "fact_key": "space_boundary_80km_vs_100km",
+    "category": "물리·화학·우주",
+    "fact": "우주의 시작점은 전 세계가 하나의 고도로 합의한 경계가 아니다. 국제항공연맹(FAI)은 항공·우주 기록을 구분하는 카르만선을 해발 100km로 사용하지만, 미국에서는 50마일, 약 80km 기준도 우주비행·우주인 인정에 사용돼 왔다.",
+    "title": "우주는 80km부터일까, 100km부터일까?",
+    "source_1": "https://www.fai.org/sites/default/files/documents/annex_4_fai_icare_plenary_meeting-_karman_line_presentation._berend.pdf",
+    "source_2": "https://www.nationalgeographic.com/science/article/where-is-the-edge-of-space-and-what-is-the-karman-line",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6aaf315f13d908add20aed01",
+    "buffer_due_at": "2026-09-20T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-20-03-evening-space_boundary_80km_vs_100km.mp4",
+    "status": "scheduled"
   }
 ]
