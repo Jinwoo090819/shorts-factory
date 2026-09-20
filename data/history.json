@@ -138,5 +138,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-02-lunch-mirror_front_back_not_left_right.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-21T05:09:54.421792+09:00",
+    "publish_at": "2026-09-21T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-21-03-evening.json",
+    "fact_key": "zero_is_even_number_definition",
+    "category": "교육·일상생활",
+    "fact": "0은 짝수다. 정수 n이 어떤 정수 k에 대해 n=2k로 표현되면 짝수인데, 0=2×0이므로 정의를 정확히 만족한다.",
+    "title": "0은 짝수일까, 아무것도 아닐까?",
+    "source_1": "https://mathworld.wolfram.com/EvenNumber.html",
+    "source_2": "https://www.math.wichita.edu/discrete-book/section-logic-proofs.html",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab03d929644849c899f20ff",
+    "buffer_due_at": "2026-09-21T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-03-evening-zero_is_even_number_definition.mp4",
+    "status": "scheduled"
   }
 ]

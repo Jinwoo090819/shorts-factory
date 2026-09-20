@@ -11,6 +11,10 @@
   "title": "0은 짝수일까, 아무것도 아닐까?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-09-21T05:02:43+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-21T05:02:43+09:00",
+  "buffer_post_id": "6ab03d929644849c899f20ff",
+  "publish_at": "2026-09-21T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-03-evening-zero_is_even_number_definition.mp4",
+  "scheduled_at": "2026-09-21T05:09:54.421560+09:00"
 }
