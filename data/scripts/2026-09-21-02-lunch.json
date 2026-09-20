@@ -11,6 +11,10 @@
   "title": "거울은 정말 좌우를 뒤집을까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-21T05:02:43+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-21T05:02:43+09:00",
+  "buffer_post_id": "6ab03d46b07e536c5a1b2f94",
+  "publish_at": "2026-09-21T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-02-lunch-mirror_front_back_not_left_right.mp4",
+  "scheduled_at": "2026-09-21T05:08:38.905052+09:00"
 }

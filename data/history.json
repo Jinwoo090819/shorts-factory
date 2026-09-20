@@ -118,5 +118,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-01-morning-airplane_windows_rounded_stress_concentration.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-21T05:08:38.905281+09:00",
+    "publish_at": "2026-09-21T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-21-02-lunch.json",
+    "fact_key": "mirror_front_back_not_left_right",
+    "category": "물리·화학·우주",
+    "fact": "평면거울은 물리적으로 왼쪽과 오른쪽을 선택해 뒤집는 것이 아니라 거울 면에 수직인 앞뒤 방향을 반전시킨다. 우리가 좌우가 바뀌었다고 느끼는 것은 거울 속 사람과 자신을 마주 보게 비교하는 방식과 관련이 있다.",
+    "title": "거울은 정말 좌우를 뒤집을까?",
+    "source_1": "https://www.wtamu.edu/~cbaird/sq/2013/01/05/why-do-mirrors-flip-left-to-right-and-not-up-to-down/",
+    "source_2": "https://www.physics.rutgers.edu/~coleman/228/lects/lect02.pdf",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab03d46b07e536c5a1b2f94",
+    "buffer_due_at": "2026-09-21T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-02-lunch-mirror_front_back_not_left_right.mp4",
+    "status": "scheduled"
   }
 ]
