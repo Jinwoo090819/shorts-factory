@@ -1,0 +1,16 @@
+{
+  "fact_key": "mirror_front_back_not_left_right",
+  "category": "물리·화학·우주",
+  "fact": "평면거울은 물리적으로 왼쪽과 오른쪽을 선택해 뒤집는 것이 아니라 거울 면에 수직인 앞뒤 방향을 반전시킨다. 우리가 좌우가 바뀌었다고 느끼는 것은 거울 속 사람과 자신을 마주 보게 비교하는 방식과 관련이 있다.",
+  "script": "그거 아세요? 거울은 사실 왼쪽과 오른쪽을 뒤집지 않습니다. 거울 앞에서 오른손을 들면 거울 속 손도 화면 기준 같은 쪽에 있습니다. 위와 아래도 그대로죠. 실제로 평면거울이 바꾸는 건 거울 면에 수직인 앞뒤 방향입니다. 내 코가 거울 쪽으로 튀어나와 있다면 거울상에서는 반대 방향으로 들어간 것처럼 배치됩니다. 그런데 우리는 거울 속 사람을 실제 사람처럼 생각하면서, 그 사람이 나를 마주 보도록 몸을 180도 돌렸다고 상상하는 경향이 있습니다. 바로 그 비교 과정에서 왼쪽과 오른쪽이 바뀐 것처럼 느껴집니다. 그래서 글자가 거꾸로 보이는 현상도 단순히 ‘거울이 좌우를 바꾼다’고만 설명하면 정확하지 않습니다. 물리적으로는 앞뒤 반전, 일상 감각으로는 좌우 반전처럼 보이는 셈입니다. 여러분은 거울이 좌우를 뒤집는다고 표현해도 된다고 보나요?",
+  "source_1": "https://www.wtamu.edu/~cbaird/sq/2013/01/05/why-do-mirrors-flip-left-to-right-and-not-up-to-down/",
+  "source_2": "https://www.physics.rutgers.edu/~coleman/228/lects/lect02.pdf",
+  "pexels_query_1": "person looking mirror",
+  "pexels_query_2": "mirror reflection room",
+  "pexels_query_3": "hand touching mirror",
+  "title": "거울은 정말 좌우를 뒤집을까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-21T05:02:43+09:00"
+}
