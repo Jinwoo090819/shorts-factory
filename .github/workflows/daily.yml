@@ -11,6 +11,7 @@ on:
   push:
     paths:
       - 'data/scripts/**'
+      - '.github/workflows/daily.yml'
 
 concurrency:
   group: shorts-factory
@@ -71,6 +72,11 @@ jobs:
       - name: Install Python dependencies
         if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
+
+      - name: Allow longer narration
+        if: steps.ready.outputs.has_ready == 'true'
+        run: |
+          sed -i 's/MAX_NARRATION_SECONDS = 85.0/MAX_NARRATION_SECONDS = 170.0/' src/main_fixed.py
 
       - name: Build and schedule all ready Shorts
         if: steps.ready.outputs.has_ready == 'true'
