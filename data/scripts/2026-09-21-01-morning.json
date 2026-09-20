@@ -1,0 +1,16 @@
+{
+  "fact_key": "airplane_windows_rounded_stress_concentration",
+  "category": "기술·AI·인터넷",
+  "fact": "현대 여객기 창문이 둥근 모서리를 가진 핵심 이유는 여압된 동체의 반복 하중에서 날카로운 모서리에 응력이 집중되는 것을 줄이기 위해서다. 초기 제트여객기 드하빌랜드 코멧의 조사에서도 각진 창 주변의 높은 응력 집중이 중요한 문제로 확인됐다.",
+  "script": "그거 아세요? 비행기 창문이 둥근 건 디자인 취향보다 구조 안전과 더 관련이 있습니다. 높은 고도에서 객실은 바깥보다 높은 압력을 유지하기 때문에 동체는 비행할 때마다 반복해서 압력 하중을 받습니다. 이때 창처럼 동체에 구멍이 있는 부분은 원래 응력이 몰리기 쉬운데, 날카로운 모서리가 있으면 특정 지점에 응력이 더 집중될 수 있습니다. 실제로 초기 제트여객기 드하빌랜드 코멧 조사에서 각진 창과 창틀 주변의 높은 응력 집중이 확인됐습니다. 반대로 둥글거나 타원형인 모서리는 하중이 주변으로 더 부드럽게 퍼지도록 도와줍니다. 다만 ‘네모난 창은 무조건 위험하다’는 뜻은 아닙니다. 핵심은 모서리의 곡률과 전체 구조 설계, 재료, 피로 검증을 함께 보는 겁니다. 그래서 요즘 창도 완벽한 원이 아니라 둥근 모서리의 타원이나 사각형에 가까운 형태가 가능합니다. 여러분은 비행기 창 모양에 이런 이유가 있다는 걸 알고 있었나요?",
+  "source_1": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/G-ALYV",
+  "source_2": "https://www.businesstoday.in/latest/trends/photo/why-are-airplane-windows-round-the-deadly-lesson-behind-their-shape-542288-2026-07-10",
+  "pexels_query_1": "airplane window clouds",
+  "pexels_query_2": "passenger airplane cabin",
+  "pexels_query_3": "aircraft fuselage exterior",
+  "title": "비행기 창문은 왜 둥근 모서리일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-21T05:02:43+09:00"
+}
