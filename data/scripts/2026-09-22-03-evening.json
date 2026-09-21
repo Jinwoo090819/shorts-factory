@@ -11,6 +11,10 @@
   "title": "QWERTY는 일부러 느리게 만든 배열일까?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-09-22T05:02:13+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-22T05:02:13+09:00",
+  "buffer_post_id": "6ab18fb94ee0883d657ef83e",
+  "publish_at": "2026-09-22T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-22-03-evening-qwerty_origin_not_simply_slow_typists.mp4",
+  "scheduled_at": "2026-09-22T05:12:42.030507+09:00"
 }
