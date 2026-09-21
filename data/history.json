@@ -158,5 +158,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-21-03-evening-zero_is_even_number_definition.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-22T05:09:09.159836+09:00",
+    "publish_at": "2026-09-22T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-22-01-morning.json",
+    "fact_key": "greenland_island_australia_continent_convention",
+    "category": "지리·도시",
+    "fact": "그린란드는 세계에서 가장 큰 섬으로, 호주는 가장 작은 대륙으로 분류된다. 섬과 대륙의 경계는 단순히 '물로 둘러싸였는가'만으로 정해지지 않으며 크기와 지리적 관습이 함께 작용한다.",
+    "title": "호주는 왜 섬이 아니라 대륙일까?",
+    "source_1": "https://education.nationalgeographic.org/resource/island/",
+    "source_2": "https://education.nationalgeographic.org/resource/Continent/5th-grade/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab18ee54ee0883d657ee6fb",
+    "buffer_due_at": "2026-09-21T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-22-01-morning-greenland_island_australia_continent_convention.mp4",
+    "status": "scheduled"
   }
 ]

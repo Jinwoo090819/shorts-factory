@@ -11,6 +11,10 @@
   "title": "호주는 왜 섬이 아니라 대륙일까?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-22T05:02:13+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-22T05:02:13+09:00",
+  "buffer_post_id": "6ab18ee54ee0883d657ee6fb",
+  "publish_at": "2026-09-22T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-22-01-morning-greenland_island_australia_continent_convention.mp4",
+  "scheduled_at": "2026-09-22T05:09:09.159612+09:00"
 }
