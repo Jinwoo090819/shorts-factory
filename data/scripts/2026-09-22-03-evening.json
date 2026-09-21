@@ -1,0 +1,16 @@
+{
+  "fact_key": "qwerty_origin_not_simply_slow_typists",
+  "category": "기술·AI·인터넷",
+  "fact": "QWERTY 배열이 타자 속도를 일부러 늦추려고 만들어졌다는 설명은 지나치게 단순하다. 초기 타자기의 기계적 간섭을 줄이려 했다는 설명이 있지만, 전신 기사들의 요구가 배열 발전에 영향을 줬다는 역사 연구도 있어 정확한 기원에는 논쟁이 남아 있다.",
+  "script": "그거 아세요? QWERTY 키보드는 사람들이 너무 빨리 치지 못하게 일부러 불편하게 만들었다는 이야기가 유명하지만, 역사는 그렇게 단순하지 않습니다. 초기 타자기는 특정 글쇠를 빠르게 연속해서 누르면 기계 부품이 서로 간섭할 수 있었고, 그래서 자주 이어지는 글쇠의 충돌을 줄이려 배열을 조정했다는 설명이 있습니다. 하지만 여기서 ‘타자를 느리게 만드는 게 목적이었다’고 단정하면 과장입니다. 컴퓨터역사박물관도 QWERTY가 타자를 느리게 하려 만들어졌다는 이야기를 도시전설로 설명합니다. 한편 다른 역사 연구에서는 초기 사용자인 전신 기사들이 모스 부호를 받아 적기 편하도록 배열 변화에 영향을 줬다는 주장도 나옵니다. 즉 QWERTY는 한 번에 완성된 천재적 설계라기보다 초기 타자기의 기술적 문제와 실제 사용자 요구가 오랜 시간 섞여 굳어진 표준에 가깝습니다. 지금은 더 효율적이라고 주장하는 다른 배열도 있지만 QWERTY는 여전히 가장 널리 쓰입니다. 여러분은 익숙한 표준과 더 효율적인 새 배열 중 무엇을 선택하겠나요?",
+  "source_1": "https://www.computerhistory.org/revolution/input-output/14/355",
+  "source_2": "https://www.smithsonianmag.com/history/the-qwerty-keyboard-will-never-die-where-did-the-150-year-old-design-come-from-49863249/",
+  "pexels_query_1": "antique typewriter keys",
+  "pexels_query_2": "modern computer keyboard typing",
+  "pexels_query_3": "telegraph morse code machine",
+  "title": "QWERTY는 일부러 느리게 만든 배열일까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-22T05:02:13+09:00"
+}
