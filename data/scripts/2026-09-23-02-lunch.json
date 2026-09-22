@@ -1,0 +1,16 @@
+{
+  "fact_key": "kilogram_defined_by_planck_constant_since_2019",
+  "category": "물리·화학·우주",
+  "fact": "킬로그램은 더 이상 특정 금속 원기의 질량으로 정의되지 않는다. 2019년 5월 20일부터 SI에서 킬로그램은 플랑크 상수의 수치를 정확히 고정하는 방식으로 정의된다.",
+  "script": "그거 아세요? 지금 1킬로그램의 기준은 ‘어딘가에 보관된 정확히 1킬로그램짜리 물체’가 아닙니다. 과거에는 실제로 그랬습니다. 백금과 이리듐으로 만든 국제 킬로그램 원기가 100년 넘게 질량의 기준 역할을 했죠. 문제는 기준이 물건 하나라면 아무리 조심해서 보관해도 오염이나 표면 변화 같은 현실적인 문제가 생길 수 있다는 겁니다. 그래서 국제 측정 체계는 2019년부터 킬로그램을 특정 물체가 아니라 자연의 상수인 플랑크 상수에 연결했습니다. 국제도량형국은 플랑크 상수의 수치를 정확히 고정해 킬로그램을 정의하고 있고, 실제 구현에는 키블 저울이나 실리콘 구를 이용하는 방법 등이 쓰입니다. 여기서 헷갈리기 쉬운 점은 기존의 1킬로그램이 갑자기 다른 무게가 됐다는 뜻은 아니라는 겁니다. 새 정의는 기존 질량 척도의 연속성을 유지하면서 기준을 더 보편적으로 만든 변화에 가깝습니다. 여러분은 기준이 실물 하나인 방식과 자연 상수인 방식 중 어느 쪽이 더 직관적인가요?",
+  "source_1": "https://www.bipm.org/en/si-base-units/kilogram",
+  "source_2": "https://www.nist.gov/si-redefinition/kilogram-introduction",
+  "pexels_query_1": "laboratory precision balance weights",
+  "pexels_query_2": "metal cylinder science laboratory",
+  "pexels_query_3": "physics scientist measurement equipment",
+  "title": "1kg의 기준은 이제 1kg짜리 물체가 아니다?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-23T04:58:02+09:00"
+}
