@@ -11,6 +11,10 @@
   "title": "세계에서 가장 큰 사막은 사하라가 아니다?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-23T04:58:02+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-23T04:58:02+09:00",
+  "buffer_post_id": "6ab2df2cac5b2b66b70223a2",
+  "publish_at": "2026-09-23T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-01-morning-antarctica_is_worlds_largest_desert.mp4",
+  "scheduled_at": "2026-09-23T05:03:56.731329+09:00"
 }
