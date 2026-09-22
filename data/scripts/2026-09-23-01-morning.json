@@ -1,0 +1,16 @@
+{
+  "fact_key": "antarctica_is_worlds_largest_desert",
+  "category": "지리·도시",
+  "fact": "세계에서 가장 큰 사막은 남극이다. 사막은 반드시 덥거나 모래가 많은 곳을 뜻하지 않고 강수량이 매우 적은 건조 지역을 포함하므로 남극은 극지 사막으로 분류된다. 사하라는 세계에서 가장 큰 뜨거운 사막이다.",
+  "script": "그거 아세요? 세계에서 가장 큰 사막을 묻는 문제에 사하라라고 답하면, 기준에 따라 틀릴 수 있습니다. 전체 사막 중 가장 큰 곳은 남극이기 때문입니다. 사막이라고 하면 뜨거운 모래언덕부터 떠올리기 쉽지만, 사막을 가르는 핵심은 온도나 모래가 아니라 건조함입니다. 내셔널지오그래픽은 남극을 약 천사백이십만 제곱킬로미터 규모의 세계 최대 사막으로 설명하고, 사하라는 세계 최대의 뜨거운 사막으로 구분합니다. 남극은 얼음이 엄청나게 많은데 왜 건조하냐고요? 지금 쌓여 있는 얼음의 양과 매년 내리는 강수량은 다른 개념입니다. 남극 내륙은 강수량이 매우 적고, 내리는 것도 대부분 눈입니다. 그래서 ‘사막은 덥고 모래가 많아야 한다’는 일상적인 이미지와 지리학적 분류가 충돌하는 겁니다. 결국 사하라라고 답하려면 질문이 ‘가장 큰 뜨거운 사막’이어야 더 정확합니다. 여러분은 사막이라는 말을 들으면 남극도 바로 떠오르나요?",
+  "source_1": "https://education.nationalgeographic.org/resource/deserts/",
+  "source_2": "https://www.guinnessworldrecords.com/world-records/largest-desert-cold",
+  "pexels_query_1": "Antarctica ice aerial landscape",
+  "pexels_query_2": "Sahara sand dunes landscape",
+  "pexels_query_3": "polar snow weather landscape",
+  "title": "세계에서 가장 큰 사막은 사하라가 아니다?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-23T04:58:02+09:00"
+}
