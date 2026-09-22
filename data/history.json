@@ -238,5 +238,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-01-morning-antarctica_is_worlds_largest_desert.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-23T05:05:24.649785+09:00",
+    "publish_at": "2026-09-23T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-23-02-lunch.json",
+    "fact_key": "kilogram_defined_by_planck_constant_since_2019",
+    "category": "물리·화학·우주",
+    "fact": "킬로그램은 더 이상 특정 금속 원기의 질량으로 정의되지 않는다. 2019년 5월 20일부터 SI에서 킬로그램은 플랑크 상수의 수치를 정확히 고정하는 방식으로 정의된다.",
+    "title": "1kg의 기준은 이제 1kg짜리 물체가 아니다?",
+    "source_1": "https://www.bipm.org/en/si-base-units/kilogram",
+    "source_2": "https://www.nist.gov/si-redefinition/kilogram-introduction",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab2df8452dc55ce94649e2f",
+    "buffer_due_at": "2026-09-23T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-02-lunch-kilogram_defined_by_planck_constant_since_2019.mp4",
+    "status": "scheduled"
   }
 ]

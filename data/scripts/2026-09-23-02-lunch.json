@@ -11,6 +11,10 @@
   "title": "1kg의 기준은 이제 1kg짜리 물체가 아니다?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-23T04:58:02+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-23T04:58:02+09:00",
+  "buffer_post_id": "6ab2df8452dc55ce94649e2f",
+  "publish_at": "2026-09-23T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-02-lunch-kilogram_defined_by_planck_constant_since_2019.mp4",
+  "scheduled_at": "2026-09-23T05:05:24.649549+09:00"
 }
