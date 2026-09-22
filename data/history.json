@@ -258,5 +258,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-02-lunch-kilogram_defined_by_planck_constant_since_2019.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-23T05:07:22.392661+09:00",
+    "publish_at": "2026-09-23T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-23-03-evening.json",
+    "fact_key": "football_goal_requires_whole_ball_over_line",
+    "category": "스포츠 규칙",
+    "fact": "축구에서는 공의 대부분이나 중심이 골라인을 넘는 것만으로 득점이 아니다. 득점 팀의 반칙이 없다는 전제에서 공 전체가 골포스트 사이, 크로스바 아래의 골라인을 완전히 넘어야 골로 인정된다.",
+    "title": "축구공이 99% 들어가도 골이 아닐 수 있다?",
+    "source_1": "https://www.theifab.com/laws/latest/determining-the-outcome-of-a-match/",
+    "source_2": "https://www.thefa.com/football-rules-governance/lawsandrules/laws/football-11-11/law-9---the-ball-in-and-out-of-play",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab2dffa96bce92ace642227",
+    "buffer_due_at": "2026-09-23T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-03-evening-football_goal_requires_whole_ball_over_line.mp4",
+    "status": "scheduled"
   }
 ]
