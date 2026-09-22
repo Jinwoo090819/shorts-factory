@@ -1,0 +1,16 @@
+{
+  "fact_key": "football_goal_requires_whole_ball_over_line",
+  "category": "스포츠 규칙",
+  "fact": "축구에서는 공의 대부분이나 중심이 골라인을 넘는 것만으로 득점이 아니다. 득점 팀의 반칙이 없다는 전제에서 공 전체가 골포스트 사이, 크로스바 아래의 골라인을 완전히 넘어야 골로 인정된다.",
+  "script": "그거 아세요? 축구공이 골라인을 99퍼센트 넘었어도 골이 아닐 수 있습니다. 공식 규칙에서 중요한 건 공의 중심도, 공의 대부분도 아니라 ‘공 전체’입니다. 국제축구평의회 규칙 10은 득점 팀의 반칙이 없다는 전제에서 공 전체가 골포스트 사이와 크로스바 아래의 골라인을 완전히 지나야 골이라고 정합니다. 그래서 화면상 공이 거의 다 들어가 보이더라도 아주 일부가 선의 수직면 위에 남아 있다면 아직 골이 아닙니다. 이 원칙은 공이 경기장 밖으로 나갔는지를 판단할 때도 비슷합니다. 규칙 9에서도 공 전체가 터치라인이나 골라인을 넘어야 아웃으로 봅니다. 사람들이 자주 헷갈리는 이유는 다른 상황에서는 선을 밟거나 일부만 넘어도 판정이 바뀌는 스포츠가 있고, 축구 중계 화면의 각도도 실제 위치를 착각하게 만들 수 있기 때문입니다. 결국 축구의 골라인 판정은 ‘얼마나 많이 넘어갔나’가 아니라 ‘마지막 한 부분까지 완전히 넘어갔나’의 문제입니다. 여러분은 99퍼센트가 넘어가도 노골인 이 규칙이 합리적이라고 보나요?",
+  "source_1": "https://www.theifab.com/laws/latest/determining-the-outcome-of-a-match/",
+  "source_2": "https://www.thefa.com/football-rules-governance/lawsandrules/laws/football-11-11/law-9---the-ball-in-and-out-of-play",
+  "pexels_query_1": "soccer ball goal line close up",
+  "pexels_query_2": "football referee stadium match",
+  "pexels_query_3": "soccer goal net stadium camera",
+  "title": "축구공이 99% 들어가도 골이 아닐 수 있다?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-23T04:58:02+09:00"
+}
