@@ -318,5 +318,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-02-lunch-a4_paper_sqrt2_ratio_preserved_when_halved.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-24T05:06:24.588115+09:00",
+    "publish_at": "2026-09-24T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-24-03-evening.json",
+    "fact_key": "keyboard_f_j_bumps_mark_touch_typing_home_row",
+    "category": "기술·AI·인터넷",
+    "fact": "일반적인 물리 키보드의 F와 J 키에 있는 돌기는 터치 타이핑 때 양손 검지를 홈 포지션에 놓을 위치를 촉각으로 찾도록 돕는 기준점이다. 숫자 키패드에서는 같은 이유로 5 키에 촉각 표시가 있는 경우가 많다.",
+    "title": "키보드 F와 J에만 돌기가 있는 이유",
+    "source_1": "https://www.independent.co.uk/tech/why-are-there-bumps-on-the-f-and-j-on-a-computer-keyboard-a6891011.html",
+    "source_2": "https://www.ratatype.co.uk/typing-tips/0205-why-do-the-f-and-j-keys-have-tactile-markers-and-why-is-the-keyboard-designed-this-way/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab43140a0564c872958e8ba",
+    "buffer_due_at": "2026-09-24T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-03-evening-keyboard_f_j_bumps_mark_touch_typing_home_row.mp4",
+    "status": "scheduled"
   }
 ]

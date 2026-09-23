@@ -11,6 +11,10 @@
   "title": "키보드 F와 J에만 돌기가 있는 이유",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-09-24T04:57:38+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-24T04:57:38+09:00",
+  "buffer_post_id": "6ab43140a0564c872958e8ba",
+  "publish_at": "2026-09-24T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-03-evening-keyboard_f_j_bumps_mark_touch_typing_home_row.mp4",
+  "scheduled_at": "2026-09-24T05:06:24.587513+09:00"
 }
