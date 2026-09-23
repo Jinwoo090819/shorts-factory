@@ -1,0 +1,16 @@
+{
+  "fact_key": "aircraft_black_box_is_orange_for_recovery",
+  "category": "기술·AI·인터넷",
+  "fact": "항공기의 이른바 '블랙박스'는 실제로 검은색이 아니라 사고 뒤 쉽게 찾을 수 있도록 눈에 잘 띄는 주황색으로 칠해진 비행기록장치다. 일반적으로 조종실음성기록장치와 비행자료기록장치가 사고 조사에 쓰인다.",
+  "script": "그거 아세요? 비행기의 블랙박스는 실제로 검은색이 아닙니다. 사고 현장에서 더 쉽게 찾을 수 있도록 눈에 잘 띄는 주황색으로 칠해집니다. 여기서 더 헷갈리는 점은 블랙박스가 보통 하나의 검은 상자를 뜻하는 것도 아니라는 겁니다. 항공 사고 조사에서는 조종실의 소리와 교신 등을 남기는 조종실음성기록장치와, 고도나 속도 같은 비행 정보를 남기는 비행자료기록장치가 핵심 기록장치로 쓰입니다. 호주 교통안전국도 이 장치들이 흔히 블랙박스라고 불리지만 실제로는 회수를 돕기 위해 주황색이라고 설명합니다. 에어버스 역시 현대 비행기록장치가 충격과 화재, 물속 환경 등을 견디도록 설계되며 주황색은 금속 케이스를 식별하기 쉽게 하기 위한 것이라고 설명합니다. 그러니까 블랙박스라는 이름만 보고 색깔까지 검정이라고 생각하면 이름과 실제 모습이 완전히 엇갈리는 셈이죠. 이름을 실제 색에 맞춰 바꾸는 게 낫다고 보나요, 아니면 블랙박스라는 익숙한 이름을 유지하는 게 낫다고 보나요?",
+  "source_1": "https://www.atsb.gov.au/publications/educational-fact-sheet/2022/aviation/black-box-flight-recorders",
+  "source_2": "https://www.airbus.com/en/newsroom/stories/2024-05-what-is-a-black-box-and-how-does-it-work",
+  "pexels_query_1": "orange flight recorder aviation equipment",
+  "pexels_query_2": "airplane cockpit instruments close up",
+  "pexels_query_3": "aircraft wreckage investigation safety",
+  "title": "비행기 블랙박스는 사실 검은색이 아니다?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-24T04:57:38+09:00"
+}
