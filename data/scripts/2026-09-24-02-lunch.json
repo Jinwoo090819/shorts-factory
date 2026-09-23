@@ -11,6 +11,10 @@
   "title": "A4가 210×297mm인 데는 수학적 이유가 있다?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-24T04:57:38+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-24T04:57:38+09:00",
+  "buffer_post_id": "6ab430d9a0564c872958d8aa",
+  "publish_at": "2026-09-24T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-02-lunch-a4_paper_sqrt2_ratio_preserved_when_halved.mp4",
+  "scheduled_at": "2026-09-24T05:04:41.762377+09:00"
 }

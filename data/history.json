@@ -298,5 +298,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-01-morning-aircraft_black_box_is_orange_for_recovery.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-24T05:04:41.762930+09:00",
+    "publish_at": "2026-09-24T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-24-02-lunch.json",
+    "fact_key": "a4_paper_sqrt2_ratio_preserved_when_halved",
+    "category": "교육·일상생활",
+    "fact": "A4를 포함한 ISO A계열 용지는 긴 변과 짧은 변의 비율이 약 √2:1이어서 긴 방향을 절반으로 자르면 다음 크기의 용지가 되면서도 같은 가로세로 비율이 유지된다. A4는 210×297mm이고 A3는 297×420mm다.",
+    "title": "A4가 210×297mm인 데는 수학적 이유가 있다?",
+    "source_1": "https://support.hp.com/in-en/document/bpq04022",
+    "source_2": "https://en.wikipedia.org/wiki/International_standard_paper_sizes",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab430d9a0564c872958d8aa",
+    "buffer_due_at": "2026-09-24T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-02-lunch-a4_paper_sqrt2_ratio_preserved_when_halved.mp4",
+    "status": "scheduled"
   }
 ]
