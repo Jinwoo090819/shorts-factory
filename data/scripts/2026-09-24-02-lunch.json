@@ -1,0 +1,16 @@
+{
+  "fact_key": "a4_paper_sqrt2_ratio_preserved_when_halved",
+  "category": "교육·일상생활",
+  "fact": "A4를 포함한 ISO A계열 용지는 긴 변과 짧은 변의 비율이 약 √2:1이어서 긴 방향을 절반으로 자르면 다음 크기의 용지가 되면서도 같은 가로세로 비율이 유지된다. A4는 210×297mm이고 A3는 297×420mm다.",
+  "script": "그거 아세요? A4 용지의 210 곱하기 297밀리미터라는 애매해 보이는 숫자는 그냥 우연히 정한 크기가 아닙니다. A계열 종이는 긴 변과 짧은 변의 비율이 약 루트2 대 1이 되도록 설계돼 있습니다. 이 비율의 핵심은 종이를 긴 방향으로 정확히 절반으로 잘라도 새로 생긴 종이의 가로세로 비율이 원래와 같다는 점입니다. 그래서 A3를 반으로 나누면 A4가 되고, A4를 반으로 나누면 A5가 되면서 모양의 비율이 거의 그대로 유지됩니다. 실제로 A3는 297 곱하기 420밀리미터이고 A4는 210 곱하기 297밀리미터입니다. 덕분에 문서를 A3에서 A4로 축소하거나 반대로 확대할 때 종이 비율 때문에 내용이 찌그러지는 문제를 줄이기 좋습니다. 다만 북미에서 흔한 레터 용지는 8.5 곱하기 11인치라 비율과 체계가 다릅니다. 결국 A4의 숫자가 어중간해 보이는 건 오히려 반복해서 반으로 나누기 좋은 수학적 규칙을 선택한 결과인 셈입니다. 여러분은 딱 떨어지는 숫자와 반으로 접어도 비율이 유지되는 규칙 중 어느 쪽이 더 실용적이라고 보나요?",
+  "source_1": "https://support.hp.com/in-en/document/bpq04022",
+  "source_2": "https://en.wikipedia.org/wiki/International_standard_paper_sizes",
+  "pexels_query_1": "A4 paper sheets office desk",
+  "pexels_query_2": "paper folding hands close up",
+  "pexels_query_3": "printer document paper office",
+  "title": "A4가 210×297mm인 데는 수학적 이유가 있다?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-24T04:57:38+09:00"
+}
