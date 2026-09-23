@@ -278,5 +278,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-23-03-evening-football_goal_requires_whole_ball_over_line.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-24T05:03:13.801186+09:00",
+    "publish_at": "2026-09-24T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-24-01-morning.json",
+    "fact_key": "aircraft_black_box_is_orange_for_recovery",
+    "category": "기술·AI·인터넷",
+    "fact": "항공기의 이른바 '블랙박스'는 실제로 검은색이 아니라 사고 뒤 쉽게 찾을 수 있도록 눈에 잘 띄는 주황색으로 칠해진 비행기록장치다. 일반적으로 조종실음성기록장치와 비행자료기록장치가 사고 조사에 쓰인다.",
+    "title": "비행기 블랙박스는 사실 검은색이 아니다?",
+    "source_1": "https://www.atsb.gov.au/publications/educational-fact-sheet/2022/aviation/black-box-flight-recorders",
+    "source_2": "https://www.airbus.com/en/newsroom/stories/2024-05-what-is-a-black-box-and-how-does-it-work",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab43081f9547d54b721aeb0",
+    "buffer_due_at": "2026-09-23T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-24-01-morning-aircraft_black_box_is_orange_for_recovery.mp4",
+    "status": "scheduled"
   }
 ]
