@@ -1,0 +1,16 @@
+{
+  "fact_key": "keyboard_f_j_bumps_mark_touch_typing_home_row",
+  "category": "기술·AI·인터넷",
+  "fact": "일반적인 물리 키보드의 F와 J 키에 있는 돌기는 터치 타이핑 때 양손 검지를 홈 포지션에 놓을 위치를 촉각으로 찾도록 돕는 기준점이다. 숫자 키패드에서는 같은 이유로 5 키에 촉각 표시가 있는 경우가 많다.",
+  "script": "그거 아세요? 키보드의 F와 J에만 작은 돌기가 있는 건 장식도, 두 글자가 특별해서도 아닙니다. 이 돌기는 키보드를 보지 않고 손의 기준 위치를 찾기 위한 촉각 표시입니다. 일반적인 터치 타이핑에서는 왼손 검지를 F에, 오른손 검지를 J에 놓고 나머지 손가락을 홈 로우에 배치합니다. 손을 잠깐 떼었다가 다시 올려도 두 검지가 돌기를 느끼면 키보드를 내려다보지 않고 기준 위치를 다시 찾을 수 있는 거죠. 그래서 이 기능의 핵심은 단순히 타자를 빠르게 치는 것보다 손의 위치를 촉각으로 재설정하는 데 있습니다. 비슷한 원리는 숫자 키패드의 5번 키에서도 볼 수 있습니다. 5번의 돌기를 찾으면 주변 숫자의 위치를 눈으로 확인하지 않고도 가늠하기 쉬워집니다. 다만 모든 키보드가 완전히 같은 모양의 돌기를 쓰는 것은 아니고 키캡 디자인에 따라 선이나 점처럼 형태가 달라질 수 있습니다. 결국 아주 작은 돌기 두 개가 화면에서 눈을 떼지 않고 입력하도록 돕는 인터페이스인 셈입니다. 여러분은 지금까지 F와 J의 돌기를 실제로 의식해서 써본 적이 있나요?",
+  "source_1": "https://www.independent.co.uk/tech/why-are-there-bumps-on-the-f-and-j-on-a-computer-keyboard-a6891011.html",
+  "source_2": "https://www.ratatype.co.uk/typing-tips/0205-why-do-the-f-and-j-keys-have-tactile-markers-and-why-is-the-keyboard-designed-this-way/",
+  "pexels_query_1": "computer keyboard F J keys close up",
+  "pexels_query_2": "hands touch typing laptop keyboard",
+  "pexels_query_3": "numeric keypad fingers office",
+  "title": "키보드 F와 J에만 돌기가 있는 이유",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-24T04:57:38+09:00"
+}
