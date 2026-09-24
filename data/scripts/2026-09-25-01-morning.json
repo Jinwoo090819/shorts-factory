@@ -1,0 +1,16 @@
+{
+  "fact_key": "great_wall_not_visible_from_moon_naked_eye",
+  "category": "지리·도시",
+  "fact": "만리장성은 달에서 맨눈으로 볼 수 있는 인공 구조물이 아니다. 낮은 지구 궤도에서도 주변 지형과 대비가 낮고 폭이 좁아 맨눈으로 식별하기 매우 어렵다.",
+  "script": "그거 아세요? 만리장성이 달에서도 맨눈으로 보이는 유일한 인공 구조물이라는 이야기는 사실이 아닙니다. NASA는 만리장성이 달에서는 보이지 않으며, 지구 저궤도에서도 고배율 렌즈 없이 보기 어렵거나 불가능하다고 설명합니다. 이상하게 느껴지는 이유는 만리장성이 엄청나게 길기 때문입니다. 하지만 눈으로 어떤 물체를 구별할 수 있는지는 길이만이 아니라 폭과 거리, 주변과의 색 대비가 중요합니다. 만리장성은 길지만 상대적으로 좁고 주변 지형과 비슷한 재료와 색을 가져 멀리서 배경과 섞이기 쉽습니다. 반대로 도시나 넓은 도로, 공항처럼 면적이 크거나 대비가 강한 인공 구조는 낮은 궤도에서 더 눈에 띌 수 있습니다. 카메라의 망원 렌즈나 위성 센서로 촬영할 수 있다는 것과 사람이 맨눈으로 본다는 것도 다른 문제입니다. 결국 ‘가장 긴 구조물이니 우주에서도 잘 보일 것’이라는 직관이 만든 유명한 오해인 셈입니다. 여러분도 만리장성이 달에서 보인다고 알고 있었나요?",
+  "source_1": "https://www.nasa.gov/image-article/great-wall/",
+  "source_2": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/",
+  "pexels_query_1": "Great Wall China aerial landscape",
+  "pexels_query_2": "earth from space orbit",
+  "pexels_query_3": "moon earth view astronomy",
+  "title": "만리장성은 정말 달에서도 보일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-25T05:00:57+09:00"
+}
