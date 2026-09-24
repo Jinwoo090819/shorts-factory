@@ -11,6 +11,10 @@
   "title": "9월 September가 사실 ‘7’을 뜻한다고?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-09-25T05:00:57+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-25T05:00:57+09:00",
+  "buffer_post_id": "6ab583a1b30c30cf0f3c31db",
+  "publish_at": "2026-09-25T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-03-evening-september_name_means_seven_but_is_ninth_month.mp4",
+  "scheduled_at": "2026-09-25T05:10:09.270843+09:00"
 }

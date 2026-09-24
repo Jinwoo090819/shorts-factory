@@ -378,5 +378,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-02-lunch-airplane_cabin_changes_food_flavor_perception.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-25T05:10:09.271183+09:00",
+    "publish_at": "2026-09-25T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-25-03-evening.json",
+    "fact_key": "september_name_means_seven_but_is_ninth_month",
+    "category": "역사",
+    "fact": "September라는 이름은 라틴어 septem, 즉 7에서 왔지만 현대 달력에서는 9월이다. 고대 로마의 옛 달력이 3월부터 시작해 September가 일곱 번째 달이었던 흔적이 이름에 남은 것이다.",
+    "title": "9월 September가 사실 ‘7’을 뜻한다고?",
+    "source_1": "https://www.timeanddate.com/calendar/months/september.html",
+    "source_2": "https://www.history.com/articles/september-month-history-facts",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab583a1b30c30cf0f3c31db",
+    "buffer_due_at": "2026-09-25T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-03-evening-september_name_means_seven_but_is_ninth_month.mp4",
+    "status": "scheduled"
   }
 ]
