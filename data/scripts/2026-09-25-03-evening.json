@@ -1,0 +1,16 @@
+{
+  "fact_key": "september_name_means_seven_but_is_ninth_month",
+  "category": "역사",
+  "fact": "September라는 이름은 라틴어 septem, 즉 7에서 왔지만 현대 달력에서는 9월이다. 고대 로마의 옛 달력이 3월부터 시작해 September가 일곱 번째 달이었던 흔적이 이름에 남은 것이다.",
+  "script": "그거 아세요? 영어 September는 9월인데 이름 자체는 라틴어로 ‘7’을 뜻하는 septem에서 왔습니다. 숫자가 두 칸이나 어긋난 이유는 옛 로마 달력의 흔적 때문입니다. 고대 로마의 오래된 달력에서는 한 해가 3월부터 시작했기 때문에 3월을 첫째 달로 세면 September는 정확히 일곱 번째였습니다. 같은 방식으로 October는 여덟, November는 아홉, December는 열이라는 숫자 이름의 흔적을 가지고 있습니다. 이후 달력 체계가 바뀌면서 1월과 2월이 앞쪽에 자리 잡고 September는 아홉 번째 달이 됐지만 이름은 그대로 남았습니다. 재미있는 점은 예전의 다섯 번째와 여섯 번째 달이었던 Quintilis와 Sextilis는 각각 Julius Caesar와 Augustus의 이름을 따 July와 August로 바뀌었다는 겁니다. 즉 지금의 달 이름은 하나의 완벽한 숫자 체계라기보다 여러 시대의 역사적 수정이 겹쳐 남은 결과입니다. 여러분이라면 숫자에 맞게 이름을 바꿀까요, 역사가 담긴 이름을 유지할까요?",
+  "source_1": "https://www.timeanddate.com/calendar/months/september.html",
+  "source_2": "https://www.history.com/articles/september-month-history-facts",
+  "pexels_query_1": "ancient Rome calendar stone",
+  "pexels_query_2": "September calendar page desk",
+  "pexels_query_3": "Roman ruins history columns",
+  "title": "9월 September가 사실 ‘7’을 뜻한다고?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-25T05:00:57+09:00"
+}
