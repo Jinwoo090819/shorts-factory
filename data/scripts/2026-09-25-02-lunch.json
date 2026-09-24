@@ -11,6 +11,10 @@
   "title": "비행기 음식이 밍밍한 건 요리사 탓일까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-25T05:00:57+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-25T05:00:57+09:00",
+  "buffer_post_id": "6ab58330374ee6800d36e98f",
+  "publish_at": "2026-09-25T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-02-lunch-airplane_cabin_changes_food_flavor_perception.mp4",
+  "scheduled_at": "2026-09-25T05:08:16.685726+09:00"
 }

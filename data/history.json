@@ -358,5 +358,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-01-morning-great_wall_not_visible_from_moon_naked_eye.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-25T05:08:16.686071+09:00",
+    "publish_at": "2026-09-25T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-25-02-lunch.json",
+    "fact_key": "airplane_cabin_changes_food_flavor_perception",
+    "category": "음식",
+    "fact": "비행기 음식의 맛이 지상과 다르게 느껴지는 데는 조리 품질뿐 아니라 낮은 객실 압력, 건조한 공기와 소음이 맛과 향의 지각을 바꾸는 영향도 있다.",
+    "title": "비행기 음식이 밍밍한 건 요리사 탓일까?",
+    "source_1": "https://www.ibp.fraunhofer.de/en/press-media/research-in-focus/a-feast-for-research.html",
+    "source_2": "https://www.smithsonianmag.com/air-space-magazine/the-world-from-your-airplane-window-88359585/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab58330374ee6800d36e98f",
+    "buffer_due_at": "2026-09-25T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-02-lunch-airplane_cabin_changes_food_flavor_perception.mp4",
+    "status": "scheduled"
   }
 ]
