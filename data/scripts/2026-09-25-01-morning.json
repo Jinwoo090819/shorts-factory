@@ -11,6 +11,10 @@
   "title": "만리장성은 정말 달에서도 보일까?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-25T05:00:57+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-25T05:00:57+09:00",
+  "buffer_post_id": "6ab582c4b30c30cf0f3c1760",
+  "publish_at": "2026-09-25T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-01-morning-great_wall_not_visible_from_moon_naked_eye.mp4",
+  "scheduled_at": "2026-09-25T05:06:28.271056+09:00"
 }
