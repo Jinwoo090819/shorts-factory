@@ -1,0 +1,16 @@
+{
+  "fact_key": "airplane_cabin_changes_food_flavor_perception",
+  "category": "음식",
+  "fact": "비행기 음식의 맛이 지상과 다르게 느껴지는 데는 조리 품질뿐 아니라 낮은 객실 압력, 건조한 공기와 소음이 맛과 향의 지각을 바꾸는 영향도 있다.",
+  "script": "그거 아세요? 비행기 음식이 밍밍하게 느껴지는 건 꼭 요리를 못해서만은 아닙니다. 비행 중 객실 환경 자체가 우리가 맛을 느끼는 방식을 바꿀 수 있습니다. 독일 프라운호퍼 연구소는 실제 항공기와 비슷한 저압 환경에서 음식과 음료의 맛을 시험했고, 낮은 압력이 후각과 미각 수용기의 효과를 떨어뜨려 감기에 걸렸을 때처럼 맛이 다르게 느껴질 수 있다고 설명했습니다. 여기에 객실의 건조한 공기는 코를 마르게 해 향을 느끼기 어렵게 만들고, 계속되는 배경 소음도 음식의 단맛이나 짠맛 같은 지각에 영향을 줄 수 있습니다. 물론 모든 책임을 객실 환경에 돌릴 수도 없습니다. 기내식은 미리 조리하고 보관한 뒤 다시 데우는 과정 때문에 식감과 맛이 달라질 수도 있으니까요. 즉 ‘기내식은 원래 맛없다’보다 정확한 답은 음식 자체와 비행 환경이 함께 영향을 준다는 겁니다. 같은 음식을 지상과 비행기에서 먹는다면 맛이 얼마나 달라질 것 같나요?",
+  "source_1": "https://www.ibp.fraunhofer.de/en/press-media/research-in-focus/a-feast-for-research.html",
+  "source_2": "https://www.smithsonianmag.com/air-space-magazine/the-world-from-your-airplane-window-88359585/",
+  "pexels_query_1": "airplane meal tray cabin",
+  "pexels_query_2": "aircraft cabin passengers window",
+  "pexels_query_3": "chef preparing catering food",
+  "title": "비행기 음식이 밍밍한 건 요리사 탓일까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-25T05:00:57+09:00"
+}
