@@ -398,5 +398,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-25-03-evening-september_name_means_seven_but_is_ninth_month.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-26T05:07:03.127194+09:00",
+    "publish_at": "2026-09-26T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-26-01-morning.json",
+    "fact_key": "marathon_42195m_standardized_after_1908_london_distance",
+    "category": "스포츠 규칙",
+    "fact": "현대 마라톤의 42.195km는 고대 그리스 전설에서 정확히 정해진 거리가 아니라, 1908년 런던 올림픽에서 윈저성에서 출발해 왕실 관람석 앞에서 끝나도록 잡힌 26마일 385야드가 1921년 표준화된 거리다.",
+    "title": "마라톤은 왜 하필 42.195km일까?",
+    "source_1": "https://worldathletics.org/disciplines/race-walks/marathon",
+    "source_2": "https://oscnewsletter.olympics.com/article/34/hidden-treasures_lang%3Den.html",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab6d466f59168c975296c7e",
+    "buffer_due_at": "2026-09-25T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-26-01-morning-marathon_42195m_standardized_after_1908_london_distance.mp4",
+    "status": "scheduled"
   }
 ]
