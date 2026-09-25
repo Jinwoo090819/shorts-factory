@@ -1,0 +1,16 @@
+{
+  "fact_key": "marathon_42195m_standardized_after_1908_london_distance",
+  "category": "스포츠 규칙",
+  "fact": "현대 마라톤의 42.195km는 고대 그리스 전설에서 정확히 정해진 거리가 아니라, 1908년 런던 올림픽에서 윈저성에서 출발해 왕실 관람석 앞에서 끝나도록 잡힌 26마일 385야드가 1921년 표준화된 거리다.",
+  "script": "그거 아세요? 마라톤이 42.195킬로미터인 건 고대 그리스 전령이 정확히 그만큼 달렸기 때문이 아닙니다. 첫 근대 올림픽인 1896년 마라톤은 약 40킬로미터였고, 초기 올림픽에서도 거리는 일정하지 않았습니다. 지금의 애매해 보이는 숫자는 1908년 런던 올림픽에서 나왔습니다. 당시 코스는 윈저성에서 출발해 화이트시티 스타디움의 왕실 관람석 앞에서 끝나도록 정해졌고, 그 결과 거리가 26마일 385야드, 즉 42.195킬로미터가 됐습니다. 중요한 건 이 한 번의 코스가 즉시 영원한 규칙이 된 것도 아니라는 점입니다. 세계육상에 따르면 이 거리가 공식적으로 표준화된 건 1921년이었습니다. 그래서 마라톤의 이름은 고대 마라톤 전투의 전설에서 왔지만, 우리가 오늘 뛰는 정확한 숫자는 근대 스포츠 운영의 역사에서 굳어진 겁니다. 전통이라고 부를까요, 우연이 표준이 된 사례라고 볼까요?",
+  "source_1": "https://worldathletics.org/disciplines/race-walks/marathon",
+  "source_2": "https://oscnewsletter.olympics.com/article/34/hidden-treasures_lang%3Den.html",
+  "pexels_query_1": "marathon runners city road race",
+  "pexels_query_2": "Windsor Castle England exterior",
+  "pexels_query_3": "running track finish line stadium",
+  "title": "마라톤은 왜 하필 42.195km일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-26T05:01:43+09:00"
+}
