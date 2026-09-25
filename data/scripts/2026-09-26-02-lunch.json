@@ -1,0 +1,16 @@
+{
+  "fact_key": "nautical_mile_1852m_based_on_latitude_arc_minute",
+  "category": "지리·도시",
+  "fact": "국제 해리 1해리는 정확히 1,852m이며, 위도 1분에 대응하는 지구상의 거리라는 항해상의 개념에서 유래했다.",
+  "script": "그거 아세요? 바다와 항공에서는 왜 굳이 킬로미터 대신 ‘해리’를 쓰는 걸까요? 국제 해리 1해리는 정확히 1,852미터라서 얼핏 보면 더 불편한 단위처럼 보입니다. 하지만 출발점은 지구 지도입니다. 위도와 경도는 각도로 표시되고, 위도 1도는 다시 60분으로 나뉩니다. 해리는 역사적으로 위도 1분에 해당하는 지표면 거리와 연결돼 있어서, 해도에서 각도와 거리를 바로 대응시키기 편했습니다. 다만 지구가 완벽한 구가 아니기 때문에 실제 위도 1분의 길이가 어디서나 정확히 같지는 않습니다. 그래서 국제적으로는 1929년에 해리의 길이를 정확히 1,852미터로 정했고, 미국은 1954년에 이 국제 기준을 채택했습니다. 속도 단위 ‘노트’도 여기서 이어져 1노트는 시간당 1해리입니다. 숫자가 깔끔한 킬로미터와 지도에 바로 연결되는 해리, 항해에서는 어느 쪽이 더 합리적이라고 보세요?",
+  "source_1": "https://oceanservice.noaa.gov/facts/nautical-mile-knot.html",
+  "source_2": "https://www.vos.noaa.gov/MWL/aug_08/navigation_tools.shtml",
+  "pexels_query_1": "nautical chart navigation map",
+  "pexels_query_2": "cargo ship open ocean aerial",
+  "pexels_query_3": "airplane cockpit navigation instruments",
+  "title": "바다에서는 왜 킬로미터 대신 해리를 쓸까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-26T05:01:43+09:00"
+}
