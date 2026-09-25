@@ -418,5 +418,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-26-01-morning-marathon_42195m_standardized_after_1908_london_distance.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-26T05:08:46.245787+09:00",
+    "publish_at": "2026-09-26T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-26-02-lunch.json",
+    "fact_key": "nautical_mile_1852m_based_on_latitude_arc_minute",
+    "category": "지리·도시",
+    "fact": "국제 해리 1해리는 정확히 1,852m이며, 위도 1분에 대응하는 지구상의 거리라는 항해상의 개념에서 유래했다.",
+    "title": "바다에서는 왜 킬로미터 대신 해리를 쓸까?",
+    "source_1": "https://oceanservice.noaa.gov/facts/nautical-mile-knot.html",
+    "source_2": "https://www.vos.noaa.gov/MWL/aug_08/navigation_tools.shtml",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab6d4ceb097c5b401a1327b",
+    "buffer_due_at": "2026-09-26T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-26-02-lunch-nautical_mile_1852m_based_on_latitude_arc_minute.mp4",
+    "status": "scheduled"
   }
 ]
