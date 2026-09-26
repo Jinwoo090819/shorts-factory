@@ -9,9 +9,11 @@ on:
     - cron: '0 9 * * *'
   workflow_dispatch:
   push:
+    # The 05:00 content task writes morning, lunch, then evening as separate
+    # commits. Trigger only on the final evening file so one batch run handles
+    # all three instead of queueing three stale workflow runs.
     paths:
-      - 'data/scripts/**'
-      - '.github/workflows/daily.yml'
+      - 'data/scripts/*-03-evening.json'
 
 concurrency:
   group: shorts-factory
@@ -33,6 +35,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Sync latest main
+        shell: bash
+        run: |
+          # A queued workflow can otherwise start from the old commit that
+          # originally triggered it and see a Short as "ready" even though a
+          # previous run already scheduled it. Always make scheduling
+          # decisions from the current main branch state.
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Check for ready script
         id: ready
