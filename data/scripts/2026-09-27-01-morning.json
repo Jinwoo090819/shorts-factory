@@ -11,6 +11,10 @@
   "title": "그린란드가 아프리카만 해 보이는 이유",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-27T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-27T05:00:00+09:00",
+  "buffer_post_id": "6ab976be36a0dcfcb3e2f511",
+  "publish_at": "2026-09-28T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-01-morning-mercator_projection_area_distortion_greenland_africa.mp4",
+  "scheduled_at": "2026-09-28T05:04:14.410947+09:00"
 }

@@ -458,5 +458,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-26-03-evening-why_sixty_minutes_history.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-28T05:04:14.411313+09:00",
+    "publish_at": "2026-09-28T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-27-01-morning.json",
+    "fact_key": "mercator_projection_area_distortion_greenland_africa",
+    "category": "지리·도시",
+    "fact": "메르카토르 도법은 항해에서 방향을 다루기 편하지만 고위도로 갈수록 면적을 크게 왜곡한다. 그래서 지도에서는 그린란드가 아프리카와 비슷하게 보일 수 있지만 실제 아프리카 면적은 그린란드의 약 14배다.",
+    "title": "그린란드가 아프리카만 해 보이는 이유",
+    "source_1": "https://www.usgs.gov/faqs/how-are-different-map-projections-used",
+    "source_2": "https://education.nationalgeographic.org/resource/selecting-map-projection/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab976be36a0dcfcb3e2f511",
+    "buffer_due_at": "2026-09-27T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-01-morning-mercator_projection_area_distortion_greenland_africa.mp4",
+    "status": "scheduled"
   }
 ]
