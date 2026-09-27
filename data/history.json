@@ -478,5 +478,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-01-morning-mercator_projection_area_distortion_greenland_africa.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-28T05:06:25.199367+09:00",
+    "publish_at": "2026-09-28T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-27-02-lunch.json",
+    "fact_key": "international_date_line_not_fixed_by_international_law",
+    "category": "법·규칙·관행",
+    "fact": "국제 날짜 변경선은 대략 경도 180도를 따르지만 국제법으로 고정된 하나의 직선이 아니다. 각 나라가 사용하는 날짜와 시간대를 선택할 수 있어 정치적·경제적 필요에 따라 경계가 굽어 있으며 실제로 사모아는 2011년 날짜 체계를 바꾸면서 12월 30일을 건너뛰었다.",
+    "title": "국제 날짜 변경선은 마음대로 움직일 수 있다?",
+    "source_1": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+    "source_2": "https://www.timeanddate.com/time/dateline.html",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab9774182dee5c85bc91927",
+    "buffer_due_at": "2026-09-28T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-02-lunch-international_date_line_not_fixed_by_international_law.mp4",
+    "status": "scheduled"
   }
 ]
