@@ -1,0 +1,16 @@
+{
+  "fact_key": "international_date_line_not_fixed_by_international_law",
+  "category": "법·규칙·관행",
+  "fact": "국제 날짜 변경선은 대략 경도 180도를 따르지만 국제법으로 고정된 하나의 직선이 아니다. 각 나라가 사용하는 날짜와 시간대를 선택할 수 있어 정치적·경제적 필요에 따라 경계가 굽어 있으며 실제로 사모아는 2011년 날짜 체계를 바꾸면서 12월 30일을 건너뛰었다.",
+  "script": "그거 아세요? 국제 날짜 변경선은 이름과 달리 국제법으로 딱 고정된 선이 아닙니다. 보통 경도 180도 근처를 지나지만 지도에서 보면 직선이 아니라 여기저기 크게 꺾여 있죠. 흔히 지구 반대편이니까 자연적으로 날짜가 바뀌는 정확한 선이 있다고 생각하기 쉽지만, 달력 날짜는 사람이 정한 시간 체계입니다. 그래서 나라들은 자신들이 사용할 날짜와 시간대를 선택할 수 있고, 날짜 변경선도 국경과 생활권을 피해 굽어집니다. 서쪽으로 선을 넘으면 하루를 더하고 동쪽으로 넘으면 하루를 빼는 것이 기본 원리입니다. 더 흥미로운 실제 사례도 있습니다. 사모아는 호주와 뉴질랜드와의 경제 관계를 맞추기 위해 2011년에 시간대를 바꾸면서 달력에서 12월 30일을 통째로 건너뛰었습니다. 반대로 항해에서 쓰는 날짜선처럼 180도 자오선을 기준으로 삼는 별도의 관점도 있습니다. 결국 날짜 변경선은 자연에 그어진 선이라기보다 세계가 날짜를 맞추기 위한 사회적 약속에 가깝습니다. 날짜 하나를 나라가 건너뛸 수 있다면, 여러분은 이상하다고 보나요 합리적이라고 보나요?",
+  "source_1": "https://oceanservice.noaa.gov/facts/international-date-line.html",
+  "source_2": "https://www.timeanddate.com/time/dateline.html",
+  "pexels_query_1": "Pacific Ocean globe map",
+  "pexels_query_2": "international airport departure board",
+  "pexels_query_3": "Samoa tropical island coastline",
+  "title": "국제 날짜 변경선은 마음대로 움직일 수 있다?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-09-27T05:00:00+09:00"
+}
