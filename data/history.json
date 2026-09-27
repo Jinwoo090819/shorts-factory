@@ -498,5 +498,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-02-lunch-international_date_line_not_fixed_by_international_law.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-28T05:07:58.873260+09:00",
+    "publish_at": "2026-09-28T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-27-03-evening.json",
+    "fact_key": "http_404_not_found_does_not_mean_permanently_deleted",
+    "category": "기술·AI·인터넷",
+    "fact": "HTTP 404 Not Found는 서버가 요청한 리소스의 현재 표현을 찾지 못했거나 그 존재를 공개하지 않으려 한다는 뜻이며, 그 리소스가 영구적으로 삭제됐다는 뜻까지 포함하지 않는다. 영구 삭제임을 서버가 알고 있다면 410 Gone이 더 적절한 상태 코드다.",
+    "title": "404는 페이지가 삭제됐다는 뜻이 아니다?",
+    "source_1": "https://datatracker.ietf.org/doc/rfc9110/",
+    "source_2": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ab9779e43493a0ede9cc159",
+    "buffer_due_at": "2026-09-28T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-03-evening-http_404_not_found_does_not_mean_permanently_deleted.mp4",
+    "status": "scheduled"
   }
 ]
