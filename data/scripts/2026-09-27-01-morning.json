@@ -1,0 +1,16 @@
+{
+  "fact_key": "mercator_projection_area_distortion_greenland_africa",
+  "category": "지리·도시",
+  "fact": "메르카토르 도법은 항해에서 방향을 다루기 편하지만 고위도로 갈수록 면적을 크게 왜곡한다. 그래서 지도에서는 그린란드가 아프리카와 비슷하게 보일 수 있지만 실제 아프리카 면적은 그린란드의 약 14배다.",
+  "script": "그거 아세요? 우리가 익숙하게 본 세계지도에서는 그린란드가 아프리카와 거의 비슷한 크기로 보이기도 하지만, 실제로 아프리카는 그린란드보다 약 14배나 넓습니다. 그렇다면 우리가 보던 지도가 틀린 걸까요? 정확히는 목적이 다른 겁니다. 대표적인 메르카토르 도법은 지구의 둥근 표면을 평면으로 옮기면서 방향을 다루기 쉽게 만든 방식이라 항해에 큰 장점이 있었습니다. 대신 적도에서 멀어질수록 면적이 심하게 부풀려집니다. 그래서 그린란드나 알래스카 같은 고위도 지역이 실제보다 거대하게 보이죠. 반대로 면적을 정확하게 비교하도록 만든 등적 도법도 있지만, 이번에는 모양이나 방향 같은 다른 요소가 왜곡될 수 있습니다. 결국 둥근 지구를 평평한 종이에 옮기면서 크기, 모양, 거리, 방향을 전부 완벽하게 보존하는 지도는 없습니다. 그러니까 세계지도에서 무엇이 더 커 보인다고 실제 면적도 더 크다고 단정하면 안 됩니다. 여러분은 익숙한 모양과 정확한 면적 중 어느 지도를 고르겠어요?",
+  "source_1": "https://www.usgs.gov/faqs/how-are-different-map-projections-used",
+  "source_2": "https://education.nationalgeographic.org/resource/selecting-map-projection/",
+  "pexels_query_1": "world map wall classroom",
+  "pexels_query_2": "Greenland aerial ice landscape",
+  "pexels_query_3": "Africa satellite earth globe",
+  "title": "그린란드가 아프리카만 해 보이는 이유",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-27T05:00:00+09:00"
+}
