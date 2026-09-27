@@ -1,0 +1,16 @@
+{
+  "fact_key": "http_404_not_found_does_not_mean_permanently_deleted",
+  "category": "기술·AI·인터넷",
+  "fact": "HTTP 404 Not Found는 서버가 요청한 리소스의 현재 표현을 찾지 못했거나 그 존재를 공개하지 않으려 한다는 뜻이며, 그 리소스가 영구적으로 삭제됐다는 뜻까지 포함하지 않는다. 영구 삭제임을 서버가 알고 있다면 410 Gone이 더 적절한 상태 코드다.",
+  "script": "그거 아세요? 인터넷에서 404가 뜬다고 그 페이지가 영원히 삭제됐다는 뜻은 아닙니다. 우리는 흔히 404를 그냥 페이지 삭제 표시라고 생각하지만, HTTP 표준의 의미는 조금 더 넓습니다. 404 Not Found는 서버가 지금 요청한 리소스를 찾지 못했거나, 경우에 따라 그 리소스가 존재한다는 사실을 공개하지 않겠다는 뜻입니다. 중요한 건 404만 보고 그 상태가 임시인지 영구적인지는 알 수 없다는 겁니다. 주소를 잘못 입력했거나 페이지가 이동했는데 연결이 안 된 경우에도 404가 나올 수 있죠. 반대로 서버가 해당 리소스가 영구적으로 사라졌다는 사실을 알고 있다면 표준에는 410 Gone이라는 별도 상태 코드도 있습니다. 그런데 실제 웹에서는 404가 훨씬 익숙하고 널리 쓰여서 사용자는 둘을 거의 구분하지 못합니다. 즉 화면에서는 둘 다 없는 페이지처럼 보여도 서버가 전달하는 의미는 다를 수 있습니다. 404를 보면 여러분은 삭제됐다고 생각하나요, 일단 못 찾는다고 생각하나요?",
+  "source_1": "https://datatracker.ietf.org/doc/rfc9110/",
+  "source_2": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404",
+  "pexels_query_1": "website error laptop screen",
+  "pexels_query_2": "server racks data center",
+  "pexels_query_3": "web developer typing code",
+  "title": "404는 페이지가 삭제됐다는 뜻이 아니다?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-27T05:00:00+09:00"
+}
