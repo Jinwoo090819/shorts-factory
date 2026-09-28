@@ -558,5 +558,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-02-lunch-recipe_ingredients_copyright_expression.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-29T05:05:24.786040+09:00",
+    "publish_at": "2026-09-29T19:00:00+09:00",
+    "script_file": "data/scripts/2026-09-28-03-evening.json",
+    "fact_key": "tennis_scoring_15_30_40_origin_uncertain",
+    "category": "스포츠 규칙",
+    "fact": "테니스의 한 게임 점수는 0, 15, 30, 40으로 세지만 이 독특한 숫자 체계가 왜 생겼는지에 대해서는 널리 알려진 설명들이 있어도 기원이 완전히 확정된 것은 아니다.",
+    "title": "테니스 점수는 왜 15·30·40일까?",
+    "source_1": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/",
+    "source_2": "https://www.itftennis.com/en/news-and-media/articles/history-of-tennis/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abac8843ac9f26496aa3961",
+    "buffer_due_at": "2026-09-29T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-03-evening-tennis_scoring_15_30_40_origin_uncertain.mp4",
+    "status": "scheduled"
   }
 ]
