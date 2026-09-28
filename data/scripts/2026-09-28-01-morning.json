@@ -11,6 +11,10 @@
   "title": "버저가 먼저 울려도 골이 될 수 있다?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-28T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-28T05:00:00+09:00",
+  "buffer_post_id": "6abac7a43ac9f26496aa1c64",
+  "publish_at": "2026-09-29T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-01-morning-basketball_buzzer_release_before_zero.mp4",
+  "scheduled_at": "2026-09-29T05:01:40.651032+09:00"
 }

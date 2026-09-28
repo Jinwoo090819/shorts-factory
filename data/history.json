@@ -518,5 +518,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-27-03-evening-http_404_not_found_does_not_mean_permanently_deleted.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-29T05:01:40.651359+09:00",
+    "publish_at": "2026-09-29T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-28-01-morning.json",
+    "fact_key": "basketball_buzzer_release_before_zero",
+    "category": "스포츠 규칙",
+    "fact": "농구에서 경기 종료 버저가 울릴 때 공이 이미 슈터의 손을 떠났다면, 버저 뒤에 공이 림을 통과해도 득점이 인정될 수 있다.",
+    "title": "버저가 먼저 울려도 골이 될 수 있다?",
+    "source_1": "https://official.nba.com/rule-no-13-instant-replay/",
+    "source_2": "https://www.fiba.basketball/en/news/tough-calls-regular-season-week-5-november-9",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abac7a43ac9f26496aa1c64",
+    "buffer_due_at": "2026-09-28T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-01-morning-basketball_buzzer_release_before_zero.mp4",
+    "status": "scheduled"
   }
 ]
