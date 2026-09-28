@@ -1,0 +1,16 @@
+{
+  "fact_key": "tennis_scoring_15_30_40_origin_uncertain",
+  "category": "스포츠 규칙",
+  "fact": "테니스의 한 게임 점수는 0, 15, 30, 40으로 세지만 이 독특한 숫자 체계가 왜 생겼는지에 대해서는 널리 알려진 설명들이 있어도 기원이 완전히 확정된 것은 아니다.",
+  "script": "그거 아세요? 테니스는 한 포인트씩 따는데 점수는 1, 2, 3이 아니라 15, 30, 40으로 올라갑니다. 더 이상한 건 왜 이런 숫자를 쓰는지에 대해 딱 하나로 확정된 설명이 없다는 점입니다. 현재 공식 규칙에서 한 게임의 첫 세 포인트는 15, 30, 40으로 부르고, 40 대 40은 듀스가 됩니다. 하지만 이 체계의 역사적 기원은 별개의 문제입니다. 오래된 설명 중에는 시계판의 15, 30, 45에서 시작했고 이후 45가 40으로 바뀌었다는 설이 유명합니다. 다만 이런 설명을 확정된 사실처럼 말하기에는 역사 기록이 충분하지 않다는 지적도 있습니다. 테니스 자체도 중세 프랑스의 주 드 폼과 연결되는 긴 역사를 가지고 있어 규칙과 용어가 오랜 시간 변해 왔습니다. 즉 오늘날 15, 30, 40을 쓰는 규칙은 명확하지만, 왜 그렇게 됐느냐는 질문에는 역사적 가설이 남아 있는 겁니다. 규칙이 확실하다고 기원까지 확실한 건 아닙니다. 여러분은 시계판 설이 가장 그럴듯하다고 보나요?",
+  "source_1": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/",
+  "source_2": "https://www.itftennis.com/en/news-and-media/articles/history-of-tennis/",
+  "pexels_query_1": "tennis match scoreboard court",
+  "pexels_query_2": "old clock face close up",
+  "pexels_query_3": "historic tennis racket court",
+  "title": "테니스 점수는 왜 15·30·40일까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-28T05:00:00+09:00"
+}
