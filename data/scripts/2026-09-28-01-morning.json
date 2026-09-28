@@ -1,0 +1,16 @@
+{
+  "fact_key": "basketball_buzzer_release_before_zero",
+  "category": "스포츠 규칙",
+  "fact": "농구에서 경기 종료 버저가 울릴 때 공이 이미 슈터의 손을 떠났다면, 버저 뒤에 공이 림을 통과해도 득점이 인정될 수 있다.",
+  "script": "그거 아세요? 농구에서는 종료 버저가 먼저 울리고 공이 그 뒤에 들어가도 득점이 될 수 있습니다. 흔히 전광판이 0이 되는 순간 공이 골대 안에 있어야 한다고 생각하지만, 핵심 기준은 공이 들어간 시점이 아니라 슈터의 손을 떠난 시점입니다. NBA 규칙은 경기 시간이 끝나기 전에 공이 손을 떠났는지를 판독하고, 샷클록 역시 공이 시간 만료 전에 손을 떠나야 정상적인 슛 시도가 됩니다. FIBA도 같은 핵심 원칙을 사용합니다. 그래서 0.1초를 남기고 던진 공이 버저가 울린 뒤 림을 통과해도 조건을 충족하면 득점입니다. 반대로 버저가 울릴 때 공이 손끝에 조금이라도 남아 있었다면 들어가도 인정되지 않을 수 있습니다. 물론 파울이나 아웃오브바운드 같은 다른 규칙은 별도로 확인해야 합니다. 결국 버저비터의 진짜 경계선은 골대가 아니라 손끝인 셈입니다. 여러분은 공이 들어간 순간과 손을 떠난 순간 중 어느 기준이 더 직관적인가요?",
+  "source_1": "https://official.nba.com/rule-no-13-instant-replay/",
+  "source_2": "https://www.fiba.basketball/en/news/tough-calls-regular-season-week-5-november-9",
+  "pexels_query_1": "basketball player shooting arena",
+  "pexels_query_2": "digital sports countdown clock",
+  "pexels_query_3": "basketball hoop ball slow motion",
+  "title": "버저가 먼저 울려도 골이 될 수 있다?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-28T05:00:00+09:00"
+}
