@@ -11,6 +11,10 @@
   "title": "레시피는 정말 저작권이 없을까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-28T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-28T05:00:00+09:00",
+  "buffer_post_id": "6abac81bc375fa5e8aa88d91",
+  "publish_at": "2026-09-29T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-02-lunch-recipe_ingredients_copyright_expression.mp4",
+  "scheduled_at": "2026-09-29T05:03:39.518570+09:00"
 }

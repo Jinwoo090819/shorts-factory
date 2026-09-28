@@ -538,5 +538,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-01-morning-basketball_buzzer_release_before_zero.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-29T05:03:39.518949+09:00",
+    "publish_at": "2026-09-29T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-28-02-lunch.json",
+    "fact_key": "recipe_ingredients_copyright_expression",
+    "category": "법·규칙·관행",
+    "fact": "미국 저작권 기준에서 단순한 재료 목록과 기본적인 조리 절차 자체는 보통 저작권 보호 대상이 아니지만, 창의적인 설명·사진·표현 등은 보호될 수 있다.",
+    "title": "레시피는 정말 저작권이 없을까?",
+    "source_1": "https://www.copyright.gov/help/faq/faq-protect.html",
+    "source_2": "https://copyrightalliance.org/are-recipes-cookbooks-protected-by-copyright/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abac81bc375fa5e8aa88d91",
+    "buffer_due_at": "2026-09-29T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-02-lunch-recipe_ingredients_copyright_expression.mp4",
+    "status": "scheduled"
   }
 ]
