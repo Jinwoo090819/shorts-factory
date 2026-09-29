@@ -1,0 +1,16 @@
+{
+  "fact_key": "banknote_material_cotton_linen_vs_polymer",
+  "category": "경제·돈의 원리",
+  "fact": "지폐는 나라에 따라 일반 목재 펄프 종이가 아니라 면·리넨 섬유나 폴리머 같은 특수 소재로 만들어진다. 미국 연방준비권은 75% 면과 25% 리넨으로 구성되고, 영국과 호주 등은 폴리머 지폐를 사용한다.",
+  "script": "그거 아세요? 우리가 흔히 지폐를 종이돈이라고 부르지만, 실제 지폐가 전부 우리가 쓰는 종이로 만들어지는 건 아닙니다. 미국 달러 지폐는 목재 펄프 종이가 아니라 면 75퍼센트와 리넨 25퍼센트로 만든 특수 소재입니다. 그래서 일반 프린터용 종이보다 반복해서 접고 펴는 상황에 훨씬 강합니다. 그런데 여기서 더 헷갈리는 점이 있습니다. 그렇다고 모든 나라가 면 섬유 지폐를 쓰는 것도 아닙니다. 영국과 호주처럼 폴리머, 즉 얇고 유연한 플라스틱 계열 소재를 쓰는 나라들도 있습니다. 폴리머는 투명창 같은 보안 요소를 넣기 쉽고 물과 오염에 강하며 오래 사용할 수 있다는 장점이 있습니다. 반대로 면 기반 지폐도 독특한 촉감과 보안 기술을 갖고 있어서 지금도 널리 사용됩니다. 결국 지폐를 종이라고 부르는 건 일상적인 표현일 뿐, 실제 소재는 나라의 보안과 내구성 선택에 따라 다릅니다. 여러분은 지폐라면 종이 느낌이 나야 한다고 보나요, 오래가는 폴리머가 낫다고 보나요?",
+  "source_1": "https://www.bep.gov/currency/how-money-is-made",
+  "source_2": "https://www.bankofengland.co.uk/explainers/why-are-new-banknotes-made-of-polymer",
+  "pexels_query_1": "cash money banknotes close up",
+  "pexels_query_2": "cotton fabric textile macro",
+  "pexels_query_3": "plastic transparent material factory",
+  "title": "지폐는 정말 종이로 만들까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-09-29T05:00:00+09:00"
+}
