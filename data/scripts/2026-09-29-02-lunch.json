@@ -11,6 +11,10 @@
   "title": "비행기는 뒤에서부터 타야 가장 빠를까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-09-29T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-29T05:00:00+09:00",
+  "buffer_post_id": "6abc1b782b2f93f6099d3f81",
+  "publish_at": "2026-09-30T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-02-lunch-airplane_boarding_back_to_front_not_fastest.mp4",
+  "scheduled_at": "2026-09-30T05:11:36.597806+09:00"
 }

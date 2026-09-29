@@ -598,5 +598,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-01-morning-banknote_material_cotton_linen_vs_polymer.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-30T05:11:36.598676+09:00",
+    "publish_at": "2026-09-30T13:00:00+09:00",
+    "script_file": "data/scripts/2026-09-29-02-lunch.json",
+    "fact_key": "airplane_boarding_back_to_front_not_fastest",
+    "category": "교육·일상생활",
+    "fact": "비행기 탑승은 뒤쪽 승객부터 순서대로 태우는 방식이 직관적으로 보여도 항상 가장 빠른 방법은 아니다. 연구에서는 창가·가운데·통로 순서처럼 좌석 간섭과 통로 정체를 줄이는 방식이나 더 정교한 최적화 방식이 더 빠를 수 있다.",
+    "title": "비행기는 뒤에서부터 타야 가장 빠를까?",
+    "source_1": "https://www.mdpi.com/2226-4310/4/4/57",
+    "source_2": "https://econpapers.repec.org/article/eeejaitra/v_3a18_3ay_3a2012_3ai_3a1_3ap_3a64-67.htm",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abc1b782b2f93f6099d3f81",
+    "buffer_due_at": "2026-09-30T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-02-lunch-airplane_boarding_back_to_front_not_fastest.mp4",
+    "status": "scheduled"
   }
 ]
