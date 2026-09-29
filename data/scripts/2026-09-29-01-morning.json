@@ -11,6 +11,10 @@
   "title": "지폐는 정말 종이로 만들까?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-09-29T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-29T05:00:00+09:00",
+  "buffer_post_id": "6abc1b13a1ba5ce146dae79b",
+  "publish_at": "2026-09-30T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-01-morning-banknote_material_cotton_linen_vs_polymer.mp4",
+  "scheduled_at": "2026-09-30T05:09:55.685378+09:00"
 }

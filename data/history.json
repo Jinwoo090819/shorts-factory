@@ -578,5 +578,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-28-03-evening-tennis_scoring_15_30_40_origin_uncertain.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-09-30T05:09:55.685942+09:00",
+    "publish_at": "2026-09-30T08:00:00+09:00",
+    "script_file": "data/scripts/2026-09-29-01-morning.json",
+    "fact_key": "banknote_material_cotton_linen_vs_polymer",
+    "category": "경제·돈의 원리",
+    "fact": "지폐는 나라에 따라 일반 목재 펄프 종이가 아니라 면·리넨 섬유나 폴리머 같은 특수 소재로 만들어진다. 미국 연방준비권은 75% 면과 25% 리넨으로 구성되고, 영국과 호주 등은 폴리머 지폐를 사용한다.",
+    "title": "지폐는 정말 종이로 만들까?",
+    "source_1": "https://www.bep.gov/currency/how-money-is-made",
+    "source_2": "https://www.bankofengland.co.uk/explainers/why-are-new-banknotes-made-of-polymer",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abc1b13a1ba5ce146dae79b",
+    "buffer_due_at": "2026-09-29T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-01-morning-banknote_material_cotton_linen_vs_polymer.mp4",
+    "status": "scheduled"
   }
 ]
