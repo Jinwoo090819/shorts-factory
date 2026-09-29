@@ -1,0 +1,16 @@
+{
+  "fact_key": "nine_ending_prices_left_digit_effect_not_universal",
+  "category": "소비·가격·브랜드",
+  "fact": "9로 끝나는 가격은 조건에 따라 소비자가 가격을 더 낮게 인식하거나 선택에 영향을 줄 수 있지만, 효과가 모든 상품과 상황에서 동일하게 나타나는 것은 아니다. 특히 2.99와 3.00처럼 가장 왼쪽 숫자가 바뀌는 경우 왼쪽 숫자 효과가 나타날 수 있다.",
+  "script": "그거 아세요? 9,900원이나 19,900원 같은 가격은 단순히 100원을 덜 받는 것 이상의 효과를 낼 수 있습니다. 소비자 연구에서는 2.99와 3.00처럼 실제 차이는 아주 작아도 맨 앞자리 숫자가 달라지면 2.99를 심리적으로 더 낮은 가격처럼 처리하는 현상이 관찰됐습니다. 이를 왼쪽 숫자 효과라고 부릅니다. 숫자를 왼쪽에서 오른쪽으로 읽으면서 첫 자리가 가격 판단에 상대적으로 큰 영향을 줄 수 있다는 설명입니다. 하지만 여기서 흔한 오해가 있습니다. 9로 끝내기만 하면 무조건 더 잘 팔린다는 뜻은 아닙니다. 연구에서는 가격 수준, 비교 대상, 구매 목적에 따라 효과가 달라질 수 있고, 어떤 상품에서는 둥근 가격이 품질이나 이미지 측면에서 더 적절할 수도 있습니다. 즉 9,900원은 마법의 숫자가 아니라 특정 조건에서 작동할 수 있는 가격 표현 방식입니다. 10,000원과 9,900원이 나란히 있다면 실제로 여러분은 9,900원이 꽤 더 싸게 느껴지나요?",
+  "source_1": "https://academic.oup.com/jcr/article-abstract/32/1/54/1796360",
+  "source_2": "https://academic.oup.com/jcr/article-abstract/36/2/328/1942926",
+  "pexels_query_1": "supermarket price tags shopping",
+  "pexels_query_2": "online shopping checkout price",
+  "pexels_query_3": "person comparing products store",
+  "title": "9,900원은 정말 더 싸게 느껴질까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-09-29T05:00:00+09:00"
+}
