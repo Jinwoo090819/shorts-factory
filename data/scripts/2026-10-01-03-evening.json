@@ -1,0 +1,16 @@
+{
+  "fact_key": "water_boiling_point_depends_on_atmospheric_pressure",
+  "category": "물리·화학·우주",
+  "fact": "물의 끓는점 100°C는 표준적인 해수면 부근 압력에서의 값이다. 기압이 낮은 높은 고도에서는 물이 100°C보다 낮은 온도에서 끓는다.",
+  "script": "그거 아세요? 물은 언제나 정확히 100도에서 끓는 게 아닙니다. 100도는 대략 해수면의 표준적인 대기압에서 순수한 물이 끓는 온도입니다. 끓는다는 건 액체의 증기압이 주변 압력과 같아져 액체 내부에서도 기포가 만들어질 수 있는 상태인데, 주변 압력이 낮아지면 그 조건을 더 낮은 온도에서 만족합니다. 그래서 산처럼 고도가 높은 곳에서는 물이 100도보다 낮은 온도에서 끓습니다. 미국 농무부 자료를 보면 해발 약 2,000피트에서는 물의 끓는점이 약 208화씨, 즉 약 97.8도까지 내려갑니다. 여기서 자주 헷갈리는 부분이 있습니다. 물이 더 낮은 온도에서 끓기 시작한다고 해서 삶는 음식이 더 빨리 익는 것은 아닙니다. 오히려 끓고 있는 물의 온도가 낮기 때문에 같은 조리 과정에 더 긴 시간이 필요할 수 있습니다. 기압이 달라지면 끓는점도 달라진다는 뜻이죠. 결국 ‘물은 100도에서 끓는다’는 말은 조건이 생략된 편리한 표현입니다. 여러분은 학교에서 이 조건까지 같이 배웠나요?",
+  "source_1": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/high-altitude-cooking",
+  "source_2": "https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular55.pdf",
+  "pexels_query_1": "boiling water steam kitchen",
+  "pexels_query_2": "high altitude mountain landscape",
+  "pexels_query_3": "weather barometer atmospheric pressure",
+  "title": "물은 정말 항상 100°C에서 끓을까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-10-01T04:56:37+09:00"
+}
