@@ -1,0 +1,16 @@
+{
+  "fact_key": "highest_mountain_depends_on_measurement_baseline",
+  "category": "지리·도시",
+  "fact": "'세계에서 가장 높은 산'은 측정 기준에 따라 답이 달라진다. 평균 해수면 위 고도는 에베레스트가 최고지만, 해저의 기저부부터 정상까지 재면 마우나케아가 더 길고, 지구 중심에서 정상까지의 거리는 적도 팽창 때문에 침보라소가 더 멀다.",
+  "script": "그거 아세요? ‘세계에서 가장 높은 산은 에베레스트’라는 답은 맞지만, 측정 기준을 바꾸면 다른 산이 1등이 됩니다. 에베레스트는 평균 해수면을 기준으로 정상 고도가 가장 높기 때문에 우리가 보통 말하는 세계 최고봉입니다. 그런데 산의 바닥부터 정상까지 실제 높이를 재면 하와이의 마우나케아가 후보가 됩니다. 마우나케아는 해수면 위로는 약 4.2킬로미터지만 대부분이 바닷속에 있고, 해저 기저부부터 정상까지는 약 10킬로미터에 이릅니다. 또 완전히 다른 기준도 있습니다. 지구는 완벽한 구가 아니라 적도 부근이 약간 불룩하기 때문에, 지구 중심에서 정상까지의 거리를 재면 적도 가까이에 있는 에콰도르의 침보라소 정상이 에베레스트보다 더 멉니다. 즉 ‘높다’는 말을 해수면 기준 고도, 산 자체의 기저부부터 정상까지의 높이, 지구 중심으로부터의 거리 중 무엇으로 정의하느냐에 따라 답이 달라지는 겁니다. 공식적인 최고봉을 고르라면 에베레스트지만, 질문 자체에는 숨은 기준이 있습니다. 여러분은 에베레스트, 마우나케아, 침보라소 중 어느 산을 진짜 1등이라고 부르겠나요?",
+  "source_1": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+  "source_2": "https://www.nationalgeographic.com/culture/article/extreme-geography-coldest-temperature-highest-peak-deepest-ocean-cartography",
+  "pexels_query_1": "Mount Everest Himalaya summit",
+  "pexels_query_2": "Mauna Kea Hawaii volcano ocean",
+  "pexels_query_3": "Chimborazo Ecuador mountain landscape",
+  "title": "세계에서 가장 높은 산은 에베레스트가 아닐 수도 있다?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-10-01T04:56:37+09:00"
+}
