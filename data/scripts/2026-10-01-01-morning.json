@@ -1,0 +1,16 @@
+{
+  "fact_key": "food_date_labels_quality_not_safety_us",
+  "category": "음식",
+  "fact": "미국의 식품 날짜 표시는 영아용 조제분유를 제외하면 대체로 안전기한이 아니라 최상의 품질을 안내하는 표시다. 'Best if Used By'나 'Sell By'가 지났다고 그 순간 음식이 자동으로 위험해지는 것은 아니며, 보관 상태와 식품 종류를 함께 봐야 한다.",
+  "script": "그거 아세요? 식품 포장에 적힌 날짜가 지났다고 그 순간 음식이 자동으로 위험해지는 건 아닙니다. 적어도 미국의 연방 기준에서는 영아용 조제분유를 제외한 대부분의 식품 날짜가 안전기한이 아니라 품질을 안내하는 표시입니다. 예를 들어 ‘Best if Used By’는 그 날짜까지 맛과 품질이 가장 좋다는 뜻이고, ‘Sell By’는 매장이 재고를 관리할 때 참고하는 날짜입니다. 헷갈리는 이유는 소비자가 이런 표현을 전부 ‘먹으면 안 되는 마지막 날’처럼 받아들이기 쉽기 때문입니다. FDA와 USDA도 날짜 표시 혼란이 멀쩡한 음식의 폐기로 이어질 수 있다고 설명합니다. 그렇다고 날짜를 무시하고 아무 음식이나 먹어도 된다는 뜻은 아닙니다. 보관 온도와 개봉 여부, 식품 종류가 중요하고 변질 징후가 있으면 버려야 합니다. 특히 영아용 조제분유의 Use By 날짜는 예외로 반드시 지켜야 합니다. 결국 포장 날짜는 하나의 절대적인 안전 스위치가 아니라 표시의 의미를 먼저 확인해야 하는 정보입니다. 여러분은 날짜가 하루만 지나도 버리는 편인가요, 상태를 확인하는 편인가요?",
+  "source_1": "https://www.fda.gov/food/consumers/tips-reduce-food-waste",
+  "source_2": "https://ask.fsis.usda.gov/article/What-is-open-dating",
+  "pexels_query_1": "grocery food expiration date package",
+  "pexels_query_2": "refrigerator food storage kitchen",
+  "pexels_query_3": "supermarket shelves packaged food",
+  "title": "유통 날짜가 지나면 바로 위험한 음식일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-10-01T04:56:37+09:00"
+}
