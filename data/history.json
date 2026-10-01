@@ -678,5 +678,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-02-lunch-highest_mountain_depends_on_measurement_baseline.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-02T01:18:23.902455+09:00",
+    "publish_at": "2026-10-02T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-01-03-evening.json",
+    "fact_key": "water_boiling_point_depends_on_atmospheric_pressure",
+    "category": "물리·화학·우주",
+    "fact": "물의 끓는점 100°C는 표준적인 해수면 부근 압력에서의 값이다. 기압이 낮은 높은 고도에서는 물이 100°C보다 낮은 온도에서 끓는다.",
+    "title": "물은 정말 항상 100°C에서 끓을까?",
+    "source_1": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/high-altitude-cooking",
+    "source_2": "https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular55.pdf",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abe87cfb9f23bd4e873bc04",
+    "buffer_due_at": "2026-10-02T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-03-evening-water_boiling_point_depends_on_atmospheric_pressure.mp4",
+    "status": "scheduled"
   }
 ]
