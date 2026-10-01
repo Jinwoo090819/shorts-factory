@@ -86,10 +86,14 @@ jobs:
         if: steps.ready.outputs.has_ready == 'true'
         run: pip install -r requirements.txt
 
-      - name: Allow longer narration
+      - name: Apply runtime render fixes
         if: steps.ready.outputs.has_ready == 'true'
         run: |
           sed -i 's/MAX_NARRATION_SECONDS = 85.0/MAX_NARRATION_SECONDS = 170.0/' src/main_fixed.py
+          # Pexels occasionally returns portrait MP4s with a non-square sample
+          # aspect ratio. concat requires matching SAR across every input, so
+          # normalize each segment to square pixels before concatenation.
+          sed -i 's/crop=1080:1920,fps=30,format=yuv420p/crop=1080:1920,setsar=1,fps=30,format=yuv420p/' src/main_fixed.py
 
       - name: Build and schedule all ready Shorts
         if: steps.ready.outputs.has_ready == 'true'
