@@ -658,5 +658,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-01-morning-food_date_labels_quality_not_safety_us.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-01T20:00:55.814585+09:00",
+    "publish_at": "2026-10-01T20:05:47.552877+09:00",
+    "script_file": "data/scripts/2026-10-01-02-lunch.json",
+    "fact_key": "highest_mountain_depends_on_measurement_baseline",
+    "category": "지리·도시",
+    "fact": "'세계에서 가장 높은 산'은 측정 기준에 따라 답이 달라진다. 평균 해수면 위 고도는 에베레스트가 최고지만, 해저의 기저부부터 정상까지 재면 마우나케아가 더 길고, 지구 중심에서 정상까지의 거리는 적도 팽창 때문에 침보라소가 더 멀다.",
+    "title": "세계에서 가장 높은 산은 에베레스트가 아닐 수도 있다?",
+    "source_1": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+    "source_2": "https://www.nationalgeographic.com/culture/article/extreme-geography-coldest-temperature-highest-peak-deepest-ocean-cartography",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abe3d67f9db557f49363935",
+    "buffer_due_at": "2026-10-01T11:05:47.552Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-02-lunch-highest_mountain_depends_on_measurement_baseline.mp4",
+    "status": "scheduled"
   }
 ]

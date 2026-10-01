@@ -11,6 +11,10 @@
   "title": "세계에서 가장 높은 산은 에베레스트가 아닐 수도 있다?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-10-01T04:56:37+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-01T04:56:37+09:00",
+  "buffer_post_id": "6abe3d67f9db557f49363935",
+  "publish_at": "2026-10-01T20:05:47.552877+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-02-lunch-highest_mountain_depends_on_measurement_baseline.mp4",
+  "scheduled_at": "2026-10-01T20:00:55.814016+09:00"
 }
