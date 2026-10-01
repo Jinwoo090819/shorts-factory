@@ -638,5 +638,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-03-evening-nine_ending_prices_left_digit_effect_not_universal.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-01T19:59:02.042956+09:00",
+    "publish_at": "2026-10-01T20:03:55.490871+09:00",
+    "script_file": "data/scripts/2026-10-01-01-morning.json",
+    "fact_key": "food_date_labels_quality_not_safety_us",
+    "category": "음식",
+    "fact": "미국의 식품 날짜 표시는 영아용 조제분유를 제외하면 대체로 안전기한이 아니라 최상의 품질을 안내하는 표시다. 'Best if Used By'나 'Sell By'가 지났다고 그 순간 음식이 자동으로 위험해지는 것은 아니며, 보관 상태와 식품 종류를 함께 봐야 한다.",
+    "title": "유통 날짜가 지나면 바로 위험한 음식일까?",
+    "source_1": "https://www.fda.gov/food/consumers/tips-reduce-food-waste",
+    "source_2": "https://ask.fsis.usda.gov/article/What-is-open-dating",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abe3cf5d1d649472325660a",
+    "buffer_due_at": "2026-10-01T11:03:55.490Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-01-morning-food_date_labels_quality_not_safety_us.mp4",
+    "status": "scheduled"
   }
 ]

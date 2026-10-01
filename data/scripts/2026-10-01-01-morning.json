@@ -11,6 +11,10 @@
   "title": "유통 날짜가 지나면 바로 위험한 음식일까?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-10-01T04:56:37+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-01T04:56:37+09:00",
+  "buffer_post_id": "6abe3cf5d1d649472325660a",
+  "publish_at": "2026-10-01T20:03:55.490871+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-01-morning-food_date_labels_quality_not_safety_us.mp4",
+  "scheduled_at": "2026-10-01T19:59:02.041943+09:00"
 }
