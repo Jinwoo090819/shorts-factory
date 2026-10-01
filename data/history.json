@@ -618,5 +618,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-02-lunch-airplane_boarding_back_to_front_not_fastest.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-01T19:56:53.203634+09:00",
+    "publish_at": "2026-10-01T20:01:47.783720+09:00",
+    "script_file": "data/scripts/2026-09-29-03-evening.json",
+    "fact_key": "nine_ending_prices_left_digit_effect_not_universal",
+    "category": "소비·가격·브랜드",
+    "fact": "9로 끝나는 가격은 조건에 따라 소비자가 가격을 더 낮게 인식하거나 선택에 영향을 줄 수 있지만, 효과가 모든 상품과 상황에서 동일하게 나타나는 것은 아니다. 특히 2.99와 3.00처럼 가장 왼쪽 숫자가 바뀌는 경우 왼쪽 숫자 효과가 나타날 수 있다.",
+    "title": "9,900원은 정말 더 싸게 느껴질까?",
+    "source_1": "https://academic.oup.com/jcr/article-abstract/32/1/54/1796360",
+    "source_2": "https://academic.oup.com/jcr/article-abstract/36/2/328/1942926",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6abe3c753ba994290b1df50f",
+    "buffer_due_at": "2026-10-01T11:01:47.783Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-03-evening-nine_ending_prices_left_digit_effect_not_universal.mp4",
+    "status": "scheduled"
   }
 ]

@@ -11,6 +11,10 @@
   "title": "9,900원은 정말 더 싸게 느껴질까?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-09-29T05:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-09-29T05:00:00+09:00",
+  "buffer_post_id": "6abe3c753ba994290b1df50f",
+  "publish_at": "2026-10-01T20:01:47.783720+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-09-29-03-evening-nine_ending_prices_left_digit_effect_not_universal.mp4",
+  "scheduled_at": "2026-10-01T19:56:53.203040+09:00"
 }
