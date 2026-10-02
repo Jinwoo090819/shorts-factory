@@ -1,0 +1,16 @@
+{
+  "fact_key": "pluto_dwarf_planet_official_definition_debate_continues",
+  "category": "물리·화학·우주",
+  "fact": "명왕성은 IAU의 2006년 공식 정의에서는 왜행성이다. 태양을 돌고 거의 둥글지만 궤도 주변을 지배적으로 정리했다는 조건을 충족하지 못한다. 다만 어떤 기준으로 행성을 정의할지에 대한 과학적 논의 자체는 계속되고 있다.",
+  "script": "그거 아세요? 명왕성이 ‘행성이냐 아니냐’는 질문에는 공식 답과 과학적 논쟁을 구분해야 합니다. 국제천문연맹, IAU의 현재 분류에서 명왕성은 행성이 아니라 왜행성입니다. 2006년 채택된 기준에서 태양계 행성은 태양을 돌고, 자체 중력으로 거의 둥글며, 자기 궤도 주변을 지배적으로 정리해야 합니다. 명왕성은 앞의 두 조건은 만족하지만 세 번째 조건을 충족하지 못해 왜행성으로 분류됐습니다. 그래서 공식 분류만 묻는다면 답은 명확합니다. 그런데 여기서 논쟁이 끝난 건 아닙니다. NASA도 일부 천문학자와 행성과학자들이 IAU 정의에 동의하지 않으며, 위치나 궤도 지배력보다 천체 자체의 물리적 성질을 중심으로 행성을 정의하자는 관점 등이 존재한다고 설명합니다. 실제로 2006년 IAU에서도 정의를 둘러싼 여러 안이 논의됐습니다. 즉 명왕성이 공식적으로 왜행성이라는 사실과, 그 정의가 유일하게 가능한 과학적 기준이라는 주장은 같은 말이 아닙니다. 여러분은 궤도 기준과 천체 자체 기준 중 어느 쪽이 더 납득되나요?",
+  "source_1": "https://www.iau.org/IAU/Iau/News/PR2006/iau-2006-general-assembly-resolution-votes.aspx",
+  "source_2": "https://science.nasa.gov/solar-system/planets/what-is-a-planet/",
+  "pexels_query_1": "Pluto dwarf planet space illustration",
+  "pexels_query_2": "solar system planets astronomy",
+  "pexels_query_3": "telescope observatory night sky",
+  "title": "명왕성은 진짜 행성이 아닐까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-10-02T14:44:00+09:00"
+}
