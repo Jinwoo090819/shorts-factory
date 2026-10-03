@@ -1,0 +1,16 @@
+{
+  "fact_key": "white_black_color_answer_depends_on_light_or_perception_definition",
+  "category": "물리·화학·우주",
+  "fact": "흰색과 검은색이 '색인가'라는 질문은 색을 무엇으로 정의하느냐에 따라 답이 달라진다. 빛의 스펙트럼 관점에서 흰빛은 여러 가시광 파장이 섞여 보이는 것이고 검정은 가시광이 거의 없는 상태지만, 색 지각·색채 체계에서는 흰색·회색·검정도 무채색으로 다룰 수 있다.",
+  "script": "그거 아세요? 흰색과 검은색이 색이냐는 질문은 단순한 말싸움이 아니라 기준에 따라 답이 달라집니다. 빛의 물리만 놓고 보면 빨강이나 초록처럼 흰색에 대응하는 하나의 고유 파장이 있는 건 아닙니다. NASA 자료처럼 흰빛을 프리즘으로 나누면 여러 가시광 색이 나타납니다. 반대로 빛이 거의 눈에 들어오지 않으면 우리는 검게 지각합니다. 그래서 '빛의 한 파장에 대응하는 색인가'라는 기준에서는 흰색과 검은색을 일반적인 스펙트럼 색과 다르게 볼 수 있습니다. 하지만 색채와 인간 지각에서는 이야기가 달라집니다. NASA가 공개한 인간 지각 자료에서는 흰색, 회색, 검은색처럼 색상, 즉 hue가 없는 자극도 무채색, achromatic colors로 분류합니다. 화면에서도 빨강, 초록, 파랑 빛을 함께 높이면 흰색을 만들고 모두 끄면 검정이 됩니다. 결국 '색'을 빛의 파장으로 말하는지, 사람이 구별하는 시각적 범주로 말하는지가 핵심입니다. 여러분은 흰색과 검은색도 색이라고 보나요?",
+  "source_1": "https://imagine.gsfc.nasa.gov/science/toolbox/spectra1.html",
+  "source_2": "https://ntrs.nasa.gov/api/citations/19880019246/downloads/19880019246.pdf",
+  "pexels_query_1": "rainbow prism light spectrum",
+  "pexels_query_2": "black dark room silhouette",
+  "pexels_query_3": "white paint color palette studio",
+  "title": "흰색과 검은색은 진짜 색일까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-10-03T11:00:00+09:00"
+}
