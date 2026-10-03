@@ -1,0 +1,16 @@
+{
+  "fact_key": "single_color_can_function_as_trademark_with_distinctiveness",
+  "category": "법·규칙·관행",
+  "fact": "특정 색 하나만으로도 조건을 충족하면 상표가 될 수 있다. 다만 색 자체를 모든 용도에서 독점하는 것이 아니라 특정 상품·서비스에서 출처를 식별할 만큼 식별력을 얻어야 하며, 기능적이거나 일반적인 색은 보호가 제한될 수 있다.",
+  "script": "그거 아세요? 회사가 로고나 글자 없이 색 하나만으로도 상표권을 인정받는 경우가 있습니다. 그렇다고 어떤 회사가 빨간색을 등록했다고 세상의 모든 빨간색 사용을 금지할 수 있다는 뜻은 아닙니다. 상표는 기본적으로 특정 상품이나 서비스의 출처를 구별하기 위한 제도이기 때문입니다. 미국 특허상표청은 색을 포함한 상표를 별도 형식으로 출원할 수 있게 하고 있고, 세계지식재산기구 자료도 단일 색상이 상표가 될 가능성을 인정합니다. 하지만 여기에는 중요한 조건이 있습니다. 단일 색은 보통 처음부터 강한 식별력이 있다고 보기 어렵기 때문에, 오랜 사용 등을 통해 소비자가 그 색을 특정 출처와 연결한다는 식별력을 보여줘야 하는 경우가 많습니다. 또 업계에서 흔히 필요한 색까지 한 회사가 막아버리지 않도록 기능성과 공익도 고려됩니다. 즉 색 상표는 '이 색은 내 것'이 아니라 특정 시장에서 이 색이 브랜드 표시로 기능하는지가 핵심입니다. 여러분은 색 하나에도 상표권을 인정해야 한다고 보나요?",
+  "source_1": "https://www.uspto.gov/trademarks/basics/mark-drawings-trademarks",
+  "source_2": "https://www.wipo.int/edocs/mdocs/stlt/en/sct_23/sct_23_2.pdf",
+  "pexels_query_1": "paint color swatches palette",
+  "pexels_query_2": "supermarket branded packaging shelves",
+  "pexels_query_3": "trademark legal documents office",
+  "title": "색 하나도 상표가 될 수 있을까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-10-03T11:00:00+09:00"
+}
