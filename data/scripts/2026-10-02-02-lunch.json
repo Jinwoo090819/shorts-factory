@@ -11,6 +11,10 @@
   "title": "명왕성은 진짜 행성이 아닐까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-10-02T14:44:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-02T14:44:00+09:00",
+  "buffer_post_id": "6ac050c5724c7034229beb5e",
+  "publish_at": "2026-10-03T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-02-02-lunch-pluto_dwarf_planet_official_definition_debate_continues.mp4",
+  "scheduled_at": "2026-10-03T09:48:05.889003+09:00"
 }

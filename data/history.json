@@ -698,5 +698,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-01-03-evening-water_boiling_point_depends_on_atmospheric_pressure.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-03T09:48:05.889369+09:00",
+    "publish_at": "2026-10-03T13:00:00+09:00",
+    "script_file": "data/scripts/2026-10-02-02-lunch.json",
+    "fact_key": "pluto_dwarf_planet_official_definition_debate_continues",
+    "category": "물리·화학·우주",
+    "fact": "명왕성은 IAU의 2006년 공식 정의에서는 왜행성이다. 태양을 돌고 거의 둥글지만 궤도 주변을 지배적으로 정리했다는 조건을 충족하지 못한다. 다만 어떤 기준으로 행성을 정의할지에 대한 과학적 논의 자체는 계속되고 있다.",
+    "title": "명왕성은 진짜 행성이 아닐까?",
+    "source_1": "https://www.iau.org/IAU/Iau/News/PR2006/iau-2006-general-assembly-resolution-votes.aspx",
+    "source_2": "https://science.nasa.gov/solar-system/planets/what-is-a-planet/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac050c5724c7034229beb5e",
+    "buffer_due_at": "2026-10-03T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-02-02-lunch-pluto_dwarf_planet_official_definition_debate_continues.mp4",
+    "status": "scheduled"
   }
 ]
