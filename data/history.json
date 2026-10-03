@@ -758,5 +758,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-02-lunch-single_color_can_function_as_trademark_with_distinctiveness.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-04T05:11:40.969972+09:00",
+    "publish_at": "2026-10-04T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-03-03-evening.json",
+    "fact_key": "white_black_color_answer_depends_on_light_or_perception_definition",
+    "category": "물리·화학·우주",
+    "fact": "흰색과 검은색이 '색인가'라는 질문은 색을 무엇으로 정의하느냐에 따라 답이 달라진다. 빛의 스펙트럼 관점에서 흰빛은 여러 가시광 파장이 섞여 보이는 것이고 검정은 가시광이 거의 없는 상태지만, 색 지각·색채 체계에서는 흰색·회색·검정도 무채색으로 다룰 수 있다.",
+    "title": "흰색과 검은색은 진짜 색일까?",
+    "source_1": "https://imagine.gsfc.nasa.gov/science/toolbox/spectra1.html",
+    "source_2": "https://ntrs.nasa.gov/api/citations/19880019246/downloads/19880019246.pdf",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac1617cad7fd83bc502317c",
+    "buffer_due_at": "2026-10-04T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-03-evening-white_black_color_answer_depends_on_light_or_perception_definition.mp4",
+    "status": "scheduled"
   }
 ]

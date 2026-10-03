@@ -11,6 +11,10 @@
   "title": "흰색과 검은색은 진짜 색일까?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-10-03T11:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-03T11:00:00+09:00",
+  "buffer_post_id": "6ac1617cad7fd83bc502317c",
+  "publish_at": "2026-10-04T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-03-evening-white_black_color_answer_depends_on_light_or_perception_definition.mp4",
+  "scheduled_at": "2026-10-04T05:11:40.969644+09:00"
 }
