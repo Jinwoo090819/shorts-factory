@@ -1,0 +1,16 @@
+{
+  "fact_key": "continent_count_depends_on_geographic_convention",
+  "category": "지리·도시",
+  "fact": "대륙의 수는 전 세계에서 하나의 방식으로만 세는 것이 아니다. 7대륙 체계가 널리 쓰이지만, 북·남아메리카를 하나의 아메리카로 묶거나 유럽과 아시아를 유라시아로 묶는 6대륙 체계도 실제로 사용된다.",
+  "script": "그거 아세요? 지구의 대륙은 무조건 7개라고 배웠다면, 다른 지역에서는 정답이 6개일 수도 있습니다. 내셔널지오그래픽은 아시아, 아프리카, 북아메리카, 남아메리카, 남극, 유럽, 오스트레일리아의 7대륙 체계를 사용합니다. 그런데 대륙이라는 말에는 전 세계가 합의한 단 하나의 분류 공식이 있는 게 아닙니다. 실제로 북아메리카와 남아메리카를 하나의 아메리카로 묶는 6대륙 체계가 있고, 반대로 아메리카는 둘로 나누면서 유럽과 아시아를 유라시아 하나로 묶는 6대륙 체계도 있습니다. 실제 지형만 보면 유럽과 아시아 사이에 대양이 있는 것도 아니기 때문에, 어디까지를 별도 대륙으로 볼지는 물리적 지형뿐 아니라 역사와 교육 관습도 영향을 줍니다. 그래서 같은 지구 지도를 보고도 어떤 체계를 배웠는지에 따라 대륙 개수가 달라질 수 있습니다. 결국 7개가 틀렸다는 뜻이 아니라 어떤 분류 기준을 쓰는지 먼저 정해야 한다는 겁니다. 여러분은 6대륙과 7대륙 중 어느 쪽이 더 자연스럽나요?",
+  "source_1": "https://www.nationalgeographic.org/national-geographic-map-policy",
+  "source_2": "https://www.worldometers.info/geography/continents/",
+  "pexels_query_1": "world map continents classroom",
+  "pexels_query_2": "Europe Asia border mountains landscape",
+  "pexels_query_3": "North South America satellite earth",
+  "title": "대륙은 정말 무조건 7개일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-10-03T11:00:00+09:00"
+}
