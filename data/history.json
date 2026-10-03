@@ -718,5 +718,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-02-02-lunch-pluto_dwarf_planet_official_definition_debate_continues.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-04T05:08:25.505651+09:00",
+    "publish_at": "2026-10-04T08:00:00+09:00",
+    "script_file": "data/scripts/2026-10-03-01-morning.json",
+    "fact_key": "continent_count_depends_on_geographic_convention",
+    "category": "지리·도시",
+    "fact": "대륙의 수는 전 세계에서 하나의 방식으로만 세는 것이 아니다. 7대륙 체계가 널리 쓰이지만, 북·남아메리카를 하나의 아메리카로 묶거나 유럽과 아시아를 유라시아로 묶는 6대륙 체계도 실제로 사용된다.",
+    "title": "대륙은 정말 무조건 7개일까?",
+    "source_1": "https://www.nationalgeographic.org/national-geographic-map-policy",
+    "source_2": "https://www.worldometers.info/geography/continents/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac160b9fec591339485c682",
+    "buffer_due_at": "2026-10-03T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-01-morning-continent_count_depends_on_geographic_convention.mp4",
+    "status": "scheduled"
   }
 ]
