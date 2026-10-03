@@ -738,5 +738,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-01-morning-continent_count_depends_on_geographic_convention.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-04T05:10:17.463669+09:00",
+    "publish_at": "2026-10-04T13:00:00+09:00",
+    "script_file": "data/scripts/2026-10-03-02-lunch.json",
+    "fact_key": "single_color_can_function_as_trademark_with_distinctiveness",
+    "category": "법·규칙·관행",
+    "fact": "특정 색 하나만으로도 조건을 충족하면 상표가 될 수 있다. 다만 색 자체를 모든 용도에서 독점하는 것이 아니라 특정 상품·서비스에서 출처를 식별할 만큼 식별력을 얻어야 하며, 기능적이거나 일반적인 색은 보호가 제한될 수 있다.",
+    "title": "색 하나도 상표가 될 수 있을까?",
+    "source_1": "https://www.uspto.gov/trademarks/basics/mark-drawings-trademarks",
+    "source_2": "https://www.wipo.int/edocs/mdocs/stlt/en/sct_23/sct_23_2.pdf",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac161297d53b827e0ec4cb9",
+    "buffer_due_at": "2026-10-04T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-02-lunch-single_color_can_function_as_trademark_with_distinctiveness.mp4",
+    "status": "scheduled"
   }
 ]

@@ -11,6 +11,10 @@
   "title": "색 하나도 상표가 될 수 있을까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-10-03T11:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-03T11:00:00+09:00",
+  "buffer_post_id": "6ac161297d53b827e0ec4cb9",
+  "publish_at": "2026-10-04T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-02-lunch-single_color_can_function_as_trademark_with_distinctiveness.mp4",
+  "scheduled_at": "2026-10-04T05:10:17.463347+09:00"
 }
