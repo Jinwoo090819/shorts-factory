@@ -818,5 +818,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-02-lunch-lake_vs_pond_has_no_universal_official_size_boundary.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-05T05:08:09.700389+09:00",
+    "publish_at": "2026-10-05T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-04-03-evening.json",
+    "fact_key": "work_titles_not_protected_by_copyright_but_other_laws_may_apply",
+    "category": "법·규칙·관행",
+    "fact": "미국 저작권법 체계에서는 책·영화·노래 같은 저작물의 제목 자체는 저작권 보호 대상이 아니다. 다만 제목의 사용이 언제나 자유롭다는 뜻은 아니며, 상황에 따라 상표법 등 다른 법적 보호가 문제될 수 있다.",
+    "title": "책이나 영화 제목에도 저작권이 있을까?",
+    "source_1": "https://www.copyright.gov/help/faq/faq-forms.html",
+    "source_2": "https://loc.gov/issn/faq/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac2b22963761da98b5b1c58",
+    "buffer_due_at": "2026-10-05T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-03-evening-work_titles_not_protected_by_copyright_but_other_laws_may_apply.mp4",
+    "status": "scheduled"
   }
 ]

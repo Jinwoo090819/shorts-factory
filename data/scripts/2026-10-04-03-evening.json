@@ -11,6 +11,10 @@
   "title": "책이나 영화 제목에도 저작권이 있을까?",
   "slot": "evening",
   "target_publish_time": "19:00",
-  "status": "ready",
-  "created_at": "2026-10-04T11:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-04T11:00:00+09:00",
+  "buffer_post_id": "6ac2b22963761da98b5b1c58",
+  "publish_at": "2026-10-05T19:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-03-evening-work_titles_not_protected_by_copyright_but_other_laws_may_apply.mp4",
+  "scheduled_at": "2026-10-05T05:08:09.700040+09:00"
 }
