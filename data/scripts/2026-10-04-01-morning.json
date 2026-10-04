@@ -1,0 +1,16 @@
+{
+  "fact_key": "kilobyte_1000_vs_kibibyte_1024_standard_distinction",
+  "category": "기술·AI·인터넷",
+  "fact": "국제 표준에서 kB(킬로바이트)는 1000바이트이고 KiB(키비바이트)는 1024바이트다. 다만 컴퓨터 역사에서는 1024바이트를 KB라고 부르는 관행이 오래 사용돼 실제 제품과 운영체제에서 표시 차이가 생길 수 있다.",
+  "script": "그거 아세요? 1킬로바이트가 1024바이트라고 외웠다면, 국제 표준 기준으로는 정확하지 않습니다. SI 접두어에서 킬로는 1000을 뜻하기 때문에 kB, 즉 킬로바이트는 1000바이트입니다. 그런데 컴퓨터는 2진법을 쓰고 2의 10제곱인 1024가 1000과 가까워서, 초기 컴퓨터 업계에서는 1024바이트를 킬로바이트라고 부르는 관행이 널리 퍼졌습니다. 이 혼란을 줄이려고 IEC는 1024바이트에 키비바이트, 기호 KiB라는 별도 이름을 도입했습니다. 그래서 표준대로라면 1 kB는 1000바이트, 1 KiB는 1024바이트입니다. 실제로 저장장치 회사가 1GB를 10억 바이트로 표시했는데 컴퓨터에서 숫자가 다르게 보이는 현상도 이런 십진 단위와 이진 단위의 차이와 연결됩니다. 즉 1000과 1024 중 하나가 무조건 틀린 게 아니라, 같은 KB라는 말을 서로 다른 관행으로 써온 게 문제였습니다. 여러분은 1024바이트를 KB라고 부르는 관행을 계속 써도 된다고 보나요?",
+  "source_1": "https://physics.nist.gov/cuu/Units/binary.html",
+  "source_2": "https://styleguide.iec.ch/?onepage-docs=docly-documentation",
+  "pexels_query_1": "computer data storage hard drive",
+  "pexels_query_2": "binary code computer screen",
+  "pexels_query_3": "digital file size storage interface",
+  "title": "1KB는 1000바이트일까, 1024바이트일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-10-04T11:00:00+09:00"
+}
