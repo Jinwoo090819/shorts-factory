@@ -11,6 +11,10 @@
   "title": "연못은 얼마나 커지면 호수가 될까?",
   "slot": "lunch",
   "target_publish_time": "13:00",
-  "status": "ready",
-  "created_at": "2026-10-04T11:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-04T11:00:00+09:00",
+  "buffer_post_id": "6ac2b1c9ca1380ada835a917",
+  "publish_at": "2026-10-05T13:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-02-lunch-lake_vs_pond_has_no_universal_official_size_boundary.mp4",
+  "scheduled_at": "2026-10-05T05:06:33.275533+09:00"
 }
