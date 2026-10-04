@@ -778,5 +778,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-03-03-evening-white_black_color_answer_depends_on_light_or_perception_definition.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-05T05:04:07.221261+09:00",
+    "publish_at": "2026-10-05T08:00:00+09:00",
+    "script_file": "data/scripts/2026-10-04-01-morning.json",
+    "fact_key": "kilobyte_1000_vs_kibibyte_1024_standard_distinction",
+    "category": "기술·AI·인터넷",
+    "fact": "국제 표준에서 kB(킬로바이트)는 1000바이트이고 KiB(키비바이트)는 1024바이트다. 다만 컴퓨터 역사에서는 1024바이트를 KB라고 부르는 관행이 오래 사용돼 실제 제품과 운영체제에서 표시 차이가 생길 수 있다.",
+    "title": "1KB는 1000바이트일까, 1024바이트일까?",
+    "source_1": "https://physics.nist.gov/cuu/Units/binary.html",
+    "source_2": "https://styleguide.iec.ch/?onepage-docs=docly-documentation",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac2b137d467abe8cfc59342",
+    "buffer_due_at": "2026-10-04T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-01-morning-kilobyte_1000_vs_kibibyte_1024_standard_distinction.mp4",
+    "status": "scheduled"
   }
 ]

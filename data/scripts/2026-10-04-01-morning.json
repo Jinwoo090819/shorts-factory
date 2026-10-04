@@ -11,6 +11,10 @@
   "title": "1KB는 1000바이트일까, 1024바이트일까?",
   "slot": "morning",
   "target_publish_time": "08:00",
-  "status": "ready",
-  "created_at": "2026-10-04T11:00:00+09:00"
+  "status": "scheduled",
+  "created_at": "2026-10-04T11:00:00+09:00",
+  "buffer_post_id": "6ac2b137d467abe8cfc59342",
+  "publish_at": "2026-10-05T08:00:00+09:00",
+  "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-04-01-morning-kilobyte_1000_vs_kibibyte_1024_standard_distinction.mp4",
+  "scheduled_at": "2026-10-05T05:04:07.220904+09:00"
 }
