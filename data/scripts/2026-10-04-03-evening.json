@@ -1,0 +1,16 @@
+{
+  "fact_key": "work_titles_not_protected_by_copyright_but_other_laws_may_apply",
+  "category": "법·규칙·관행",
+  "fact": "미국 저작권법 체계에서는 책·영화·노래 같은 저작물의 제목 자체는 저작권 보호 대상이 아니다. 다만 제목의 사용이 언제나 자유롭다는 뜻은 아니며, 상황에 따라 상표법 등 다른 법적 보호가 문제될 수 있다.",
+  "script": "그거 아세요? 유명한 책이나 영화의 제목 자체는 미국 저작권법에서 저작권으로 보호되지 않습니다. 작품 전체가 저작권 보호를 받으니 제목도 당연히 독점할 수 있을 것 같지만, 미국 저작권청은 이름, 제목, 짧은 문구는 저작권 보호 대상이 아니라고 명시합니다. 이유는 저작권이 독창적인 표현을 보호하는 제도이고, 짧은 제목만으로는 일반적으로 필요한 수준의 저작물성을 충족하지 못하기 때문입니다. 그렇다고 남의 유명한 제목을 아무 상품에나 붙여도 된다는 뜻은 아닙니다. 미국 저작권청도 제목이나 이름이 저작권과 별개로 상표법 등의 보호를 받을 가능성이 있다고 설명합니다. 미국 의회도서관의 ISSN 안내 역시 간행물 제목에 ISSN을 받았다고 독점권이 생기는 것은 아니며 제목 자체는 저작권 대상이 아니라고 설명합니다. 결국 작품의 내용에 대한 저작권과 작품 이름에 대한 법적 보호는 서로 다른 문제입니다. 여러분은 제목도 저작권으로 보호해야 한다고 보나요?",
+  "source_1": "https://www.copyright.gov/help/faq/faq-forms.html",
+  "source_2": "https://loc.gov/issn/faq/",
+  "pexels_query_1": "bookshelf book covers library",
+  "pexels_query_2": "movie theater marquee title",
+  "pexels_query_3": "copyright legal document desk",
+  "title": "책이나 영화 제목에도 저작권이 있을까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-10-04T11:00:00+09:00"
+}
