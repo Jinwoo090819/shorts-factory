@@ -1,0 +1,16 @@
+{
+  "fact_key": "lake_vs_pond_has_no_universal_official_size_boundary",
+  "category": "지리·도시",
+  "fact": "호수와 연못을 가르는 전 세계 공통의 공식 크기 기준은 없다. 미국 USGS는 지리 지형의 lake와 pond에 공식적인 보편 정의가 없다고 설명하는 반면, 미국 EPA의 한 분류 체계는 일반적으로 10에이커 이상을 lake, 그보다 작으면 pond로 취급한다.",
+  "script": "그거 아세요? 연못이 커지면 어느 순간 자동으로 호수가 되는 공식 경계선은 없습니다. 보통은 연못이 작고 호수가 크다고 생각하지만, 미국 지질조사국 USGS는 lake와 pond 같은 지리 명칭을 가르는 공식적인 보편 정의가 없다고 설명합니다. 이름은 지역의 역사와 관습, 기관의 목적에 따라 달라질 수 있다는 겁니다. 그런데 여기서 더 헷갈리는 점이 있습니다. 기준이 아예 없는 건 아닙니다. 미국 환경보호청 EPA의 특정 수체 분류에서는 일반적으로 수면 면적 10에이커 이상을 lake로 보고, 더 작으면 pond로 정의합니다. 즉 어떤 기관은 조사와 관리에 필요한 실용적인 숫자 기준을 만들 수 있지만, 그 숫자가 전 세계 모든 호수와 연못의 이름을 결정하는 자연법칙은 아닙니다. 그래서 이름에 pond가 붙었다고 반드시 어떤 lake보다 작다고 단정할 수도 없습니다. 핵심은 호수와 연못의 차이가 크기 하나로 완벽하게 정해진다는 상식이 실제 분류보다 단순하다는 겁니다. 여러분은 명확한 크기 기준을 정하는 게 낫다고 보나요?",
+  "source_1": "https://www.usgs.gov/us-board-on-geographic-names/what-geographic-names-information-system-gnis",
+  "source_2": "https://www.epa.gov/n-steps-online/water-body-types",
+  "pexels_query_1": "large lake aerial landscape",
+  "pexels_query_2": "small pond park water",
+  "pexels_query_3": "wetland water map survey",
+  "title": "연못은 얼마나 커지면 호수가 될까?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-10-04T11:00:00+09:00"
+}
