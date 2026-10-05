@@ -878,5 +878,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-airport_runway_numbers_follow_magnetic_heading_and_can_change.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-06T06:25:14.149637+09:00",
+    "publish_at": "2026-10-06T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-06-batch.json",
+    "fact_key": "utc_day_can_include_leap_second_23_59_60",
+    "category": "기술·AI·인터넷",
+    "fact": "UTC에는 지구 자전으로 정해지는 천문시와 원자시의 차이를 조정하기 위해 윤초가 삽입될 수 있으며, 양의 윤초가 들어가는 날에는 23시 59분 60초가 실제 UTC 시각으로 존재한다.",
+    "title": "하루는 정말 항상 86,400초일까?",
+    "source_1": "https://www.nist.gov/pml/time-and-frequency-division/leap-seconds-faqs",
+    "source_2": "https://www.iers.org/iers/en/service/glossary/functions/glossary/L",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac415ba4e17d6a1b258d7b6",
+    "buffer_due_at": "2026-10-06T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-utc_day_can_include_leap_second_23_59_60.mp4",
+    "status": "scheduled"
   }
 ]
