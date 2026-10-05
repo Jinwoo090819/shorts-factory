@@ -1,0 +1,16 @@
+{
+  "fact_key": "repeating_decimal_0_999_equals_1_in_real_numbers",
+  "category": "교육·일상생활",
+  "fact": "실수의 표준적인 정의에서 무한소수 0.999…는 1에 한없이 가까운 별개의 수가 아니라 정확히 1과 같은 수다. 반면 유한하게 9를 적은 0.9, 0.99, 0.999 등은 각각 1보다 작다.",
+  "script": "그거 아세요? 0.999…는 1에 거의 가까운 숫자가 아니라 수학적으로 정확히 1입니다. 여기서 가장 많이 헷갈리는 건 0.999처럼 9가 유한 번 적힌 수와, 9가 끝없이 반복되는 0.999…를 같은 느낌으로 보는 겁니다. 유한한 0.999는 당연히 1보다 작지만, 무한소수에는 마지막 9가 없습니다. 실수에서 0.999…는 0.9, 0.99, 0.999처럼 이어지는 수열의 극한으로 정의되고 그 극한이 1입니다. 다른 방식으로 보면 1/3은 0.333…이고 여기에 3을 곱하면 왼쪽은 1, 오른쪽은 0.999…가 됩니다. 또 1에서 0.999…를 뺀 뒤 남는 양수를 찾으려 해도 그런 실수는 존재하지 않습니다. 다만 계산기 화면처럼 자릿수를 중간에서 끊은 0.999999는 여전히 1보다 작습니다. 핵심은 '거의 1'과 '무한히 반복되는 소수의 값'을 구분하는 겁니다. 여러분은 처음 봤을 때 1과 같다고 납득됐나요?",
+  "source_1": "https://math.ucr.edu/home/baez/physics/General/summingNaturals.html",
+  "source_2": "https://legacy-www.math.harvard.edu/archive/101_spring_05/Readings/Notes456.pdf",
+  "pexels_query_1": "calculator decimal numbers close up",
+  "pexels_query_2": "math equations chalkboard classroom",
+  "pexels_query_3": "infinite number sequence notebook",
+  "title": "0.999…는 정말 1과 같은 숫자일까?",
+  "slot": "morning",
+  "target_publish_time": "08:00",
+  "status": "ready",
+  "created_at": "2026-10-05T11:00:00+09:00"
+}
