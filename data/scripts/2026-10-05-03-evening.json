@@ -1,0 +1,16 @@
+{
+  "fact_key": "utc_day_can_include_leap_second_23_59_60",
+  "category": "기술·AI·인터넷",
+  "fact": "UTC에는 지구 자전으로 정해지는 천문시와 원자시의 차이를 조정하기 위해 윤초가 삽입될 수 있으며, 양의 윤초가 들어가는 날에는 23시 59분 60초가 실제 UTC 시각으로 존재한다.",
+  "script": "그거 아세요? 모든 하루가 반드시 86,400초인 건 아닙니다. 우리가 쓰는 UTC에는 실제로 23시 59분 60초가 등장한 적이 있습니다. 이상하게 들리는 이유는 1분은 무조건 60초라고 배우기 때문입니다. 현대의 1초는 원자 기준으로 매우 일정하게 정의되지만, 지구의 자전 속도는 완벽하게 일정하지 않습니다. 그래서 지구 자전을 반영하는 천문시 UT1과 원자시 기반 UTC가 너무 벌어지지 않도록 필요할 때 윤초를 넣어 왔습니다. 양의 윤초가 들어가면 시계는 23시 59분 59초 다음에 23시 59분 60초를 거친 뒤 다음 날 0시가 됩니다. 반대로 이론상 한 초를 빼는 음의 윤초도 규정에는 있지만 지금까지 실제 시행된 윤초는 모두 양의 윤초였습니다. 컴퓨터 입장에서는 이 특별한 1초가 시간 기록과 순서를 처리하는 문제를 만들기도 합니다. 결국 하루는 86,400초라는 말은 보통은 맞지만 UTC의 모든 날에 절대적인 규칙은 아닙니다. 23시 59분 60초도 하루라고 보시나요?",
+  "source_1": "https://www.nist.gov/pml/time-and-frequency-division/leap-seconds-faqs",
+  "source_2": "https://www.iers.org/iers/en/service/glossary/functions/glossary/L",
+  "pexels_query_1": "atomic clock laboratory time",
+  "pexels_query_2": "earth rotation space timelapse",
+  "pexels_query_3": "digital clock midnight countdown",
+  "title": "하루는 정말 항상 86,400초일까?",
+  "slot": "evening",
+  "target_publish_time": "19:00",
+  "status": "ready",
+  "created_at": "2026-10-05T11:00:00+09:00"
+}
