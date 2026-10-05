@@ -12,8 +12,12 @@
     "title": "0.999…는 정말 1과 같은 숫자일까?",
     "slot": "morning",
     "target_publish_time": "08:00",
-    "status": "ready",
-    "created_at": "2026-10-06T05:00:00+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-06T05:00:00+09:00",
+    "buffer_post_id": "6ac414e48a7578ba6c1762dd",
+    "publish_at": "2026-10-06T08:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-repeating_decimal_0_999_equals_1_in_real_numbers.mp4",
+    "scheduled_at": "2026-10-06T06:21:40.911918+09:00"
   },
   {
     "fact_key": "airport_runway_numbers_follow_magnetic_heading_and_can_change",
