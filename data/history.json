@@ -858,5 +858,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-repeating_decimal_0_999_equals_1_in_real_numbers.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-06T06:23:52.462015+09:00",
+    "publish_at": "2026-10-06T13:00:00+09:00",
+    "script_file": "data/scripts/2026-10-06-batch.json",
+    "fact_key": "airport_runway_numbers_follow_magnetic_heading_and_can_change",
+    "category": "기술·AI·인터넷",
+    "fact": "공항 활주로 번호는 보통 활주로 중심선의 자기방위각을 10도 단위로 반올림해 정하며, 지구 자기장의 변화로 자기방위가 달라지면 활주로 자체가 움직이지 않아도 번호가 바뀔 수 있다.",
+    "title": "활주로는 그대로인데 번호가 바뀔 수 있다?",
+    "source_1": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html",
+    "source_2": "https://www.aopa.org/news-and-media/all-news/2017/december/flight-training-magazine/old-reliable",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac415684e17d6a1b258c7d5",
+    "buffer_due_at": "2026-10-06T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-airport_runway_numbers_follow_magnetic_heading_and_can_change.mp4",
+    "status": "scheduled"
   }
 ]
