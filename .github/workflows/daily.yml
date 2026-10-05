@@ -9,15 +9,15 @@ on:
     - cron: '0 9 * * *'
   workflow_dispatch:
   push:
-    # The 05:00 content task writes morning, lunch, then evening as separate
-    # commits. Trigger only on the final evening file so one batch run handles
-    # all three instead of queueing three stale workflow runs.
+    # The 05:00 content task writes all three Shorts into one JSON array and
+    # commits only once. This avoids multiple push runs and pending-run races.
     paths:
-      - 'data/scripts/*-03-evening.json'
+      - 'data/scripts/*-batch.json'
 
-concurrency:
-  group: shorts-factory
-  cancel-in-progress: false
+# No concurrency group is needed: the primary batch starts around 05:00 KST,
+# has a hard 90-minute timeout, and the first backup run is not until 07:00.
+# Removing the shared pending queue also prevents a queued primary run from
+# being cancelled/replaced before a runner ever starts it.
 
 permissions:
   contents: write
