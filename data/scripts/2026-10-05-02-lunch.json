@@ -1,0 +1,16 @@
+{
+  "fact_key": "airport_runway_numbers_follow_magnetic_heading_and_can_change",
+  "category": "기술·AI·인터넷",
+  "fact": "공항 활주로 번호는 보통 활주로 중심선의 자기방위각을 10도 단위로 반올림해 정하며, 지구 자기장의 변화로 자기방위가 달라지면 활주로 자체가 움직이지 않아도 번호가 바뀔 수 있다.",
+  "script": "그거 아세요? 공항 활주로에 적힌 09, 18, 27 같은 숫자는 그냥 순번이 아닙니다. 미국 FAA 기준으로 활주로 번호는 접근 방향에서 본 중심선의 자기방위각을 가장 가까운 10도 단위로 나타낸 값입니다. 그래서 대략 동쪽 90도를 향하면 09, 서쪽 270도를 향하면 27처럼 서로 반대쪽 끝의 번호가 18 차이 나는 경우가 일반적입니다. 그런데 여기서 신기한 점은 활주로가 그대로 있어도 번호가 바뀔 수 있다는 겁니다. 지구의 자기장은 시간이 지나며 변하고, 활주로 번호는 진북이 아니라 자기 방향을 기준으로 하기 때문입니다. 실제로 미국 탬파 국제공항에서는 자기 방향 변화 때문에 기존 18R/36L 활주로를 19R/1L로 다시 표시한 사례가 있습니다. 또 평행 활주로는 같은 숫자 뒤에 L, C, R 같은 글자를 붙여 구분합니다. 즉 활주로 번호는 주소가 아니라 방향표에 더 가깝습니다. 여러분은 번호가 바뀔 수 있다는 걸 알고 있었나요?",
+  "source_1": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html",
+  "source_2": "https://www.aopa.org/news-and-media/all-news/2017/december/flight-training-magazine/old-reliable",
+  "pexels_query_1": "airport runway numbers aerial",
+  "pexels_query_2": "airplane cockpit compass instruments",
+  "pexels_query_3": "airport runway painting maintenance",
+  "title": "활주로는 그대로인데 번호가 바뀔 수 있다?",
+  "slot": "lunch",
+  "target_publish_time": "13:00",
+  "status": "ready",
+  "created_at": "2026-10-05T11:00:00+09:00"
+}
