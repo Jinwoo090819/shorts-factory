@@ -1,0 +1,50 @@
+[
+  {
+    "fact_key": "repeating_decimal_0_999_equals_1_in_real_numbers",
+    "category": "교육·일상생활",
+    "fact": "실수의 표준적인 정의에서 무한소수 0.999…는 1에 한없이 가까운 별개의 수가 아니라 정확히 1과 같은 수다. 반면 유한하게 9를 적은 0.9, 0.99, 0.999 등은 각각 1보다 작다.",
+    "script": "그거 아세요? 0.999…는 1에 거의 가까운 숫자가 아니라 수학적으로 정확히 1입니다. 여기서 가장 많이 헷갈리는 건 0.999처럼 9가 유한 번 적힌 수와, 9가 끝없이 반복되는 0.999…를 같은 느낌으로 보는 겁니다. 유한한 0.999는 당연히 1보다 작지만, 무한소수에는 마지막 9가 없습니다. 실수에서 0.999…는 0.9, 0.99, 0.999처럼 이어지는 수열의 극한으로 정의되고 그 극한이 1입니다. 다른 방식으로 보면 1/3은 0.333…이고 여기에 3을 곱하면 왼쪽은 1, 오른쪽은 0.999…가 됩니다. 또 1에서 0.999…를 뺀 뒤 남는 양수를 찾으려 해도 그런 실수는 존재하지 않습니다. 다만 계산기 화면처럼 자릿수를 중간에서 끊은 0.999999는 여전히 1보다 작습니다. 핵심은 '거의 1'과 '무한히 반복되는 소수의 값'을 구분하는 겁니다. 여러분은 처음 봤을 때 1과 같다고 납득됐나요?",
+    "source_1": "https://math.ucr.edu/home/baez/physics/General/summingNaturals.html",
+    "source_2": "https://legacy-www.math.harvard.edu/archive/101_spring_05/Readings/Notes456.pdf",
+    "pexels_query_1": "calculator decimal numbers close up",
+    "pexels_query_2": "math equations chalkboard classroom",
+    "pexels_query_3": "infinite number sequence notebook",
+    "title": "0.999…는 정말 1과 같은 숫자일까?",
+    "slot": "morning",
+    "target_publish_time": "08:00",
+    "status": "ready",
+    "created_at": "2026-10-06T05:00:00+09:00"
+  },
+  {
+    "fact_key": "airport_runway_numbers_follow_magnetic_heading_and_can_change",
+    "category": "기술·AI·인터넷",
+    "fact": "공항 활주로 번호는 보통 활주로 중심선의 자기방위각을 10도 단위로 반올림해 정하며, 지구 자기장의 변화로 자기방위가 달라지면 활주로 자체가 움직이지 않아도 번호가 바뀔 수 있다.",
+    "script": "그거 아세요? 공항 활주로에 적힌 09, 18, 27 같은 숫자는 그냥 순번이 아닙니다. 미국 FAA 기준으로 활주로 번호는 접근 방향에서 본 중심선의 자기방위각을 가장 가까운 10도 단위로 나타낸 값입니다. 그래서 대략 동쪽 90도를 향하면 09, 서쪽 270도를 향하면 27처럼 서로 반대쪽 끝의 번호가 18 차이 나는 경우가 일반적입니다. 그런데 여기서 신기한 점은 활주로가 그대로 있어도 번호가 바뀔 수 있다는 겁니다. 지구의 자기장은 시간이 지나며 변하고, 활주로 번호는 진북이 아니라 자기 방향을 기준으로 하기 때문입니다. 실제로 미국 탬파 국제공항에서는 자기 방향 변화 때문에 기존 18R/36L 활주로를 19R/1L로 다시 표시한 사례가 있습니다. 또 평행 활주로는 같은 숫자 뒤에 L, C, R 같은 글자를 붙여 구분합니다. 즉 활주로 번호는 주소가 아니라 방향표에 더 가깝습니다. 여러분은 번호가 바뀔 수 있다는 걸 알고 있었나요?",
+    "source_1": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html",
+    "source_2": "https://www.aopa.org/news-and-media/all-news/2017/december/flight-training-magazine/old-reliable",
+    "pexels_query_1": "airport runway numbers aerial",
+    "pexels_query_2": "airplane cockpit compass instruments",
+    "pexels_query_3": "airport runway painting maintenance",
+    "title": "활주로는 그대로인데 번호가 바뀔 수 있다?",
+    "slot": "lunch",
+    "target_publish_time": "13:00",
+    "status": "ready",
+    "created_at": "2026-10-06T05:00:00+09:00"
+  },
+  {
+    "fact_key": "utc_day_can_include_leap_second_23_59_60",
+    "category": "기술·AI·인터넷",
+    "fact": "UTC에는 지구 자전으로 정해지는 천문시와 원자시의 차이를 조정하기 위해 윤초가 삽입될 수 있으며, 양의 윤초가 들어가는 날에는 23시 59분 60초가 실제 UTC 시각으로 존재한다.",
+    "script": "그거 아세요? 모든 하루가 반드시 86,400초인 건 아닙니다. 우리가 쓰는 UTC에는 실제로 23시 59분 60초가 등장한 적이 있습니다. 이상하게 들리는 이유는 1분은 무조건 60초라고 배우기 때문입니다. 현대의 1초는 원자 기준으로 매우 일정하게 정의되지만, 지구의 자전 속도는 완벽하게 일정하지 않습니다. 그래서 지구 자전을 반영하는 천문시 UT1과 원자시 기반 UTC가 너무 벌어지지 않도록 필요할 때 윤초를 넣어 왔습니다. 양의 윤초가 들어가면 시계는 23시 59분 59초 다음에 23시 59분 60초를 거친 뒤 다음 날 0시가 됩니다. 반대로 이론상 한 초를 빼는 음의 윤초도 규정에는 있지만 지금까지 실제 시행된 윤초는 모두 양의 윤초였습니다. 컴퓨터 입장에서는 이 특별한 1초가 시간 기록과 순서를 처리하는 문제를 만들기도 합니다. 결국 하루는 86,400초라는 말은 보통은 맞지만 UTC의 모든 날에 절대적인 규칙은 아닙니다. 23시 59분 60초도 하루라고 보시나요?",
+    "source_1": "https://www.nist.gov/pml/time-and-frequency-division/leap-seconds-faqs",
+    "source_2": "https://www.iers.org/iers/en/service/glossary/functions/glossary/L",
+    "pexels_query_1": "atomic clock laboratory time",
+    "pexels_query_2": "earth rotation space timelapse",
+    "pexels_query_3": "digital clock midnight countdown",
+    "title": "하루는 정말 항상 86,400초일까?",
+    "slot": "evening",
+    "target_publish_time": "19:00",
+    "status": "ready",
+    "created_at": "2026-10-06T05:00:00+09:00"
+  }
+]
