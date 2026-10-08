@@ -918,5 +918,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-historical_calendar_no_year_zero_vs_astronomical_year_zero.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-08T10:26:00.693745+09:00",
+    "publish_at": "2026-10-08T13:00:00+09:00",
+    "script_file": "data/scripts/2026-10-07-batch.json",
+    "fact_key": "chess_stalemate_is_draw_even_when_materially_ahead",
+    "category": "스포츠 규칙",
+    "fact": "체스에서 둘 차례인 선수가 체크 상태는 아니지만 합법적으로 둘 수 있는 수가 하나도 없으면 스테일메이트가 되어 즉시 무승부가 된다. 상대가 퀸 등 훨씬 많은 기물을 가지고 있어도 이 규칙은 같다.",
+    "title": "퀸이 남아도 체스에서 무승부가 될 수 있다?",
+    "source_1": "https://handbook.fide.com/chapter/e012023",
+    "source_2": "https://new.uschess.org/news/just-rules-instant-draws",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac6f12801166a3e1c0efa73",
+    "buffer_due_at": "2026-10-08T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-chess_stalemate_is_draw_even_when_materially_ahead.mp4",
+    "status": "scheduled"
   }
 ]

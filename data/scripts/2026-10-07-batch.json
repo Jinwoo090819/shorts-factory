@@ -32,8 +32,12 @@
     "title": "퀸이 남아도 체스에서 무승부가 될 수 있다?",
     "slot": "lunch",
     "target_publish_time": "13:00",
-    "status": "ready",
-    "created_at": "2026-10-07T00:00:00+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-07T00:00:00+09:00",
+    "buffer_post_id": "6ac6f12801166a3e1c0efa73",
+    "publish_at": "2026-10-08T13:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-chess_stalemate_is_draw_even_when_materially_ahead.mp4",
+    "scheduled_at": "2026-10-08T10:26:00.693287+09:00"
   },
   {
     "fact_key": "private_browsing_hides_local_history_not_network_activity",
