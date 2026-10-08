@@ -898,5 +898,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-06-batch-utc_day_can_include_leap_second_23_59_60.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-08T10:24:35.711704+09:00",
+    "publish_at": "2026-10-08T10:29:30.400838+09:00",
+    "script_file": "data/scripts/2026-10-07-batch.json",
+    "fact_key": "historical_calendar_no_year_zero_vs_astronomical_year_zero",
+    "category": "역사",
+    "fact": "일반적인 BC/AD·BCE/CE 역사 연도 체계에서는 1 BCE 다음이 1 CE라서 0년이 없지만, 천문학적 연도 번호 체계에서는 계산 편의를 위해 1 BCE를 0년으로 표기한다.",
+    "title": "역사에는 0년이 없는데 천문학에는 있다?",
+    "source_1": "https://aa.usno.navy.mil/faq/millennium",
+    "source_2": "https://eclipse.gsfc.nasa.gov/SEhelp/dates.html",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac6f0d357f9bd074d22199c",
+    "buffer_due_at": "2026-10-08T01:29:30.400Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-historical_calendar_no_year_zero_vs_astronomical_year_zero.mp4",
+    "status": "scheduled"
   }
 ]
