@@ -938,5 +938,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-chess_stalemate_is_draw_even_when_materially_ahead.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-08T10:27:37.468578+09:00",
+    "publish_at": "2026-10-08T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-07-batch.json",
+    "fact_key": "private_browsing_hides_local_history_not_network_activity",
+    "category": "기술·AI·인터넷",
+    "fact": "브라우저의 시크릿·사생활 보호 모드는 주로 기기에 남는 방문 기록과 세션 데이터를 제한하는 기능이지 인터넷에서 사용자를 익명으로 만드는 기능은 아니다. 방문 사이트나 네트워크 운영자·ISP 등에는 활동이 보일 수 있다.",
+    "title": "시크릿 모드면 인터넷에서 진짜 안 보일까?",
+    "source_1": "https://support.google.com/chrome/answer/9845881",
+    "source_2": "https://www.mozilla.org/en-US/firefox/browsers/incognito-browser/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac6f18995b0fb1c5cc57009",
+    "buffer_due_at": "2026-10-08T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-private_browsing_hides_local_history_not_network_activity.mp4",
+    "status": "scheduled"
   }
 ]

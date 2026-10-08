@@ -52,7 +52,11 @@
     "title": "시크릿 모드면 인터넷에서 진짜 안 보일까?",
     "slot": "evening",
     "target_publish_time": "19:00",
-    "status": "ready",
-    "created_at": "2026-10-07T00:00:00+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-07T00:00:00+09:00",
+    "buffer_post_id": "6ac6f18995b0fb1c5cc57009",
+    "publish_at": "2026-10-08T19:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-private_browsing_hides_local_history_not_network_activity.mp4",
+    "scheduled_at": "2026-10-08T10:27:37.468208+09:00"
   }
 ]
