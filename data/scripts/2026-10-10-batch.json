@@ -1,0 +1,50 @@
+[
+  {
+    "fact_key": "plastic_resin_identification_code_not_recycling_guarantee",
+    "category": "교육·일상생활",
+    "fact": "플라스틱 용기 바닥의 삼각형 속 숫자는 주로 플라스틱 재질을 나타내며, 해당 지역에서 실제로 재활용 수거가 가능하다는 보증은 아니다.",
+    "script": "그거 아세요? 플라스틱 용기 바닥에 삼각형과 숫자가 찍혀 있어도, 그게 곧 재활용 가능하다는 보증은 아닙니다. 많은 사람은 삼각형만 보면 분리배출해도 된다고 생각하죠. 그런데 그 숫자는 주로 플라스틱의 수지 종류를 구분하는 표시입니다. 미국 환경보호청도 이 표시가 지역 수거 가능 여부를 뜻하지는 않는다고 설명합니다. 이유는 같은 재질이라도 지역마다 선별 설비와 수거 기준이 다르기 때문입니다. 반면 재질을 표시하면 분류에 도움을 준다는 실용적인 목적도 분명히 있습니다. 미국 연방거래위원회는 실제로 수거되지 않는 제품에 재활용 가능하다는 인상을 주면 소비자를 오해하게 할 수 있다고 안내합니다. 예를 들어 똑같은 숫자가 찍힌 포장재라도 어느 지역에서는 수거하고 다른 지역에서는 거절할 수 있습니다. 결국 숫자는 재질의 단서이지 재활용 합격 도장이 아닙니다. 여러분은 포장지의 표시를 믿나요, 지역 배출 기준을 먼저 확인하나요?",
+    "source_1": "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables",
+    "source_2": "https://search.ftc.gov/news-events/news/press-releases/1999/04/ftc-releases-revised-consumer-brochure-about-green-claims",
+    "pexels_query_1": "plastic container resin identification number closeup",
+    "pexels_query_2": "recycling sorting conveyor facility workers",
+    "pexels_query_3": "household colored waste bins outdoors",
+    "title": "재활용 삼각형 표시, 믿고 버려도 될까?",
+    "slot": "morning",
+    "target_publish_time": "08:00",
+    "status": "ready",
+    "created_at": "2026-10-10T05:05:20+09:00"
+  },
+  {
+    "fact_key": "medieval_glass_windows_thickness_not_due_to_flow",
+    "category": "물리·화학·우주",
+    "fact": "중세 성당 유리창의 아래쪽이 두꺼운 이유는 상온에서 유리가 수백 년간 흘러내려서가 아니라 과거 제조 방식에 따른 두께 불균일 때문이다.",
+    "script": "그거 아세요? 오래된 성당 유리창이 아래쪽만 두꺼워 보인다고 해서, 유리가 수백 년 동안 눈에 띄게 흘러내린 건 아닙니다. 그래서 유리는 사실 액체라는 말을 들어보셨을 거예요. 하지만 상온의 유리는 형태를 유지하는 비정질 고체로 다룹니다. 원자들이 수정처럼 규칙적으로 정렬되지는 않았지만, 액체처럼 자유롭게 움직이지도 않기 때문이죠. 그렇다고 액체와 전혀 닮지 않았다는 말도 정확하진 않습니다. 유리는 액체가 식으면서 결정 구조를 만들지 못한 상태이고, 유리 전이와 아주 느린 구조 변화는 실제 연구 대상입니다. 다만 미국 세라믹학회가 소개한 연구에 따르면 중세 유리창이 십억 년 동안 변형되는 양도 최대 약 1나노미터 수준으로 계산됐습니다. 옛 창문의 두께 차이는 당시 유리 제조 방식으로 설명됩니다. 결국 액체 같은 내부 배열과 일상에서의 고체 같은 성질을 구분해야 합니다. 여러분은 유리를 고체라고 부르겠어요, 특별한 상태라고 부르겠어요?",
+    "source_1": "https://info.cmog.org/node/631",
+    "source_2": "https://ceramics.org/ceramic-tech-today/glass-viscosity-calculations-definitively-debunk-the-myth-of-observable-flow-in-medieval-windows/",
+    "pexels_query_1": "medieval cathedral stained glass window sunlight",
+    "pexels_query_2": "glassblower shaping molten glass in furnace",
+    "pexels_query_3": "materials science laboratory glass samples microscope",
+    "title": "유리는 액체라서 오래된 창문이 흘러내릴까?",
+    "slot": "lunch",
+    "target_publish_time": "13:00",
+    "status": "ready",
+    "created_at": "2026-10-10T05:05:20+09:00"
+  },
+  {
+    "fact_key": "nist_no_forced_periodic_password_change_without_compromise",
+    "category": "기술·AI·인터넷",
+    "fact": "NIST와 Microsoft의 현대적 비밀번호 지침은 근거 없는 정기적 비밀번호 변경 강제를 권하지 않으며, 유출 정황이 확인되면 변경하도록 한다.",
+    "script": "그거 아세요? 비밀번호는 석 달마다 무조건 바꿔야 더 안전하다는 상식, 최신 보안 지침과는 다릅니다. 자주 바꾸면 유출된 비밀번호를 오래 못 쓰게 할 수 있다는 생각은 이해됩니다. 하지만 정기 교체를 강제하면 사람들은 기억하기 쉬운 작은 변형을 반복하거나 비밀번호를 재사용하기도 합니다. 미국 국립표준기술연구소의 최신 지침은 근거 없이 주기적 변경을 요구하지 말고, 유출 정황이 있을 때 변경을 강제하라고 규정합니다. 마이크로소프트도 비슷하게 정기 변경을 강요하지 말라고 권합니다. 물론 회사나 서비스마다 내부 규정은 다를 수 있고, 계정이 노출됐다면 즉시 바꾸는 게 맞습니다. 예를 들어 비밀번호 끝의 숫자만 바꾸는 것보다, 길고 고유한 비밀번호와 추가 인증 수단을 쓰는 편이 권장됩니다. 핵심은 변경 횟수가 아니라 유출 대응과 계정 보호입니다. 여러분은 정기 교체와 필요할 때 교체 중 어느 쪽이 더 합리적이라고 보세요?",
+    "source_1": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+    "source_2": "https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-password-policy-overview-frequently-asked-questions",
+    "pexels_query_1": "laptop password login screen keyboard closeup",
+    "pexels_query_2": "person approving two factor authentication smartphone",
+    "pexels_query_3": "server room data center network racks",
+    "title": "비밀번호는 3개월마다 꼭 바꿔야 안전할까?",
+    "slot": "evening",
+    "target_publish_time": "19:00",
+    "status": "ready",
+    "created_at": "2026-10-10T05:05:20+09:00"
+  }
+]
