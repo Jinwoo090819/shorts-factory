@@ -52,7 +52,11 @@
     "title": "비밀번호는 3개월마다 꼭 바꿔야 안전할까?",
     "slot": "evening",
     "target_publish_time": "19:00",
-    "status": "ready",
-    "created_at": "2026-10-10T05:05:20+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-10T05:05:20+09:00",
+    "buffer_post_id": "6ac94a60bba9419ccbdd2d48",
+    "publish_at": "2026-10-10T19:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-10-batch-nist_no_forced_periodic_password_change_without_compromise.mp4",
+    "scheduled_at": "2026-10-10T05:11:12.584406+09:00"
   }
 ]
