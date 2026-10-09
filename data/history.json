@@ -958,5 +958,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-07-batch-private_browsing_hides_local_history_not_network_activity.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-10T05:07:45.692910+09:00",
+    "publish_at": "2026-10-10T08:00:00+09:00",
+    "script_file": "data/scripts/2026-10-10-batch.json",
+    "fact_key": "plastic_resin_identification_code_not_recycling_guarantee",
+    "category": "교육·일상생활",
+    "fact": "플라스틱 용기 바닥의 삼각형 속 숫자는 주로 플라스틱 재질을 나타내며, 해당 지역에서 실제로 재활용 수거가 가능하다는 보증은 아니다.",
+    "title": "재활용 삼각형 표시, 믿고 버려도 될까?",
+    "source_1": "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables",
+    "source_2": "https://search.ftc.gov/news-events/news/press-releases/1999/04/ftc-releases-revised-consumer-brochure-about-green-claims",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac94991ed92ed8fa5a7fc75",
+    "buffer_due_at": "2026-10-09T23:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-10-batch-plastic_resin_identification_code_not_recycling_guarantee.mp4",
+    "status": "scheduled"
   }
 ]
