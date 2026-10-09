@@ -32,8 +32,12 @@
     "title": "유리는 액체라서 오래된 창문이 흘러내릴까?",
     "slot": "lunch",
     "target_publish_time": "13:00",
-    "status": "ready",
-    "created_at": "2026-10-10T05:05:20+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-10T05:05:20+09:00",
+    "buffer_post_id": "6ac949ffb07d37ac974df7f0",
+    "publish_at": "2026-10-10T13:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-10-batch-medieval_glass_windows_thickness_not_due_to_flow.mp4",
+    "scheduled_at": "2026-10-10T05:09:36.105765+09:00"
   },
   {
     "fact_key": "nist_no_forced_periodic_password_change_without_compromise",

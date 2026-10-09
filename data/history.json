@@ -978,5 +978,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-10-batch-plastic_resin_identification_code_not_recycling_guarantee.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-10T05:09:36.106406+09:00",
+    "publish_at": "2026-10-10T13:00:00+09:00",
+    "script_file": "data/scripts/2026-10-10-batch.json",
+    "fact_key": "medieval_glass_windows_thickness_not_due_to_flow",
+    "category": "물리·화학·우주",
+    "fact": "중세 성당 유리창의 아래쪽이 두꺼운 이유는 상온에서 유리가 수백 년간 흘러내려서가 아니라 과거 제조 방식에 따른 두께 불균일 때문이다.",
+    "title": "유리는 액체라서 오래된 창문이 흘러내릴까?",
+    "source_1": "https://info.cmog.org/node/631",
+    "source_2": "https://ceramics.org/ceramic-tech-today/glass-viscosity-calculations-definitively-debunk-the-myth-of-observable-flow-in-medieval-windows/",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ac949ffb07d37ac974df7f0",
+    "buffer_due_at": "2026-10-10T04:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-10-batch-medieval_glass_windows_thickness_not_due_to_flow.mp4",
+    "status": "scheduled"
   }
 ]
