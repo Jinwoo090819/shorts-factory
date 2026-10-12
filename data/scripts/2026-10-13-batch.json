@@ -1,0 +1,50 @@
+[
+  {
+    "fact_key": "shrinkflation_same_sticker_price_higher_unit_price",
+    "category": "소비·가격·브랜드",
+    "fact": "상품 가격표가 그대로여도 포장 용량이 줄어들면 단위당 가격이 상승한다. 미국 BLS와 영국 ONS는 소비자물가 측정에서 이런 용량 변화를 고려한다.",
+    "script": "그거 아세요? 과자 가격이 그대로여도 통계상 가격이 오른 것으로 계산될 수 있습니다. 예를 들어 과자 한 봉지가 100그램에 2천 원이었다가, 가격은 그대로인데 80그램으로 줄었다고 해볼게요. 가격표만 보면 인상은 0원입니다. 하지만 100그램당 가격은 2천 원에서 2천5백 원으로 25퍼센트 올랐죠. 이런 현상을 슈링크플레이션, 즉 용량 축소를 통한 사실상의 가격 인상이라고 부릅니다. 미국 노동통계국은 소비자물가지수를 계산할 때 이런 용량 변화를 반영합니다. 영국 통계청도 크기나 무게가 바뀌면 비교 가능한 단위로 조정합니다. 물론 모든 상품이 줄어드는 것도 아니고, 전체 물가상승률에 미치는 영향은 시기와 품목에 따라 다릅니다. 소비자 입장에서는 계산대에서 낸 돈이 같다는 점도 사실이고, 같은 양을 사는 데 더 많은 돈이 든다는 점도 사실입니다. 그래서 할인 여부를 볼 때도 봉지 가격뿐 아니라 100그램당 가격을 비교해야 합니다. 여러분은 가격이 그대로면 동결이라고 보나요, 아니면 인상이라고 보나요?",
+    "source_1": "https://www.bls.gov/opub/mlr/2024/article/assessing-and-improving-the-accuracy-of-the-cpi.htm",
+    "source_2": "https://www.ons.gov.uk/economy/inflationandpriceindices/articles/theimpactofshrinkflationoncpihuk/howmanyofourproductsaregettingsmaller",
+    "pexels_query_1": "supermarket snack aisle shelves",
+    "pexels_query_2": "potato chips bag packaging close up",
+    "pexels_query_3": "digital kitchen scale weighing food",
+    "title": "가격 그대로인데 물가가 오른다고? 용량의 함정",
+    "slot": "morning",
+    "target_publish_time": "08:00",
+    "status": "ready",
+    "created_at": "2026-10-13T05:02:11+09:00"
+  },
+  {
+    "fact_key": "volleyball_serve_net_touch_legal_if_crosses_correctly",
+    "category": "스포츠 규칙",
+    "fact": "실내 배구에서 서브한 공이 네트에 닿더라도 안테나 사이의 올바른 통과 공간으로 상대 코트에 넘어가면 그 접촉만으로 반칙이 되지 않는다.",
+    "script": "그거 아세요? 배구에서 서브가 네트에 닿아도 무조건 반칙은 아닙니다. 공이 네트 위쪽을 스치고 상대 코트로 넘어가면 경기는 그대로 이어질 수 있어요. 네트에 닿았으니 다시 서브해야 한다고 생각하는 분도 있지만, 국제배구연맹의 공식 규칙은 공이 네트를 넘어가는 동안 네트에 닿는 것을 허용합니다. 미국 배구협회의 안내도 공이 안테나 사이로 완전히 넘어가면 플레이를 계속할 수 있다고 설명하죠. 다만 네트에 걸려 상대편으로 넘어가지 못하거나, 안테나 밖으로 지나가면 이야기가 달라집니다. 그건 정상적인 통과가 아니어서 반칙이 될 수 있어요. 여기서 헷갈리는 지점은 선수의 네트 접촉과 공의 네트 접촉이 서로 다른 규칙이라는 겁니다. 선수가 공을 플레이하는 동작 중 네트를 건드리는 건 반칙일 수 있지만, 공이 네트에 닿았다는 사실만으로는 반칙이 아닙니다. 결국 중요한 건 네트를 건드렸는지가 아니라 공이 규칙에 맞게 넘어갔는지입니다. 여러분은 이런 서브도 유효한 게 맞다고 보나요?",
+    "source_1": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+    "source_2": "https://usavolleyball.org/resource/simplified-youth-rules/",
+    "pexels_query_1": "volleyball player serving indoor court",
+    "pexels_query_2": "volleyball net tape macro closeup",
+    "pexels_query_3": "volleyball referee whistle scoreboard gymnasium",
+    "title": "배구 서브가 네트에 맞았는데도 반칙이 아니라고?",
+    "slot": "lunch",
+    "target_publish_time": "13:00",
+    "status": "ready",
+    "created_at": "2026-10-13T05:02:11+09:00"
+  },
+  {
+    "fact_key": "holland_two_provinces_not_entire_netherlands",
+    "category": "지리·도시",
+    "fact": "네덜란드는 12개 주로 구성되며 홀란드는 그중 북홀란트주와 남홀란트주에 해당한다. 홀란드라는 이름은 역사적 영향으로 나라 전체를 가리키는 관습적 호칭으로도 사용된다.",
+    "script": "그거 아세요? 홀란드와 네덜란드는 정확히 같은 지명이 아닙니다. 흔히 축구 응원이나 여행 이야기에서 홀란드를 나라 전체의 이름처럼 부르지만, 엄밀히 말하면 홀란드는 네덜란드 안의 특정 지역을 가리킵니다. 네덜란드는 열두 개 주로 이루어져 있고, 그중 북홀란트주와 남홀란트주 두 곳이 홀란드라는 이름을 공유합니다. 암스테르담은 북홀란트주에 있고, 로테르담과 헤이그는 남홀란트주에 있습니다. 그런데 왜 나라 전체를 홀란드라고 부를까요? 역사적으로 이 지역이 무역과 문화에서 큰 영향력을 가졌기 때문에 지역 이름이 나라 전체를 가리키는 말로 널리 퍼졌습니다. 실제 네덜란드 관광 안내 사이트도 두 표현이 자주 혼용되지만 뜻은 다르다고 설명합니다. 그렇다고 일상에서 홀란드라고 말하는 사람이 무조건 틀렸다고 단정하기도 어렵습니다. 오랫동안 널리 쓰인 관습적인 호칭이기 때문이죠. 다만 지리적으로 정확하게 말하려면 네덜란드가 더 적절합니다. 여러분은 익숙한 홀란드와 정확한 네덜란드 중 어느 이름을 쓰겠나요?",
+    "source_1": "https://www.holland.com/global/tourism/getting-around/information/netherlands-vs-holland",
+    "source_2": "https://www.government.nl/themes/government-and-democracy/public-administration/provinces-municipalities-and-water-authorities",
+    "pexels_query_1": "Amsterdam canal houses bicycles",
+    "pexels_query_2": "Rotterdam Erasmus bridge modern skyline",
+    "pexels_query_3": "Netherlands provinces map printed atlas",
+    "title": "홀란드와 네덜란드, 사실 같은 나라 이름이 아니다?",
+    "slot": "evening",
+    "target_publish_time": "19:00",
+    "status": "ready",
+    "created_at": "2026-10-13T05:02:11+09:00"
+  }
+]
