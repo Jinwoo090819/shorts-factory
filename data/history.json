@@ -1058,5 +1058,25 @@
     "buffer_channel_name": "그거 아세요?",
     "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-13-batch-volleyball_serve_net_touch_legal_if_crosses_correctly.mp4",
     "status": "scheduled"
+  },
+  {
+    "created_at": "2026-10-14T01:57:42.884228+09:00",
+    "publish_at": "2026-10-14T19:00:00+09:00",
+    "script_file": "data/scripts/2026-10-13-batch.json",
+    "fact_key": "holland_two_provinces_not_entire_netherlands",
+    "category": "지리·도시",
+    "fact": "네덜란드는 12개 주로 구성되며 홀란드는 그중 북홀란트주와 남홀란트주에 해당한다. 홀란드라는 이름은 역사적 영향으로 나라 전체를 가리키는 관습적 호칭으로도 사용된다.",
+    "title": "홀란드와 네덜란드, 사실 같은 나라 이름이 아니다?",
+    "source_1": "https://www.holland.com/global/tourism/getting-around/information/netherlands-vs-holland",
+    "source_2": "https://www.government.nl/themes/government-and-democracy/public-administration/provinces-municipalities-and-water-authorities",
+    "pexels_query_used": null,
+    "pexels_video_url": null,
+    "pexels_creator": null,
+    "buffer_post_id": "6ace63060b1619ab65694d35",
+    "buffer_due_at": "2026-10-14T10:00:00.000Z",
+    "buffer_channel_id": "6aae0192ea19ca0bde82a370",
+    "buffer_channel_name": "그거 아세요?",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-13-batch-holland_two_provinces_not_entire_netherlands.mp4",
+    "status": "scheduled"
   }
 ]

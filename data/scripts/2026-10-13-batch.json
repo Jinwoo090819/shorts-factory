@@ -52,7 +52,11 @@
     "title": "홀란드와 네덜란드, 사실 같은 나라 이름이 아니다?",
     "slot": "evening",
     "target_publish_time": "19:00",
-    "status": "ready",
-    "created_at": "2026-10-13T05:02:11+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-13T05:02:11+09:00",
+    "buffer_post_id": "6ace63060b1619ab65694d35",
+    "publish_at": "2026-10-14T19:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-13-batch-holland_two_provinces_not_entire_netherlands.mp4",
+    "scheduled_at": "2026-10-14T01:57:42.883821+09:00"
   }
 ]
