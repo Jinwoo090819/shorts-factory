@@ -12,8 +12,12 @@
     "title": "가격 그대로인데 물가가 오른다고? 용량의 함정",
     "slot": "morning",
     "target_publish_time": "08:00",
-    "status": "ready",
-    "created_at": "2026-10-13T05:02:11+09:00"
+    "status": "scheduled",
+    "created_at": "2026-10-13T05:02:11+09:00",
+    "buffer_post_id": "6ace624111032ccdb8c150fd",
+    "publish_at": "2026-10-14T08:00:00+09:00",
+    "media_url": "https://github.com/Jinwoo090819/shorts-factory/releases/download/shorts-media/2026-10-13-batch-shrinkflation_same_sticker_price_higher_unit_price.mp4",
+    "scheduled_at": "2026-10-14T01:54:26.058286+09:00"
   },
   {
     "fact_key": "volleyball_serve_net_touch_legal_if_crosses_correctly",
